@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Design System Test - Atomico.js</title>
+  <style>
+    /* Estilos básicos para la página de prueba */
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      background-color: #f4f4f9;
+    }
+    .container {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    h1 { font-size: 1.5rem; color: #333; }
+    p { color: #666; font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+
+  <h1>Prueba de Componentes: <code>dsj-button</code></h1>
+  
+  <div class="container">
+    <p>Botón Primario:</p>
+    <dsj-button label="Guardar Cambios" primary></dsj-button>
+  </div>
+
+  <div class="container">
+    <p>Botón Secundario:</p>
+    <dsj-button label="Cancelar"></dsj-button>
+  </div>
+
+  <div class="container">
+    <p>Prueba de Evento (Revisa la consola):</p>
+    <dsj-button id="btn-click" label="Haz clic aquí"></dsj-button>
+  </div>
+
+  <script type="module">
+    // Importamos el bundle generado por Vite
+    import "./dist/index.es.js";
+
+    // Prueba de interacción vía JavaScript
+    const btn = document.getElementById('btn-click');
+    btn.onClick = () => {
+      console.log("¡Evento onClick capturado desde el Web Component!");
+      alert("¡Hola desde dsj-button!");
+    };
+  </script>
+
+</body>
+</html>
