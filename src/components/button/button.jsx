@@ -2,7 +2,7 @@ import { c, useRef, useEffect, useState, useEvent, Fragment } from 'atomico';
 import { useSlot } from "@atomico/hooks/use-slot";
 
 import componentProps from './button.props';
-import { baseStyles, primaryLight } from './button.styles';
+import { baseStyles, primaryLight, secondaryLight, tertiaryLight } from './button.styles';
 
 const Component = ({ 
   label, 
@@ -100,5 +100,5 @@ const Component = ({
 }
 
 Component.props = componentProps;
-Component.styles = [baseStyles, primaryLight];
+Component.styles = [baseStyles, primaryLight, secondaryLight, tertiaryLight];
 customElements.define('dsh-button', c(Component));
