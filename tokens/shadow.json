@@ -1,0 +1,15 @@
+{
+  "dsh":{
+    "shadow": {
+      "s": {
+        "value": "0px 0px 16px 0px rgba(0, 0, 0, 0.08)"
+      },
+      "m": {
+        "value": "0px 8px 40px 0px rgba(0, 0, 0, 0.08)"
+      },
+      "l": {
+        "value": "0px 8px 40px 0px rgba(0, 0, 0, 0.16)"
+      }
+    }
+  }
+}

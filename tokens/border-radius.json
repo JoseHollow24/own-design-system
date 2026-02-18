@@ -1,0 +1,43 @@
+{
+  "dsh":{
+    "border-radius": {
+      "0": { 
+        "value": "0px",
+        "comment": "0rem"
+      },
+      "25": {
+        "value": "2px",
+        "comment": "0.125rem"
+      },
+      "50": {
+        "value": "4px",
+        "comment": "0.25rem"
+      },
+      "100": {
+        "value": "8px",
+        "comment": "0.5rem"
+      },
+      "200": {
+        "value": "16px",
+        "comment": "1rem"
+      },
+      "250": {
+        "value": "20px",
+        "comment": "1.25rem"
+      },
+      "300": {
+        "value": "24px",
+        "comment": "1.5rem"
+      },
+      "400": {
+        "value": "32px",
+        "comment": "2rem"
+      },
+      "full": {
+        "value": "50%",
+        "comment": "50%"
+      }
+    }
+  }
+}
+

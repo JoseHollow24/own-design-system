@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Design System Test - Atomico.js</title>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      background-color: #f4f4f9;
+    }
+    .container {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    h1 { font-size: 1.5rem; color: #333; }
+    p { color: #666; font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+
+  <h1>Prueba de Componentes: <code>dsh-button</code></h1>
+  
+  <div class="container">
+    <p>Botón Primario:</p>
+    <dsh-button id="buttondh" label="Guardar Cambios" primary></dsh-button>
+  </div>
+
+  <script type="module">
+    import "./dist/index.es.js";
+
+    const button = document.querySelector('#buttondh');
+    console.log(button)
+    button.addEventListener('click', () => {
+      console.log('Clicked!');
+    });
+  </script> 
+
+</body>
+</html>

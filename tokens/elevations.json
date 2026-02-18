@@ -1,0 +1,14 @@
+{
+  "dsh": {
+    "elevation": {
+      "default": { "value":"0" },
+      "raised-100": { "value": "100" },
+      "overlay": {
+        "200": { "value": "200" },
+        "300": { "value": "300" },
+        "400": { "value": "400" },
+        "500": { "value": "500" }
+      }
+    }
+  }
+}

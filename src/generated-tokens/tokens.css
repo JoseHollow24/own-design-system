@@ -1,0 +1,247 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ */
+
+:root {
+  --dsh-border-radius-0: 0px; /** 0rem */
+  --dsh-border-radius-25: 2px; /** 0.125rem */
+  --dsh-border-radius-50: 4px; /** 0.25rem */
+  --dsh-border-radius-100: 8px; /** 0.5rem */
+  --dsh-border-radius-200: 16px; /** 1rem */
+  --dsh-border-radius-250: 20px; /** 1.25rem */
+  --dsh-border-radius-300: 24px; /** 1.5rem */
+  --dsh-border-radius-400: 32px; /** 2rem */
+  --dsh-border-radius-full: 50%; /** 50% */
+  --dsh-color-secondary-a1: #B37400;
+  --dsh-color-secondary-a2: #D59608;
+  --dsh-color-secondary-a3: #F9BE00;
+  --dsh-color-secondary-a4: #FAD271;
+  --dsh-color-secondary-a5: #FDE1A7;
+  --dsh-color-secondary-a6: #FFF3DE;
+  --dsh-color-complementary-m1: #41395F;
+  --dsh-color-complementary-m2: #58527D;
+  --dsh-color-complementary-m3: #756F9C;
+  --dsh-color-complementary-m4: #9B94BF;
+  --dsh-color-complementary-m5: #C3BEDF;
+  --dsh-color-complementary-m6: #EFECFF;
+  --dsh-color-complementary-x1: #326295;
+  --dsh-color-complementary-x2: #6589AF;
+  --dsh-color-complementary-x3: #98B0CA;
+  --dsh-color-complementary-x4: #B7C8DA;
+  --dsh-color-complementary-x5: #D6E0EA;
+  --dsh-color-complementary-x6: #EBEFF4;
+  --dsh-color-complementary-g1: #3E4545;
+  --dsh-color-complementary-g2: #586264;
+  --dsh-color-complementary-g3: #A8B3B7;
+  --dsh-color-complementary-g4: #C9D0D3;
+  --dsh-color-complementary-g5: #DFE3E5;
+  --dsh-color-complementary-g6: #F6F7F7;
+  --dsh-color-monochromatic-w1: #ffffff;
+  --dsh-color-monochromatic-b1: #000000;
+  --dsh-color-blue-100: #def4ff;
+  --dsh-color-blue-200: #92d5f1;
+  --dsh-color-blue-300: #4ebce3;
+  --dsh-color-blue-400: #1896d3;
+  --dsh-color-blue-500: #008ec4;
+  --dsh-color-blue-600: #0076a9;
+  --dsh-color-blue-700: #00648f;
+  --dsh-color-indigo-100: #ebeff4;
+  --dsh-color-indigo-200: #d6e0ea;
+  --dsh-color-indigo-300: #b7c8da;
+  --dsh-color-indigo-400: #98b0ca;
+  --dsh-color-indigo-500: #6589af;
+  --dsh-color-indigo-600: #326295;
+  --dsh-color-indigo-700: #1d4a7b;
+  --dsh-color-gray-100: #f6f7f7;
+  --dsh-color-gray-200: #dfe3e5;
+  --dsh-color-gray-300: #c9d0d3;
+  --dsh-color-gray-400: #a8b3b7;
+  --dsh-color-gray-500: #586264;
+  --dsh-color-gray-600: #3e4545;
+  --dsh-color-gray-700: #2d3232;
+  --dsh-color-green-100: #deffe8;
+  --dsh-color-green-200: #89e9b0;
+  --dsh-color-green-300: #41d38a;
+  --dsh-color-green-400: #00bd70;
+  --dsh-color-green-500: #00a259;
+  --dsh-color-green-600: #008744;
+  --dsh-color-green-700: #006e38;
+  --dsh-color-teal-100: #defff5;
+  --dsh-color-teal-200: #90ddca;
+  --dsh-color-teal-300: #52baa7;
+  --dsh-color-teal-400: #1e988a;
+  --dsh-color-teal-500: #008979;
+  --dsh-color-teal-600: #006e62;
+  --dsh-color-teal-700: #00584f;
+  --dsh-color-orange-100: #ffecde;
+  --dsh-color-orange-200: #ffcaa2;
+  --dsh-color-orange-300: #ffa866;
+  --dsh-color-orange-400: #f97514;
+  --dsh-color-orange-500: #db5c00;
+  --dsh-color-orange-600: #b34a00;
+  --dsh-color-orange-700: #8C3A00;
+  --dsh-color-purple-100: #f9deff;
+  --dsh-color-purple-200: #ea95f1;
+  --dsh-color-purple-300: #e353df;
+  --dsh-color-purple-400: #cd25b0;
+  --dsh-color-purple-500: #a62aab;
+  --dsh-color-purple-600: #873299;
+  --dsh-color-purple-700: #6b257d;
+  --dsh-color-deep-purple-100: #efecff;
+  --dsh-color-deep-purple-200: #c3bedf;
+  --dsh-color-deep-purple-300: #9b94bf;
+  --dsh-color-deep-purple-400: #756f9c;
+  --dsh-color-deep-purple-500: #58527d;
+  --dsh-color-deep-purple-600: #41395f;
+  --dsh-color-deep-purple-700: #2e2847;
+  --dsh-color-red-100: #ffe1de;
+  --dsh-color-red-200: #ffb5af;
+  --dsh-color-red-300: #ff8880;
+  --dsh-color-red-400: #ff4337;
+  --dsh-color-red-500: #db1c10;
+  --dsh-color-red-600: #b21e27;
+  --dsh-color-red-700: #8c1921;
+  --dsh-color-yellow-100: #fff3de;
+  --dsh-color-yellow-200: #fde1a7;
+  --dsh-color-yellow-300: #fad271;
+  --dsh-color-yellow-400: #f9be00;
+  --dsh-color-yellow-500: #d59608;
+  --dsh-color-yellow-600: #b37400;
+  --dsh-color-yellow-700: #8c5d00;
+  --dsh-color-black: #000000;
+  --dsh-color-white: #ffffff;
+  --dsh-color-overlay-dark-80: #000000cc;
+  --dsh-color-overlay-light-80: #ffffffcc;
+  --dsh-elevation-default: 0;
+  --dsh-elevation-raised-100: 100;
+  --dsh-elevation-overlay-200: 200;
+  --dsh-elevation-overlay-300: 300;
+  --dsh-elevation-overlay-400: 400;
+  --dsh-elevation-overlay-500: 500;
+  --dsh-shadow-s: 0px 0px 16px 0px rgba(0, 0, 0, 0.08);
+  --dsh-shadow-m: 0px 8px 40px 0px rgba(0, 0, 0, 0.08);
+  --dsh-shadow-l: 0px 8px 40px 0px rgba(0, 0, 0, 0.16);
+  --dsh-space-0: 0px;
+  --dsh-space-50: 4px;
+  --dsh-space-100: 8px;
+  --dsh-space-150: 12px;
+  --dsh-space-200: 16px;
+  --dsh-space-300: 24px;
+  --dsh-space-400: 32px;
+  --dsh-space-500: 40px;
+  --dsh-space-600: 48px;
+  --dsh-space-700: 56px;
+  --dsh-space-800: 64px;
+  --dsh-space-n50: -4px;
+  --dsh-space-n100: -8px;
+  --dsh-space-n150: -12px;
+  --dsh-space-n200: -16px;
+  --dsh-space-n300: -24px;
+  --dsh-space-n400: -32px;
+  --dsh-space-n500: -40px;
+  --dsh-space-n600: -48px;
+  --dsh-space-n700: -56px;
+  --dsh-space-n800: -64px;
+  --dsh-stroke-weight-s: 1px;
+  --dsh-stroke-weight-m: 2px;
+  --dsh-stroke-weight-l: 4px;
+  --dsh-stroke-weight-xl: 8px;
+  --dsh-text-family-rawson-pro:  'Rawson Pro', sans-serif;
+  --dsh-text-line-height-base: 1rem; /** 16px */
+  --dsh-text-line-height-lg: 1.25rem; /** 20px */
+  --dsh-text-line-height-xl: 1.5rem; /** 24px */
+  --dsh-text-line-height-2xl: 2rem; /** 32px */
+  --dsh-text-line-height-3xl: 2.75rem; /** 44px */
+  --dsh-text-line-height-4xl: 3.75rem; /** 60px */
+  --dsh-text-line-height-5xl: 4.75rem; /** 76px */
+  --dsh-text-size-xs: 0.75rem; /** 12px */
+  --dsh-text-size-sm: 0.875rem; /** 14px */
+  --dsh-text-size-base: 1rem; /** 16px */
+  --dsh-text-size-lg: 1.125rem; /** 18px */
+  --dsh-text-size-xl: 1.5rem; /** 24px */
+  --dsh-text-size-2xl: 2.25rem; /** 36px */
+  --dsh-text-size-3xl: 3rem; /** 48px */
+  --dsh-text-size-4xl: 4rem; /** 64px */
+  --dsh-text-weight-250: 250;
+  --dsh-text-weight-300: 300;
+  --dsh-text-weight-350: 350;
+  --dsh-text-weight-400: 400;
+  --dsh-text-weight-500: 500;
+  --dsh-text-weight-600: 600;
+  --dsh-text-weight-650: 650;
+  --dsh-text-weight-700: 700;
+  --dsh-text-weight-800: 800;
+  --dsh-text-weight-900: 900;
+  --dsh-color-secondary-x-0: var(--dsh-color-indigo-700);
+  --dsh-color-secondary-x-1: var(--dsh-color-indigo-600);
+  --dsh-color-secondary-x-2: var(--dsh-color-indigo-500);
+  --dsh-color-secondary-x-3: var(--dsh-color-indigo-400);
+  --dsh-color-secondary-x-4: var(--dsh-color-indigo-300);
+  --dsh-color-secondary-x-5: var(--dsh-color-indigo-200);
+  --dsh-color-secondary-x-6: var(--dsh-color-indigo-100);
+  --dsh-color-secondary-m-0: var(--dsh-color-deep-purple-700);
+  --dsh-color-secondary-m-1: var(--dsh-color-deep-purple-600);
+  --dsh-color-secondary-m-2: var(--dsh-color-deep-purple-500);
+  --dsh-color-secondary-m-3: var(--dsh-color-deep-purple-400);
+  --dsh-color-secondary-m-4: var(--dsh-color-deep-purple-300);
+  --dsh-color-secondary-m-5: var(--dsh-color-deep-purple-200);
+  --dsh-color-secondary-m-6: var(--dsh-color-deep-purple-100);
+  --dsh-color-secondary-g-0: var(--dsh-color-gray-700);
+  --dsh-color-secondary-g-1: var(--dsh-color-gray-600);
+  --dsh-color-secondary-g-2: var(--dsh-color-gray-500);
+  --dsh-color-secondary-g-3: var(--dsh-color-gray-400);
+  --dsh-color-secondary-g-4: var(--dsh-color-gray-300);
+  --dsh-color-secondary-g-5: var(--dsh-color-gray-200);
+  --dsh-color-secondary-g-6: var(--dsh-color-gray-100);
+  --dsh-color-complementary-v-0: var(--dsh-color-green-700);
+  --dsh-color-complementary-v-1: var(--dsh-color-green-600);
+  --dsh-color-complementary-v-2: var(--dsh-color-green-500);
+  --dsh-color-complementary-v-3: var(--dsh-color-green-400);
+  --dsh-color-complementary-v-4: var(--dsh-color-green-300);
+  --dsh-color-complementary-v-5: var(--dsh-color-green-200);
+  --dsh-color-complementary-v-6: var(--dsh-color-green-100);
+  --dsh-color-complementary-r-0: var(--dsh-color-red-700);
+  --dsh-color-complementary-r-1: var(--dsh-color-red-600);
+  --dsh-color-complementary-r-2: var(--dsh-color-red-500);
+  --dsh-color-complementary-r-3: var(--dsh-color-red-400);
+  --dsh-color-complementary-r-4: var(--dsh-color-red-300);
+  --dsh-color-complementary-r-5: var(--dsh-color-red-200);
+  --dsh-color-complementary-r-6: var(--dsh-color-red-100);
+  --dsh-color-complementary-n-0: var(--dsh-color-orange-700);
+  --dsh-color-complementary-n-1: var(--dsh-color-orange-600);
+  --dsh-color-complementary-n-2: var(--dsh-color-orange-500);
+  --dsh-color-complementary-n-3: var(--dsh-color-orange-400);
+  --dsh-color-complementary-n-4: var(--dsh-color-orange-300);
+  --dsh-color-complementary-n-5: var(--dsh-color-orange-200);
+  --dsh-color-complementary-n-6: var(--dsh-color-orange-100);
+  --dsh-color-complementary-l-0: var(--dsh-color-purple-700);
+  --dsh-color-complementary-l-1: var(--dsh-color-purple-600);
+  --dsh-color-complementary-l-2: var(--dsh-color-purple-500);
+  --dsh-color-complementary-l-3: var(--dsh-color-purple-400);
+  --dsh-color-complementary-l-4: var(--dsh-color-purple-300);
+  --dsh-color-complementary-l-5: var(--dsh-color-purple-200);
+  --dsh-color-complementary-l-6: var(--dsh-color-purple-100);
+  --dsh-color-complementary-t-0: var(--dsh-color-teal-700);
+  --dsh-color-complementary-t-1: var(--dsh-color-teal-600);
+  --dsh-color-complementary-t-2: var(--dsh-color-teal-500);
+  --dsh-color-complementary-t-3: var(--dsh-color-teal-400);
+  --dsh-color-complementary-t-4: var(--dsh-color-teal-300);
+  --dsh-color-complementary-t-5: var(--dsh-color-teal-200);
+  --dsh-color-complementary-t-6: var(--dsh-color-teal-100);
+  --dsh-color-primary-c-0: var(--dsh-color-blue-700);
+  --dsh-color-primary-c-1: var(--dsh-color-blue-600);
+  --dsh-color-primary-c-2: var(--dsh-color-blue-500);
+  --dsh-color-primary-c-3: var(--dsh-color-blue-400);
+  --dsh-color-primary-c-4: var(--dsh-color-blue-300);
+  --dsh-color-primary-c-5: var(--dsh-color-blue-200);
+  --dsh-color-primary-c-6: var(--dsh-color-blue-100);
+  --dsh-color-primary-a-0: var(--dsh-color-yellow-700);
+  --dsh-color-primary-a-1: var(--dsh-color-yellow-600);
+  --dsh-color-primary-a-2: var(--dsh-color-yellow-500);
+  --dsh-color-primary-a-3: var(--dsh-color-yellow-400);
+  --dsh-color-primary-a-4: var(--dsh-color-yellow-300);
+  --dsh-color-primary-a-5: var(--dsh-color-yellow-200);
+  --dsh-color-primary-a-6: var(--dsh-color-yellow-100);
+  --dsh-color-mono-white: var(--dsh-color-white);
+  --dsh-color-mono-black: var(--dsh-color-black);
+}

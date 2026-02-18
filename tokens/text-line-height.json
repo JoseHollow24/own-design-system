@@ -1,0 +1,36 @@
+{
+  "dsh": {
+    "text": {
+      "line-height": {
+        "base": {
+          "value": "1rem",
+          "comment": "16px"
+        },
+        "lg": {
+          "value": "1.25rem",
+          "comment": "20px"
+        },
+        "xl": {
+          "value": "1.5rem",
+          "comment": "24px"
+        },
+        "2xl": {
+          "value": "2rem",
+          "comment": "32px"
+        },
+        "3xl": {
+          "value": "2.75rem",
+          "comment": "44px"
+        },
+        "4xl": {
+          "value": "3.75rem",
+          "comment": "60px"
+        },
+        "5xl": {
+          "value": "4.75rem",
+          "comment": "76px"
+        }
+      }
+    }
+  }
+}
