@@ -6,7 +6,12 @@
     "module": "ESNext",
     "moduleResolution": "bundler",
     "jsx": "react-jsx",
-    "jsxImportSource": "atomico"
+    "jsxImportSource": "atomico",
+    "baseUrl": ".",
+    "paths": {
+      "@components/*": ["components/*"],
+      "@tokens": ["src/generated-tokens/tokens.js"]
+    }
   },
-  "include": ["src/**/*", "build-tokens.js"] // El "/**/*" asegura que busque en todas las subcarpetas
+  "include": ["src/**/*", "components/**/*"]
 }

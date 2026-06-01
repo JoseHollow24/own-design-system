@@ -1,5 +1,5 @@
 import { html } from "lit-html";
-import "../../components/button/button";
+import "@components/button";
 
 export default {
   title: 'Atoms/Button',

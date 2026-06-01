@@ -3,7 +3,7 @@
 
 // 2. Exportar los componentes
 // Al exportar Button, exportas tanto la clase del componente como el registro
-export * from "./components/button/button";
+export * from "@components/button";
 
 /**
  * Si en el futuro tienes más componentes, se vería así:
