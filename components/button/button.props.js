@@ -1,4 +1,8 @@
 const props = {
+  label: {
+    type: String,
+    reflect: true,
+  },
   id: {
     type: String,
     reflect: true,
@@ -28,11 +32,6 @@ const props = {
     value: false,
   },
   loading: {
-    type: Boolean,
-    reflect: true,
-    value: false,
-  },
-  vertical: {
     type: Boolean,
     reflect: true,
     value: false,

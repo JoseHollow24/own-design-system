@@ -1,11 +1,50 @@
-import { Meta, Story, Canvas, Heading, Title, Subtitle, Controls, Source, } from "@storybook/addon-docs/blocks";
-import { html } from "lit-html";
-import * as Button from "./button.stories";
+import { Meta, Canvas, Controls } from "@storybook/addon-docs/blocks";
+import * as ButtonStories from "./button.stories";
 
-<Meta of={Button} />
+<Meta of={ButtonStories} />
 
-## Button - Web Component
+# dsh-button
 
-### Primary
+Web component de botón del DSH Design System. Construido con Atomico sobre Shadow DOM.
 
-<Canvas of={Button.Primary} />
+Soporta variantes **primary**, **secondary** y **tertiary**, colores **blue** y **yellow**, y estados como disabled, loading, full y fluid.
+
+## Primary
+
+<Canvas of={ButtonStories.Primary} />
+
+## Secondary
+
+<Canvas of={ButtonStories.Secondary} />
+
+## Tertiary
+
+<Canvas of={ButtonStories.Tertiary} />
+
+## Full Width
+
+<Canvas of={ButtonStories.Full} />
+
+## Slots (íconos)
+
+Usa `slot="left"` y `slot="right"` para insertar íconos en el botón.
+
+<Canvas of={ButtonStories.Slots} />
+
+## Playground
+
+Interactúa con todas las propiedades del botón:
+
+<Canvas of={ButtonStories.Playground} />
+<Controls of={ButtonStories.Playground} />
+
+## React — Cómo usarlo
+
+El componente `<dsh-button>` es un Web Component estándar, consumible desde cualquier framework.
+El evento que dispara se llama `buttonClick` (CustomEvent, `bubbles: true`, `composed: true`).
+
+<Canvas of={ButtonStories.ReactUsage} />
+
+El tab **Show code** muestra los dos patrones de consumo:
+- **React 19** — prop `onbuttonclick` directamente en JSX (soporte nativo de custom elements)
+- **React 18** — `useRef` + `addEventListener('buttonClick', handler)`

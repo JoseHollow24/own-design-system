@@ -10,7 +10,10 @@
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "build:tokens": "node build-tokens.js"
+    "build:tokens": "node build-tokens.js",
+    "dev:button": "vite --config components/button/vite.config.js",
+    "build:button": "vite build --config components/button/vite.config.js",
+    "test:button": "npm run build:button && web-test-runner components/button/button.test.js --config components/button/web-test-runner.mjs"
   },
   "dependencies": {
     "@atomico/hooks": "^4.4.1",
@@ -21,6 +24,8 @@
   "devDependencies": {
     "@atomico/vite": "^3.1.0",
     "@eslint/js": "^9.39.1",
+    "@esm-bundle/chai": "^4.3.4-fix.0",
+    "@open-wc/testing": "^4.0.0",
     "@storybook/addon-a11y": "^10.2.9",
     "@storybook/addon-docs": "^10.2.9",
     "@storybook/addon-links": "^10.2.9",
@@ -30,6 +35,8 @@
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^5.1.1",
+    "@vitest/browser": "^4.1.8",
+    "@web/test-runner": "^0.20.2",
     "eslint": "^9.39.1",
     "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-react-refresh": "^0.4.24",
@@ -41,6 +48,7 @@
     "typescript": "~5.9.3",
     "typescript-eslint": "^8.48.0",
     "vite": "^7.3.1",
-    "vite-plugin-dts": "^4.5.4"
+    "vite-plugin-dts": "^4.5.4",
+    "vitest": "^4.1.8"
   }
 }

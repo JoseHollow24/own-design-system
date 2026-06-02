@@ -1,49 +1,37 @@
-import { c, useRef, useEffect, useState, useEvent, Fragment } from 'atomico';
+import { c, useRef, useEffect, useState, useEvent } from 'atomico';
 import { useSlot } from "@atomico/hooks/use-slot";
 
 import componentProps from './button.props';
 import { baseStyles, primaryLight, secondaryLight, tertiaryLight } from './button.styles';
 
-const Component = ({ 
-  label, 
+const Component = ({
+  label,
   variant = "primary",
   disabled,
-  id, name, type, color, loading, href, target, full, fluid, ariaLabel, width, vertical
+  id, name, type, color, loading, href, target, full, fluid, ariaLabel, width
 }) => {
-  //States
   const [classes, setClasses] = useState('');
   const [hostClasses, setHostClasses] = useState('');
 
-  //Ref
   const refSlotStart = useRef();
   const refSlotMain = useRef();
   const refSlotEnd = useRef();
   const refAnchor = useRef();
   const refButton = useRef();
-  const lastInteractionRef = useRef(null);
 
   const slotStart = useSlot(refSlotStart);
   const slotMain = useSlot(refSlotMain);
   const slotEnd = useSlot(refSlotEnd);
 
-  //Events
-  const dispatchOnClick = useEvent('onClick', {
+  const dispatchButtonClick = useEvent('buttonClick', {
     bubbles: true,
     composed: true,
   });
 
-  //Methods
   const methods = {
     on: {
       click: (event) => {
-        dispatchOnClick(event);
-
-        if (href && lastInteractionRef.current !== 'keyboard') {
-          trackInteraction('mouse');
-        }
-
-        lastInteractionRef.current = null;
-
+        dispatchButtonClick(event);
         if (href && target) {
           refAnchor?.current?.click(event);
         }
@@ -51,10 +39,7 @@ const Component = ({
       keydown: (event) => {
         if (event.key === 'Enter' || event.key === ' ') {
           event.preventDefault();
-          lastInteractionRef.current = 'keyboard';
-
           if (href) {
-            trackInteraction('keyboard');
             refButton.current?.click();
           }
         }
@@ -73,7 +58,7 @@ const Component = ({
         current += color ? ` ${color}` : '';
         current += fluid ? ` fluid` : '';
         current += full ? ` full` : '';
-        current += vertical ? ` vertical` : '';
+        current += loading ? ` loading` : '';
         setClasses(current.trim());
       },
     },
@@ -82,18 +67,22 @@ const Component = ({
   useEffect(() => {
     methods.calculate.classes();
     methods.calculate.hostClasses();
-  }, [variant, color, full, disabled, vertical, fluid]);
+  }, [variant, color, full, disabled, fluid, loading]);
 
   return (
     <host shadowDom className={hostClasses}>
       <a ref={refAnchor} href={href} target={target} className="hidden"></a>
-      <button 
+      <button
         ref={refButton}
         onclick={methods.on.click}
+        onkeydown={methods.on.keydown}
         className={classes}
         disabled={disabled}
       >
-        {label || "button"} 
+        <slot name="left" ref={refSlotStart}></slot>
+        <slot ref={refSlotMain}>{label}</slot>
+        <slot name="right" ref={refSlotEnd}></slot>
+        {loading ? <span className="spinner"></span> : null}
       </button>
     </host>
   );

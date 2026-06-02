@@ -12,32 +12,6 @@
   --dsh-border-radius-300: 24px; /** 1.5rem */
   --dsh-border-radius-400: 32px; /** 2rem */
   --dsh-border-radius-full: 50%; /** 50% */
-  --dsh-color-secondary-a1: #B37400;
-  --dsh-color-secondary-a2: #D59608;
-  --dsh-color-secondary-a3: #F9BE00;
-  --dsh-color-secondary-a4: #FAD271;
-  --dsh-color-secondary-a5: #FDE1A7;
-  --dsh-color-secondary-a6: #FFF3DE;
-  --dsh-color-complementary-m1: #41395F;
-  --dsh-color-complementary-m2: #58527D;
-  --dsh-color-complementary-m3: #756F9C;
-  --dsh-color-complementary-m4: #9B94BF;
-  --dsh-color-complementary-m5: #C3BEDF;
-  --dsh-color-complementary-m6: #EFECFF;
-  --dsh-color-complementary-x1: #326295;
-  --dsh-color-complementary-x2: #6589AF;
-  --dsh-color-complementary-x3: #98B0CA;
-  --dsh-color-complementary-x4: #B7C8DA;
-  --dsh-color-complementary-x5: #D6E0EA;
-  --dsh-color-complementary-x6: #EBEFF4;
-  --dsh-color-complementary-g1: #3E4545;
-  --dsh-color-complementary-g2: #586264;
-  --dsh-color-complementary-g3: #A8B3B7;
-  --dsh-color-complementary-g4: #C9D0D3;
-  --dsh-color-complementary-g5: #DFE3E5;
-  --dsh-color-complementary-g6: #F6F7F7;
-  --dsh-color-monochromatic-w1: #ffffff;
-  --dsh-color-monochromatic-b1: #000000;
   --dsh-color-blue-100: #def4ff;
   --dsh-color-blue-200: #92d5f1;
   --dsh-color-blue-300: #4ebce3;
@@ -172,6 +146,20 @@
   --dsh-text-weight-700: 700;
   --dsh-text-weight-800: 800;
   --dsh-text-weight-900: 900;
+  --dsh-color-primary-c-0: var(--dsh-color-blue-700);
+  --dsh-color-primary-c-1: var(--dsh-color-blue-600);
+  --dsh-color-primary-c-2: var(--dsh-color-blue-500);
+  --dsh-color-primary-c-3: var(--dsh-color-blue-400);
+  --dsh-color-primary-c-4: var(--dsh-color-blue-300);
+  --dsh-color-primary-c-5: var(--dsh-color-blue-200);
+  --dsh-color-primary-c-6: var(--dsh-color-blue-100);
+  --dsh-color-primary-a-0: var(--dsh-color-yellow-700);
+  --dsh-color-primary-a-1: var(--dsh-color-yellow-600);
+  --dsh-color-primary-a-2: var(--dsh-color-yellow-500);
+  --dsh-color-primary-a-3: var(--dsh-color-yellow-400);
+  --dsh-color-primary-a-4: var(--dsh-color-yellow-300);
+  --dsh-color-primary-a-5: var(--dsh-color-yellow-200);
+  --dsh-color-primary-a-6: var(--dsh-color-yellow-100);
   --dsh-color-secondary-x-0: var(--dsh-color-indigo-700);
   --dsh-color-secondary-x-1: var(--dsh-color-indigo-600);
   --dsh-color-secondary-x-2: var(--dsh-color-indigo-500);
@@ -228,20 +216,6 @@
   --dsh-color-complementary-t-4: var(--dsh-color-teal-300);
   --dsh-color-complementary-t-5: var(--dsh-color-teal-200);
   --dsh-color-complementary-t-6: var(--dsh-color-teal-100);
-  --dsh-color-primary-c-0: var(--dsh-color-blue-700);
-  --dsh-color-primary-c-1: var(--dsh-color-blue-600);
-  --dsh-color-primary-c-2: var(--dsh-color-blue-500);
-  --dsh-color-primary-c-3: var(--dsh-color-blue-400);
-  --dsh-color-primary-c-4: var(--dsh-color-blue-300);
-  --dsh-color-primary-c-5: var(--dsh-color-blue-200);
-  --dsh-color-primary-c-6: var(--dsh-color-blue-100);
-  --dsh-color-primary-a-0: var(--dsh-color-yellow-700);
-  --dsh-color-primary-a-1: var(--dsh-color-yellow-600);
-  --dsh-color-primary-a-2: var(--dsh-color-yellow-500);
-  --dsh-color-primary-a-3: var(--dsh-color-yellow-400);
-  --dsh-color-primary-a-4: var(--dsh-color-yellow-300);
-  --dsh-color-primary-a-5: var(--dsh-color-yellow-200);
-  --dsh-color-primary-a-6: var(--dsh-color-yellow-100);
   --dsh-color-mono-white: var(--dsh-color-white);
   --dsh-color-mono-black: var(--dsh-color-black);
 }
