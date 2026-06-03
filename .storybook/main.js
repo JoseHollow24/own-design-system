@@ -42,6 +42,11 @@ const config = {
           '@tokens': resolve(__dirname, '../src/generated-tokens/tokens.js'),
         },
       },
+      esbuild: {
+        jsxFactory: 'h',
+        jsxFragment: 'Fragment',
+        jsxInject: `import { h, Fragment } from 'atomico'`,
+      },
     }),
 };
 
