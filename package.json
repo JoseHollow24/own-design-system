@@ -48,7 +48,10 @@
     "src/generated-tokens/tokens.css"
   ],
   "sideEffects": [
-    "./dist/**/*.js"
+    "./dist/**/*.js",
+    "./components/**/*.jsx",
+    "./components/**/*.js",
+    "./src/**/*.js"
   ],
   "scripts": {
     "dev": "vite",
