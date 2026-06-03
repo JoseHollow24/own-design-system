@@ -25,9 +25,12 @@ import {
   DshColorSecondaryG3,
   DshColorSecondaryG5,
   DshColorSecondaryG6,
+  DshColorPrimaryA1,
+  DshColorPrimaryA2,
   DshColorPrimaryA3,
   DshColorPrimaryA4,
   DshColorPrimaryA5,
+  DshColorSecondaryG0,
   DshColorComplementaryR1,
   DshColorComplementaryR2,
   DshColorComplementaryR4,
@@ -158,6 +161,40 @@ export const primaryLight = css`
     padding: calc(${DshSpace150} - ${DshStrokeWeightM}) calc(${DshSpace300} - ${DshStrokeWeightM});
     outline: none;
     outline-offset: 0;
+  }
+  button.primary.yellow {
+    color: ${DshColorSecondaryG0};
+    background-color: ${DshColorPrimaryA3};
+  }
+  button.primary.yellow:hover {
+    background-color: ${DshColorPrimaryA2};
+  }
+  button.primary.yellow:active {
+    color: ${DshColorSecondaryG0};
+    background-color: ${DshColorPrimaryA2};
+    border: 3px solid ${DshColorPrimaryA1};
+    padding: calc(${DshSpace150} - 3px) calc(${DshSpace300} - 3px);
+  }
+  button.primary.yellow:focus {
+    color: ${DshColorSecondaryG0};
+    background-color: ${DshColorPrimaryA3};
+    outline: ${DshStrokeWeightM} solid ${DshColorPrimaryC2};
+    outline-offset: ${DshStrokeWeightM};
+  }
+  button.primary.yellow:active:focus {
+    color: ${DshColorSecondaryG0};
+    background-color: ${DshColorPrimaryA2};
+    border: 3px solid ${DshColorPrimaryA1};
+    padding: calc(${DshSpace150} - 3px) calc(${DshSpace300} - 3px);
+    outline: none;
+    outline-offset: 0;
+  }
+  button.primary.yellow.vertical {
+    padding: ${DshSpace150} ${DshSpace200};
+  }
+  button.primary.yellow.vertical:focus {
+    border: 3px solid ${DshColorPrimaryA1};
+    padding: calc(${DshSpace150} - 3px) calc(${DshSpace200} - 3px);
   }
   button.primary:disabled {
     color: ${DshColorMonoWhite} !important;
