@@ -198,8 +198,8 @@ export const Interaction = {
     let lastEvent = null;
     host.addEventListener('checkbox-change', (e) => { lastEvent = e.detail; });
 
-    const label = host?.shadowRoot?.querySelector('dsh-checkbox-label');
-    const input = label?.shadowRoot?.querySelector('label') ?? host?.shadowRoot?.querySelector('input');
+    const labelEl = host?.shadowRoot?.querySelector('dsh-checkbox-label');
+    const input = labelEl?.querySelector('input') ?? host?.shadowRoot?.querySelector('input');
     if (input) await userEvent.click(input);
 
     await expect(host.checked).toBe(true);
@@ -212,7 +212,8 @@ export const Interaction = {
     // El deshabilitado no cambia
     const disabled = canvasElement.querySelector('#cb-disabled');
     await expect(disabled.checked).toBe(false);
-    const disabledInput = disabled?.shadowRoot?.querySelector('input');
+    const disabledLabelEl = disabled?.shadowRoot?.querySelector('dsh-checkbox-label');
+    const disabledInput = disabledLabelEl?.querySelector('input') ?? disabled?.shadowRoot?.querySelector('input');
     if (disabledInput) await userEvent.click(disabledInput);
     await expect(disabled.checked).toBe(false);
   },

@@ -21,7 +21,7 @@ function SelectComponent({
   const update = useUpdate();
   const { current } = useHost();
 
-  const cantSelected = childNodes.filter((el) => el.selected).length;
+  const cantSelected = Array.from(childNodes || []).filter((el) => el instanceof HTMLElement && el.selected).length;
 
   const buildList = () => {
     const list = slotOptions.map((opt) => ({
