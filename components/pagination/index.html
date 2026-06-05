@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dsh-pagination — Dev</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../../src/generated-tokens/tokens.css" />
+    <style>
+      body { font-family: 'Plus Jakarta Sans', sans-serif; padding: 32px; background: #f6f7f7; }
+      section { background: #fff; border-radius: 12px; padding: 32px; margin-bottom: 24px; }
+      h2 { font-size: 14px; color: #586264; margin: 0 0 16px; text-transform: uppercase; letter-spacing: 1px; }
+    </style>
+    <script type="module" src="./index.js"></script>
+  </head>
+  <body>
+    <section>
+      <h2>Pocas páginas</h2>
+      <dsh-pagination pages="5"></dsh-pagination>
+    </section>
+    <section>
+      <h2>Muchas páginas — inicio</h2>
+      <dsh-pagination pages="20" select-page="1"></dsh-pagination>
+    </section>
+    <section>
+      <h2>Muchas páginas — medio</h2>
+      <dsh-pagination pages="20" select-page="10"></dsh-pagination>
+    </section>
+    <section>
+      <h2>Con sombra</h2>
+      <dsh-pagination pages="10" shadow></dsh-pagination>
+    </section>
+  </body>
+</html>

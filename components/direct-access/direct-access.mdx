@@ -1,0 +1,35 @@
+import { Meta, Canvas, Controls } from "@storybook/addon-docs/blocks";
+import * as DirectAccessStories from "./direct-access.stories";
+
+<Meta of={DirectAccessStories} />
+
+# dsh-direct-access
+
+Web component de acceso directo del DSH Design System. Tarjeta con ícono coloreado según segmento, título y subtítulo. Incluye tracking GTM y soporte para enlaces externos.
+
+## Por defecto
+
+<Canvas of={DirectAccessStories.Default} />
+
+## Segmentos
+
+El prop `segment` determina el color del fondo del ícono.
+
+<Canvas of={DirectAccessStories.Segments} />
+
+## Con enlace externo
+
+Cuando `target="_blank"`, se muestra un footer con ícono de enlace externo y texto configurable via `link-text`.
+
+<Canvas of={DirectAccessStories.WithExternalLink} />
+
+## Con etiqueta
+
+Usa el prop `tag` para mostrar una etiqueta flotante sobre la tarjeta.
+
+<Canvas of={DirectAccessStories.WithTag} />
+
+## Playground
+
+<Canvas of={DirectAccessStories.Playground} />
+<Controls of={DirectAccessStories.Playground} />

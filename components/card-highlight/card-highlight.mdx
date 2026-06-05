@@ -1,0 +1,63 @@
+import { Meta, Canvas, Controls } from "@storybook/addon-docs/blocks";
+import * as CardHighlightStories from "./card-highlight.stories";
+
+<Meta of={CardHighlightStories} />
+
+# dsh-card-highlights
+
+Web component de tarjetas destacadas del DSH Design System. Presenta una serie de elementos visuales apilados con efecto de profundidad, donde el primero se muestra en primer plano.
+
+## 3 Items
+
+<Canvas of={CardHighlightStories.ThreeItems} />
+
+## 2 Items
+
+<Canvas of={CardHighlightStories.TwoItems} />
+
+## Todos los colores
+
+<Canvas of={CardHighlightStories.AllColors} />
+
+## Playground
+
+<Canvas of={CardHighlightStories.Playground} />
+<Controls of={CardHighlightStories.Playground} />
+
+## Componentes
+
+| Componente | Descripción |
+|---|---|
+| `dsh-card-highlights` | Contenedor que gestiona el layout y asigna props automáticamente a los items |
+| `dsh-card-highlights-item` | Item individual con slots `icon` y `label` |
+
+## Props de dsh-card-highlights-item
+
+| Prop | Tipo | Default | Descripción |
+|------|------|---------|-------------|
+| `color` | String | `"a6"` | Color del item: a6, r6, n6, v6, t6, l6, m6, x6, a1 |
+| `type` | String | `""` | Asignado automáticamente: "one" (primero) o "informative" (resto) |
+| `index` | String | `""` | Posición inversa asignada por el contenedor |
+| `total` | Number | `1` | Total de items, asignado por el contenedor |
+
+## Slots de dsh-card-highlights-item
+
+| Slot | Descripción |
+|------|-------------|
+| `icon` | Icono o SVG (48px desktop, 32px mobile) |
+| `label` | Texto del elemento |
+
+## Uso
+
+```html
+<dsh-card-highlights>
+  <dsh-card-highlights-item slot="tab" color="a6">
+    <svg slot="icon">...</svg>
+    <span slot="label">Primer elemento</span>
+  </dsh-card-highlights-item>
+  <dsh-card-highlights-item slot="tab" color="r6">
+    <svg slot="icon">...</svg>
+    <span slot="label">Segundo elemento</span>
+  </dsh-card-highlights-item>
+</dsh-card-highlights>
+```

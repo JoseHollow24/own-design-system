@@ -1,0 +1,43 @@
+import { Meta, Canvas, Controls } from "@storybook/addon-docs/blocks";
+import * as CardHeadlineStories from "./card-headline.stories";
+
+<Meta of={CardHeadlineStories} />
+
+# dsh-card-headline
+
+Web component de tarjeta destacada del DSH Design System. Muestra una imagen circular, título, monto y descripción.
+
+## Info
+
+<Canvas of={CardHeadlineStories.Info} />
+
+## Segmentos
+
+<Canvas of={CardHeadlineStories.Segmentos} />
+
+## Playground
+
+<Canvas of={CardHeadlineStories.Playground} />
+<Controls of={CardHeadlineStories.Playground} />
+
+## Props
+
+| Prop | Tipo | Default | Descripción |
+|------|------|---------|-------------|
+| `segment` | String | `"default"` | Color del header: default, blue, purple, slate |
+| `variant` | String | `"info"` | Layout: info (monto + descripción) o custom (slot libre) |
+| `img` | String | `""` | URL de imagen circular en header |
+| `amount` | String | `""` | Valor destacado (solo variant info) |
+| `button-text` | String | `""` | Texto del botón de acción |
+| `button-link` | String | `""` | URL del botón de acción |
+| `target` | String | `"_self"` | Target del enlace: _self, _blank |
+| `description-font` | String | `"default"` | Tamaño fuente descripción (small, default, large) |
+| `description-font-mobile` | String | `"default"` | Tamaño fuente descripción en móvil |
+
+## Slots
+
+| Slot | Descripción |
+|------|-------------|
+| `title` | Título del card (span, h3, etc.) |
+| `description` | Descripción (solo variant info) |
+| default | Contenido personalizado (variant custom) |

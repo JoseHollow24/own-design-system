@@ -1,0 +1,54 @@
+import { Meta, Canvas, Controls } from "@storybook/addon-docs/blocks";
+import * as ProgressBarStories from "./progress-bar.stories";
+
+<Meta of={ProgressBarStories} />
+
+# dsh-progress-bar
+
+Web component de barra de progreso apilada del DSH Design System. Muestra múltiples segmentos de color con leyenda, etiquetas y soporte para título via slot.
+
+## Por defecto
+
+<Canvas of={ProgressBarStories.Default} />
+
+## Con título (slot)
+
+Usa `slot="title"` para mostrar un título encima de la barra.
+
+<Canvas of={ProgressBarStories.WithTitle} />
+
+## Colores disponibles
+
+Los colores se configuran con claves de token: `c1`, `v1`, `r1`, `a3`, `n1`, `t1`, `m1`, `l1`, `x1`, `g4`, entre otros.
+
+<Canvas of={ProgressBarStories.Colors} />
+
+## Múltiples segmentos
+
+<Canvas of={ProgressBarStories.MultiSegment} />
+
+## Playground
+
+<Canvas of={ProgressBarStories.Playground} />
+<Controls of={ProgressBarStories.Playground} />
+
+## React — Cómo usarlo
+
+```tsx
+import 'josehollow-design-system/components/progress-bar';
+
+const options = JSON.stringify([
+  { value: 60, color: 'c1', label: 'Completado' },
+  { value: 40, color: 'g4', label: 'Pendiente' },
+]);
+
+function MyProgressBar() {
+  return (
+    <dsh-progress-bar
+      options-data={options}
+      label-top-start="0%"
+      label-top-end="100%"
+    />
+  );
+}
+```

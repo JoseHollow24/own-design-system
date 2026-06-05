@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dsh-message — Dev</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../../src/generated-tokens/tokens.css" />
+    <style>
+      body { font-family: 'Plus Jakarta Sans', sans-serif; padding: 32px; background: #f6f7f7; }
+      section { margin-bottom: 16px; }
+      h2 { font-size: 13px; color: #586264; margin: 0 0 8px; text-transform: uppercase; }
+    </style>
+    <script type="module" src="./index.js"></script>
+  </head>
+  <body>
+    <section>
+      <h2>Info</h2>
+      <dsh-message variant="info">
+        <div slot="title"><h3 style="margin:0">Información</h3></div>
+        <div slot="content"><p style="margin:4px 0 0">Mensaje informativo estándar.</p></div>
+        <div slot="footer"><a href="/">Ver más</a></div>
+      </dsh-message>
+    </section>
+    <section>
+      <h2>Informative</h2>
+      <dsh-message variant="informative" close-button>
+        <div slot="title"><h4 style="margin:0">Informativo</h4></div>
+        <div slot="content"><p style="margin:4px 0 0">Mensaje con fondo azul.</p></div>
+      </dsh-message>
+    </section>
+    <section>
+      <h2>Success</h2>
+      <dsh-message variant="success">
+        <div slot="title"><h4 style="margin:0">Éxito</h4></div>
+        <div slot="content"><p style="margin:4px 0 0">Operación completada.</p></div>
+      </dsh-message>
+    </section>
+    <section>
+      <h2>Error</h2>
+      <dsh-message variant="error" close-button>
+        <div slot="title"><h4 style="margin:0">Error</h4></div>
+        <div slot="content"><p style="margin:4px 0 0">Algo salió mal.</p></div>
+      </dsh-message>
+    </section>
+    <section>
+      <h2>Warning</h2>
+      <dsh-message variant="warning">
+        <div slot="title"><h4 style="margin:0">Advertencia</h4></div>
+        <div slot="content"><p style="margin:4px 0 0">Revisa los datos.</p></div>
+      </dsh-message>
+    </section>
+    <section>
+      <h2>Important</h2>
+      <dsh-message variant="important">
+        <div slot="title"><h4 style="margin:0">Destacado</h4></div>
+        <div slot="content"><p style="margin:4px 0 0">Mensaje con borde punteado.</p></div>
+        <div slot="footer"><a href="/">Más información</a></div>
+      </dsh-message>
+    </section>
+  </body>
+</html>

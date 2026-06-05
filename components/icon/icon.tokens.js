@@ -26,9 +26,9 @@ import {
 } from '@tokens';
 
 export const colorTokens = {
-  empresas: `${DshColorSecondaryG1}`,
-  trabajadores: `${DshColorPrimaryC2}`,
-  pensionados: `${DshColorSecondaryM2}`,
+  slate: `${DshColorSecondaryG1}`,
+  blue: `${DshColorPrimaryC2}`,
+  purple: `${DshColorSecondaryM2}`,
   white: `${DshColorMonoWhite}`,
   black: `${DshColorMonoBlack}`,
   negro: `${DshColorMonoBlack}`,

@@ -1,0 +1,51 @@
+import { Meta, Canvas, Controls } from "@storybook/addon-docs/blocks";
+import * as MessageStories from "./message.stories";
+
+<Meta of={MessageStories} />
+
+# dsh-message
+
+Web component de mensaje del DSH Design System. Combina tres variantes de mensaje en un solo componente controlado por el prop `variant`.
+
+## Variantes disponibles
+
+| Variant | Descripción |
+|---------|-------------|
+| `info` | Mensaje informativo simple con ícono azul y fondo blanco |
+| `informative` | Fondo azul claro, ícono info |
+| `success` | Fondo verde claro, ícono check |
+| `error` | Fondo rojo claro, ícono X |
+| `warning` | Fondo naranja claro, ícono triángulo |
+| `important` | Borde punteado, fondo índigo claro, sin ícono automático |
+
+## Info
+
+<Canvas of={MessageStories.Info} />
+
+## Variantes de acción
+
+<Canvas of={MessageStories.ActionVariants} />
+
+## Con botón de cierre
+
+El prop `close-button` agrega un botón X (disponible en variantes de acción). Al cerrarse emite el evento `hide-message`.
+
+<Canvas of={MessageStories.WithCloseButton} />
+
+## Importante
+
+<Canvas of={MessageStories.Important} />
+
+## Playground
+
+<Canvas of={MessageStories.Playground} />
+<Controls of={MessageStories.Playground} />
+
+## Slots
+
+| Slot | Descripción |
+|------|-------------|
+| `title` | Título del mensaje |
+| `content` | Contenido principal |
+| `footer` | Acciones o enlaces al pie |
+| `icon` | Ícono personalizado (solo para variant `important`) |

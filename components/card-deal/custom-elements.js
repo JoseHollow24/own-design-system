@@ -1,0 +1,40 @@
+export default {
+  component: 'dsh-card-deal',
+  args: {
+    variant: 'featured-discount',
+    segment: 'blue',
+    tagColor: 'blue',
+    tagText: 'Text Tag',
+    img: 'https://www.w3schools.com/howto/img_mountains_wide.jpg',
+    title: 'Fracción',
+    subtitle: 'Recibe hasta un 50% de dcto. en el total de tu boleta.',
+    description: 'Válido por compras online hasta agotar stock. Tope: $7.500',
+    textamount: 'Dcto.',
+    amount: '50<sup>%</sup>',
+    link: 'https://www.google.com',
+    linkText: 'Ver más',
+  },
+  argTypes: {
+    variant: {
+      control: 'select',
+      options: ['default', 'featured', 'featured-discount'],
+    },
+    segment: {
+      control: 'select',
+      options: ['default', 'blue', 'purple', 'slate'],
+    },
+    tagColor: {
+      control: 'select',
+      options: ['blue', 'yellow'],
+    },
+    img: { control: 'text' },
+    tagText: { control: 'text' },
+    title: { control: 'text' },
+    subtitle: { control: 'text' },
+    description: { control: 'text' },
+    textamount: { control: 'text' },
+    amount: { control: 'text' },
+    link: { control: 'text' },
+    linkText: { control: 'text' },
+  },
+};

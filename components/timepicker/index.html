@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DSH Timepicker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <style>
+      body { font-family: 'Plus Jakarta Sans', sans-serif; margin: 0; padding: 24px; background: #f5f5f5; }
+      .demo { display: flex; gap: 32px; flex-wrap: wrap; margin-bottom: 32px; align-items: flex-start; }
+    </style>
+  </head>
+  <body>
+    <h1>DSH Timepicker</h1>
+
+    <div class="demo">
+      <dsh-timepicker
+        id="tp1"
+        max-options="3"
+      >
+        <p slot="text">Selecciona horario</p>
+      </dsh-timepicker>
+    </div>
+
+    <script type="module" src="./index.js"></script>
+    <script type="module">
+      const times = [
+        { time: '08:00', selected: false, disabled: false },
+        { time: '08:30', selected: false, disabled: false },
+        { time: '09:00', selected: false, disabled: false },
+        { time: '09:30', selected: false, disabled: true },
+        { time: '10:00', selected: false, disabled: false },
+        { time: '10:30', selected: false, disabled: false },
+        { time: '11:00', selected: false, disabled: false },
+        { time: '14:00', selected: false, disabled: false },
+        { time: '14:30', selected: false, disabled: false },
+        { time: '15:00', selected: false, disabled: false },
+      ];
+      document.getElementById('tp1').timeData = JSON.stringify(times);
+    </script>
+  </body>
+</html>

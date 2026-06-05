@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dsh-menu-vertical — Dev</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="../../src/generated-tokens/tokens.css" />
+    <style>
+      body { font-family: 'Plus Jakarta Sans', sans-serif; padding: 0; background: #f6f7f7; display: flex; }
+      .container { width: 260px; height: 100vh; background: white; }
+    </style>
+    <script type="module" src="./index.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <dsh-menu-vertical>
+        <dsh-menu-vertical-item
+          slot="menu-item"
+          item-value="Inicio"
+          item-identifier="inicio"
+          href="#"
+          desktop-icon-name="fa-house"
+          mobile-icon-name="fa-house"
+          is-home-item
+        ></dsh-menu-vertical-item>
+
+        <dsh-menu-vertical-item
+          slot="menu-item"
+          item-value="Mi cuenta"
+          item-identifier="mi-cuenta"
+          href="#"
+        >
+          <dsh-menu-vertical-subitem slot="sub-item" href="#" sub-item-identifier="cuenta-1">
+            Datos personales
+          </dsh-menu-vertical-subitem>
+          <dsh-menu-vertical-subitem slot="sub-item" href="#" sub-item-identifier="cuenta-2">
+            Seguridad
+          </dsh-menu-vertical-subitem>
+        </dsh-menu-vertical-item>
+
+        <dsh-menu-vertical-item
+          slot="menu-item"
+          item-value="Beneficios"
+          item-identifier="products"
+          href="#"
+          desktop-icon-name="fa-star"
+        >
+          <dsh-menu-vertical-subitem slot="sub-item" href="#" sub-item-identifier="bene-1">
+            Descuentos
+          </dsh-menu-vertical-subitem>
+          <dsh-menu-vertical-subitem slot="sub-item" href="#" sub-item-identifier="bene-2">
+            Convenios
+          </dsh-menu-vertical-subitem>
+        </dsh-menu-vertical-item>
+
+        <dsh-menu-vertical-item
+          slot="menu-item"
+          item-value="Configuración"
+          item-identifier="config"
+          href="#"
+        ></dsh-menu-vertical-item>
+      </dsh-menu-vertical>
+    </div>
+  </body>
+</html>

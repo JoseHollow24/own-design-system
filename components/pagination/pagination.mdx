@@ -1,0 +1,45 @@
+import { Meta, Canvas, Controls } from "@storybook/addon-docs/blocks";
+import * as PaginationStories from "./pagination.stories";
+
+<Meta of={PaginationStories} />
+
+# dsh-pagination
+
+Web component de paginación del DSH Design System. Muestra botones prev/next con íconos y numeración dinámica con puntos suspensivos para rangos extensos.
+
+## Por defecto
+
+<Canvas of={PaginationStories.Default} />
+
+## Pocas páginas
+
+Con 6 o menos páginas no aparecen puntos suspensivos.
+
+<Canvas of={PaginationStories.FewPages} />
+
+## Muchas páginas
+
+Con más de 6 páginas aparecen puntos suspensivos adaptados a la posición actual.
+
+<Canvas of={PaginationStories.ManyPages} />
+
+## Con sombra
+
+<Canvas of={PaginationStories.WithShadow} />
+
+## Playground
+
+<Canvas of={PaginationStories.Playground} />
+<Controls of={PaginationStories.Playground} />
+
+## Eventos
+
+El componente emite tres CustomEvents:
+
+| Evento | Detalle | Cuándo |
+|--------|---------|--------|
+| `nextPage` | número de página | Al hacer clic en "Siguiente" |
+| `prevPage` | número de página | Al hacer clic en "Anterior" |
+| `currentPage` | número de página | Al hacer clic en un número |
+
+<Canvas of={PaginationStories.Interaction} />

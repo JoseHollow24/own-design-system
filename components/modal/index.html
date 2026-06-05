@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DSH Modal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <style>
+      body { font-family: 'Plus Jakarta Sans', sans-serif; margin: 0; padding: 24px; }
+      .demo { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 32px; }
+      button { padding: 8px 16px; cursor: pointer; }
+    </style>
+  </head>
+  <body>
+    <h1>DSH Modal</h1>
+
+    <div class="demo">
+      <button onclick="document.getElementById('modal-basic').open = true">Open Basic Modal</button>
+      <button onclick="document.getElementById('modal-closable').open = true">Open Closable Modal</button>
+      <button onclick="document.getElementById('modal-icon').open = true">Open Icon Modal</button>
+      <button onclick="document.getElementById('modal-promo').open = true">Open Promo Modal</button>
+    </div>
+
+    <dsh-modal
+      id="modal-basic"
+      text-title="Título del modal"
+      text-description="Este es el contenido del modal. Puedes incluir información relevante aquí."
+    >
+      <div slot="actionable">
+        <dsh-button onclick="document.getElementById('modal-basic').open = false">Cancelar</dsh-button>
+        <dsh-button variant="primary" onclick="document.getElementById('modal-basic').open = false">Aceptar</dsh-button>
+      </div>
+    </dsh-modal>
+
+    <dsh-modal
+      id="modal-closable"
+      closable
+      text-title="Modal con cierre"
+      text-description="Este modal tiene botón de cierre y se puede cerrar con Escape."
+    >
+      <div slot="safe-area">
+        <p>Contenido adicional en el área segura.</p>
+      </div>
+    </dsh-modal>
+
+    <dsh-modal
+      id="modal-icon"
+      closable
+      icon="fa-check-circle"
+      icon-color="x1"
+      text-title="Operación exitosa"
+      text-description="La acción se realizó correctamente."
+    >
+      <div slot="actionable">
+        <dsh-button variant="primary" onclick="document.getElementById('modal-icon').open = false">Entendido</dsh-button>
+      </div>
+    </dsh-modal>
+
+    <dsh-modal
+      id="modal-promo"
+      closable
+      variant="promo"
+      image-src="https://via.placeholder.com/653x278"
+      image-alt="Imagen promocional"
+      text-title="Oferta especial"
+      text-description="No te pierdas esta oferta exclusiva por tiempo limitado."
+    >
+      <div slot="actionable">
+        <dsh-button onclick="document.getElementById('modal-promo').open = false">Más tarde</dsh-button>
+        <dsh-button variant="primary" onclick="document.getElementById('modal-promo').open = false">Ver oferta</dsh-button>
+      </div>
+    </dsh-modal>
+
+    <script type="module" src="./index.js"></script>
+  </body>
+</html>

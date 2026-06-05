@@ -1,0 +1,42 @@
+import { Meta, Canvas, Controls } from "@storybook/addon-docs/blocks";
+import * as CardDealStories from "./card-deal.stories";
+
+<Meta of={CardDealStories} />
+
+# dsh-card-deal
+
+Web component de tarjeta de oferta del DSH Design System. Soporta tres variantes de layout y cuatro segmentos de color.
+
+## Default
+
+<Canvas of={CardDealStories.Default} />
+
+## Featured
+
+<Canvas of={CardDealStories.Featured} />
+
+## Featured Discount
+
+<Canvas of={CardDealStories.FeaturedDiscount} />
+
+## Playground
+
+<Canvas of={CardDealStories.Playground} />
+<Controls of={CardDealStories.Playground} />
+
+## Props
+
+| Prop | Tipo | Default | Descripción |
+|------|------|---------|-------------|
+| `variant` | String | `"default"` | Layout: default, featured, featured-discount |
+| `segment` | String | `"default"` | Gradiente: default, blue, purple, slate |
+| `img` | String | `""` | URL de la imagen |
+| `tag-text` | String | `""` | Texto del tag (separados por coma para múltiples) |
+| `tag-color` | String | `"blue"` | Color del tag: blue, yellow |
+| `title` | String | `""` | Título de la tarjeta |
+| `subtitle` | String | `""` | Subtítulo |
+| `description` | String | `""` | Descripción (oculta en variant default) |
+| `amount` | String | `""` | Valor principal (admite HTML, ej: `50<sup>%</sup>`) |
+| `textamount` | String | `""` | Texto sobre el monto (admite HTML, ej: `<strong>Dcto.</strong>`) |
+| `link` | String | `""` | URL del botón de acción |
+| `link-text` | String | `""` | Texto del botón de acción |

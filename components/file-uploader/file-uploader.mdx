@@ -1,0 +1,57 @@
+import { Meta, Canvas, Controls } from "@storybook/addon-docs/blocks";
+import * as FileUploaderStories from "./file-uploader.stories";
+
+<Meta of={FileUploaderStories} />
+
+# dsh-file-uploader
+
+Web component de carga de archivos del DSH Design System. Permite subir archivos con validación de tipo, tamaño y cantidad máxima.
+
+## Default
+
+<Canvas of={FileUploaderStories.Default} />
+
+## Multiple archivos
+
+<Canvas of={FileUploaderStories.Multiple} />
+
+## Deshabilitado
+
+<Canvas of={FileUploaderStories.Disabled} />
+
+## Playground
+
+<Canvas of={FileUploaderStories.Playground} />
+<Controls of={FileUploaderStories.Playground} />
+
+## Props
+
+| Prop | Tipo | Default | Descripción |
+|------|------|---------|-------------|
+| `text-title` | String | — | Título del componente |
+| `text-subtitle` | String | — | Subtítulo informativo |
+| `text-button` | String | `"Subir archivo"` | Texto del botón |
+| `button-variant` | String | `"secondary"` | Variante del botón: primary, secondary, tertiary |
+| `allowed-types` | String | `""` | Extensiones permitidas (ej: `.pdf,.doc`) |
+| `max-load` | Number | `1` | Máximo de archivos a cargar |
+| `max-size` | Number | `3` | Tamaño máximo en MB por archivo |
+| `disabled` | Boolean | `false` | Deshabilita el componente |
+| `defaults` | Array | — | Archivos precargados |
+| `name` | String | — | Nombre del input para formularios |
+
+## Eventos
+
+| Evento | Descripción |
+|--------|-------------|
+| `onChange` | Disparado al cambiar la lista de archivos. `detail` = array de archivos |
+| `onError` | Disparado al haber errores de validación. `detail` = lista de errores |
+| `onDelete` | Disparado al eliminar un archivo. `detail` = archivo eliminado |
+
+## Errores de validación
+
+| Código | Descripción |
+|--------|-------------|
+| `not_valid_type` | Tipo de archivo no permitido |
+| `not_valid_size` | Archivo supera el tamaño máximo |
+| `not_valid_max_load` | Se supera la cantidad máxima de archivos |
+| `not_valid_duplicated` | Archivo duplicado |

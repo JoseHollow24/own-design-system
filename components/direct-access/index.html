@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dsh-direct-access — Dev</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../../src/generated-tokens/tokens.css" />
+    <style>
+      body { font-family: 'Plus Jakarta Sans', sans-serif; padding: 32px; background: #f6f7f7; }
+      .grid { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 32px; }
+      h2 { font-size: 14px; color: #586264; margin: 0 0 16px; text-transform: uppercase; }
+    </style>
+    <script type="module" src="./index.js"></script>
+  </head>
+  <body>
+    <h2>Segmentos</h2>
+    <div class="grid">
+      <dsh-direct-access icon="fa-user" title="Blue" subtitle="Acceso rápido" segment="blue" link="/"></dsh-direct-access>
+      <dsh-direct-access icon="fa-building" title="Slate" subtitle="Enlace de ejemplo" segment="slate" link="/"></dsh-direct-access>
+      <dsh-direct-access icon="fa-wheelchair" title="Purple" subtitle="Enlace de ejemplo" segment="purple" link="/"></dsh-direct-access>
+      <dsh-direct-access icon="fa-globe" title="Transversal" subtitle="Acceso general" segment="transversales" link="/"></dsh-direct-access>
+    </div>
+    <h2>Con enlace externo y tag</h2>
+    <div class="grid">
+      <dsh-direct-access icon="fa-star" title="Servicio destacado" subtitle="Ver más detalles" segment="blue" target="_blank" link="https://example.com" link-text="Ir al portal" tag="Nuevo"></dsh-direct-access>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dsh-file-uploader — Dev</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="../../src/generated-tokens/tokens.css" />
+    <style>
+      body { font-family: 'Plus Jakarta Sans', sans-serif; padding: 32px; background: #f6f7f7; display: flex; flex-wrap: wrap; gap: 32px; }
+      h2 { font-size: 13px; color: #586264; margin: 0 0 8px; text-transform: uppercase; width: 100%; }
+      .block { display: flex; flex-direction: column; gap: 8px; }
+    </style>
+    <script type="module" src="./index.js"></script>
+  </head>
+  <body>
+    <div class="block">
+      <h2>Default — max 1 archivo PDF</h2>
+      <dsh-file-uploader
+        text-title="Subir documento"
+        text-subtitle="Sube un archivo PDF de máximo 5MB"
+        text-button="Subir archivo"
+        allowed-types=".pdf"
+        max-size="5"
+        max-load="1"
+        name="doc1"
+      ></dsh-file-uploader>
+    </div>
+
+    <div class="block">
+      <h2>Multiple files — hasta 3</h2>
+      <dsh-file-uploader
+        text-title="Documentos de respaldo"
+        text-subtitle="Formatos: PDF, DOC, DOCX — máx. 3MB cada uno"
+        allowed-types=".pdf,.doc,.docx"
+        max-size="3"
+        max-load="3"
+        name="docs-multiple"
+      ></dsh-file-uploader>
+    </div>
+
+    <div class="block">
+      <h2>Disabled</h2>
+      <dsh-file-uploader
+        text-title="No disponible"
+        text-subtitle="Carga deshabilitada"
+        disabled
+        name="disabled-example"
+      ></dsh-file-uploader>
+    </div>
+  </body>
+</html>

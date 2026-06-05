@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dsh-accordions — Dev</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../../src/generated-tokens/tokens.css" />
+    <style>
+      body { font-family: 'Plus Jakarta Sans', sans-serif; padding: 32px; background: #f6f7f7; }
+      section { margin-bottom: 32px; }
+      h2 { font-size: 13px; color: #586264; margin: 0 0 8px; text-transform: uppercase; }
+    </style>
+    <script type="module" src="./index.js"></script>
+  </head>
+  <body>
+
+    <section>
+      <h2>Primario — Blue</h2>
+      <dsh-accordions>
+        <dsh-accordion-item slot="item" label="Accordion 1" variant="blue" type="primario">
+          <div slot="body"><p>Contenido del acordeón 1.</p></div>
+        </dsh-accordion-item>
+        <dsh-accordion-item slot="item" label="Accordion 2" variant="blue" type="primario">
+          <div slot="body"><p>Contenido del acordeón 2.</p></div>
+        </dsh-accordion-item>
+        <dsh-accordion-item slot="item" label="Accordion 3" variant="blue" type="primario">
+          <div slot="body"><p>Contenido del acordeón 3.</p></div>
+        </dsh-accordion-item>
+      </dsh-accordions>
+    </section>
+
+    <section>
+      <h2>Secundario — Slate</h2>
+      <dsh-accordions>
+        <dsh-accordion-item slot="item" label="Slate Accordion 1" sublabel="Subtítulo de ejemplo" variant="slate" type="secundario">
+          <div slot="body"><p>Contenido de empresas.</p></div>
+        </dsh-accordion-item>
+        <dsh-accordion-item slot="item" label="Slate Accordion 2" variant="slate" type="secundario">
+          <div slot="body"><p>Otro contenido.</p></div>
+        </dsh-accordion-item>
+      </dsh-accordions>
+    </section>
+
+    <section>
+      <h2>Borderbottom — Purple</h2>
+      <dsh-accordions>
+        <dsh-accordion-item slot="item" label="Purple 1" variant="purple" type="borderbottom">
+          <div slot="body"><p>Contenido pensionados.</p></div>
+        </dsh-accordion-item>
+        <dsh-accordion-item slot="item" label="Purple 2" variant="purple" type="borderbottom">
+          <div slot="body"><p>Más contenido.</p></div>
+        </dsh-accordion-item>
+      </dsh-accordions>
+    </section>
+
+    <section>
+      <h2>Transversal</h2>
+      <dsh-accordions>
+        <dsh-accordion-item slot="item" label="Transversal 1" variant="neutral" type="primario">
+          <div slot="body"><p>Contenido transversal.</p></div>
+        </dsh-accordion-item>
+        <dsh-accordion-item slot="item" label="Transversal 2" variant="neutral" type="primario">
+          <div slot="body"><p>Otro ítem transversal.</p></div>
+        </dsh-accordion-item>
+      </dsh-accordions>
+    </section>
+
+    <section>
+      <h2>Con Checkbox</h2>
+      <dsh-accordions>
+        <dsh-accordion-item slot="item" label="Con checkbox" variant="blue" type="primario" checkbox>
+          <div slot="body"><p>Este acordeón tiene checkbox.</p></div>
+        </dsh-accordion-item>
+      </dsh-accordions>
+    </section>
+
+  </body>
+</html>

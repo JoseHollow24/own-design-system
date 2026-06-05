@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dsh-card-deal — Dev</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../../src/generated-tokens/tokens.css" />
+    <style>
+      body { font-family: 'Plus Jakarta Sans', sans-serif; padding: 32px; background: #f6f7f7; display: flex; flex-wrap: wrap; gap: 24px; }
+      h2 { font-size: 13px; color: #586264; margin: 0 0 8px; text-transform: uppercase; width: 100%; }
+    </style>
+    <script type="module" src="./index.js"></script>
+  </head>
+  <body>
+    <h2>Default</h2>
+    <dsh-card-deal
+      variant="default"
+      tag-color="yellow"
+      tag-text="Text Tag"
+      img="https://www.w3schools.com/howto/img_mountains_wide.jpg"
+      title="Fracción"
+      subtitle="Recibe hasta un 50% de dcto."
+      amount="15%"
+      textamount="<strong>Descuento</strong>"
+      link="https://www.google.com"
+      link-text="Ver más"
+    ></dsh-card-deal>
+
+    <h2>Featured — Blue</h2>
+    <dsh-card-deal
+      variant="featured"
+      segment="blue"
+      tag-color="yellow"
+      tag-text="Text Tag"
+      img="https://www.w3schools.com/howto/img_mountains_wide.jpg"
+      title="Fracción"
+      subtitle="Recibe hasta un 50% de dcto. en el total de tu boleta."
+      description="Válido por compras online hasta agotar stock. Tope: $7.500"
+      amount="$9.990"
+      textamount="Dcto."
+      link="https://www.google.com"
+      link-text="Ver más"
+    ></dsh-card-deal>
+
+    <h2>Featured Discount — Purple</h2>
+    <dsh-card-deal
+      variant="featured-discount"
+      segment="purple"
+      tag-color="yellow"
+      tag-text="Text Tag"
+      img="https://www.w3schools.com/howto/img_mountains_wide.jpg"
+      title="Fracción"
+      subtitle="Recibe hasta un 50% de dcto."
+      description="Válido por compras online hasta agotar stock."
+      amount="50<sup>%</sup>"
+      textamount="<strong>Dcto.</strong>"
+      link="https://www.google.com"
+      link-text="Ver más"
+    ></dsh-card-deal>
+
+    <h2>Featured — Slate</h2>
+    <dsh-card-deal
+      variant="featured"
+      segment="slate"
+      img="https://www.w3schools.com/howto/img_mountains_wide.jpg"
+      title="Card Slate"
+      subtitle="Subtítulo de ejemplo"
+      description="Descripción de ejemplo del componente."
+      amount="30%"
+      textamount="Descuento"
+    ></dsh-card-deal>
+  </body>
+</html>

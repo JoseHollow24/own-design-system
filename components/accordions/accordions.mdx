@@ -1,0 +1,67 @@
+import { Meta, Canvas, Controls } from "@storybook/addon-docs/blocks";
+import * as AccordionsStories from "./accordions.stories";
+
+<Meta of={AccordionsStories} />
+
+# dsh-accordions
+
+Web component de acordeones del DSH Design System. Compuesto por tres elementos: `dsh-accordions` (contenedor), `dsh-accordion-item` (ítem expandible) y `dsh-accordion-header` (cabecera interna).
+
+## Uso básico
+
+<Canvas of={AccordionsStories.Default} />
+
+## Variantes de segmento
+
+Controla el color del borde izquierdo según el segmento de usuario.
+
+| Variant | Color |
+|---------|-------|
+| `blue` | Blue (C1) |
+| `slate` | Slate (G1) |
+| `purple` | Purple (M1) |
+| `neutral` | Sin borde izquierdo |
+
+<Canvas of={AccordionsStories.Variantes} />
+
+## Tipos de acordeón
+
+| Type | Descripción |
+|------|-------------|
+| `primario` | Fondo azul claro, sin borde visible |
+| `secundario` | Fondo blanco, borde azul completo |
+| `borderbottom` | Solo borde inferior, fondo transparente |
+| `none` | Sin bordes ni fondo |
+
+<Canvas of={AccordionsStories.Tipos} />
+
+## Acordeones anidados
+
+Los `dsh-accordion-item` pueden contener otro `dsh-accordions` en el slot `accordion`.
+
+<Canvas of={AccordionsStories.Anidado} />
+
+## Playground
+
+<Canvas of={AccordionsStories.Playground} />
+<Controls of={AccordionsStories.Playground} />
+
+## Props de dsh-accordion-item
+
+| Prop | Tipo | Default | Descripción |
+|------|------|---------|-------------|
+| `label` | String | `""` | Título del acordeón |
+| `sublabel` | String | `""` | Subtítulo opcional |
+| `variant` | String | `"blue"` | Segmento: blue, slate, purple, neutral |
+| `type` | String | `"primario"` | Estilo: primario, secundario, borderbottom, none |
+| `open` | Boolean | `false` | Si el acordeón está expandido |
+| `checkbox` | Boolean | `false` | Muestra checkbox en el header |
+| `checked` | Boolean | `false` | Estado del checkbox |
+
+## Slots de dsh-accordion-item
+
+| Slot | Descripción |
+|------|-------------|
+| `body` | Contenido expandible del acordeón |
+| `accordion` | Acordeones anidados |
+| `header-right` | Elemento a la derecha del header |

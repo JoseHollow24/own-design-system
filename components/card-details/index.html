@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dsh-card-details — Dev</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../../src/generated-tokens/tokens.css" />
+    <style>
+      body { font-family: 'Plus Jakarta Sans', sans-serif; padding: 32px; background: #f6f7f7; display: flex; flex-wrap: wrap; gap: 24px; }
+      h2 { font-size: 13px; color: #586264; margin: 0 0 8px; text-transform: uppercase; width: 100%; }
+      dsh-card-details { max-width: 320px; }
+    </style>
+    <script type="module" src="./index.js"></script>
+  </head>
+  <body>
+    <h2>Transversal</h2>
+    <dsh-card-details color="transversal" icon="fa-file-alt">
+      <strong slot="title">Título principal</strong>
+      <p slot="content">Contenido del card de detalles. Información relevante para el usuario.</p>
+      <button slot="footer">Acción principal</button>
+    </dsh-card-details>
+
+    <h2>Blue</h2>
+    <dsh-card-details color="blue" icon="fa-user">
+      <strong slot="title">Información laboral</strong>
+      <p slot="content">Detalles de tu situación laboral.</p>
+      <button slot="footer">Ver más</button>
+    </dsh-card-details>
+
+    <h2>Purple</h2>
+    <dsh-card-details color="purple" icon="fa-heart">
+      <strong slot="title">Pensión</strong>
+      <p slot="content">Información sobre tu pensión mensual.</p>
+      <button slot="footer">Ver detalles</button>
+    </dsh-card-details>
+
+    <h2>Slate</h2>
+    <dsh-card-details color="slate" icon="fa-building">
+      <h4 slot="title">Empresa</h4>
+      <p slot="content">Información corporativa.</p>
+      <button slot="footer">Gestionar</button>
+    </dsh-card-details>
+
+    <h2>Acordeonable (mobile)</h2>
+    <dsh-card-details color="transversal" accordeonable icon="fa-question">
+      <h4 slot="title">¿Qué es esto?</h4>
+      <p slot="content">En móvil aparece un botón para colapsar este card.</p>
+    </dsh-card-details>
+  </body>
+</html>
