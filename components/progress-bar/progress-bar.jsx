@@ -14,7 +14,8 @@ function ProgressBarComponent({
   labelBottomStart,
   labelBottomEnd,
 }) {
-  const [childNodes = []] = useChildNodes();
+  const [rawChildNodes = []] = useChildNodes();
+  const childNodes = Array.isArray(rawChildNodes) ? rawChildNodes : Array.from(rawChildNodes);
 
   const options = JSON.parse(optionsData || '[]');
   const range = Number(maxValue) - Number(minValue);

@@ -38,16 +38,16 @@ export const Default = {
 
         <dsh-menu-vertical-item
           slot="menu-item"
-          item-value="Beneficios"
+          item-value="Explorar"
           item-identifier="products"
           href="#"
           desktop-icon-name="fa-star"
         >
           <dsh-menu-vertical-subitem slot="sub-item" href="#" sub-item-identifier="offers">
-            Descuentos
+            Catálogo
           </dsh-menu-vertical-subitem>
           <dsh-menu-vertical-subitem slot="sub-item" href="#" sub-item-identifier="convenios">
-            Convenios
+            Recursos
           </dsh-menu-vertical-subitem>
         </dsh-menu-vertical-item>
 
@@ -84,7 +84,7 @@ export const WithActiveItem = {
 
         <dsh-menu-vertical-item
           slot="menu-item"
-          item-value="Beneficios"
+          item-value="Explorar"
           item-identifier="products"
           href="#"
         ></dsh-menu-vertical-item>

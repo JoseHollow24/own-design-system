@@ -1,6 +1,5 @@
 import { c, useRef, useState, useEffect } from 'atomico';
 import { useSlot } from '@atomico/hooks/use-slot';
-import { useResponsiveState } from '@atomico/hooks/use-responsive-state';
 
 import Props from './message.props';
 import { customProperties, styles } from './message.styles';
@@ -42,10 +41,6 @@ const CLOSE_ICON = (
 
 // ────────────────────────────────────────────────────────
 function MessageComponent({ variant, closeButton, timeout, showComponent, ariaLabel, id }) {
-  const expression = 'phone, tablet 768px, desktop 1024px';
-  const state = useResponsiveState(expression);
-  const isMobile = state === 'phone';
-
   const nodeRef = useRef();
   const iconSlotRef = useRef();
   const iconSlot = useSlot(iconSlotRef);
@@ -85,11 +80,11 @@ function MessageComponent({ variant, closeButton, timeout, showComponent, ariaLa
       <host shadowDom style={{ display: display ? 'inline-flex' : 'none' }}>
         {customProperties(variant, false)}
         <div className={`content ${hasIcon ? 'has-icon' : ''}`}>
-          <slot name="icon" ref={iconSlotRef} />
+          <slot name="icon" ref={iconSlotRef}></slot>
           <div className="content-inner">
-            <div className="slot-title"><slot name="title" /></div>
-            <div className="slot-content"><slot name="content" /></div>
-            <div className="slot-footer"><slot name="footer" /></div>
+            <div className="slot-title"><slot name="title"></slot></div>
+            <div className="slot-content"><slot name="content"></slot></div>
+            <div className="slot-footer"><slot name="footer"></slot></div>
           </div>
         </div>
       </host>
@@ -118,19 +113,12 @@ function MessageComponent({ variant, closeButton, timeout, showComponent, ariaLa
           </button>
         )}
         <div className="content-body">
-          <div className="content-body__top">
-            <div className="content-body__top-icon">{icon}</div>
-            {isMobile && (
-              <div className="slot-title"><slot name="title" /></div>
-            )}
+          <div className="content-body__icon">{icon}</div>
+          <div className="content-body__text">
+            <div className="slot-title"><slot name="title"></slot></div>
+            <div className="slot-content"><slot name="content"></slot></div>
+            <div className="slot-footer"><slot name="footer"></slot></div>
           </div>
-          <div className="content-body__mid">
-            {!isMobile && (
-              <div className="slot-title"><slot name="title" /></div>
-            )}
-            <div className="slot-content"><slot name="content" /></div>
-          </div>
-          <div className="slot-footer"><slot name="footer" /></div>
         </div>
       </div>
     </host>

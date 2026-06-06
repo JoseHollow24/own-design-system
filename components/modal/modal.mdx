@@ -1,0 +1,82 @@
+import { Meta, Canvas, Controls } from "@storybook/addon-docs/blocks";
+import * as ModalStories from "./modal.stories";
+
+<Meta of={ModalStories} />
+
+# dsh-modal
+
+Web component de modal del DSH Design System. Soporta contenido con ícono, imagen promo, avatar y un área segura para contenido adicional. Los botones de acción van en el slot `actionable`.
+
+## Básico
+
+Modal con título, descripción y botones de acción.
+
+<Canvas of={ModalStories.Basic} />
+
+## Con botón de cierre
+
+El prop `closable` muestra el botón "Cerrar" en la parte superior. El modal también puede cerrarse con la tecla `Escape` o haciendo click en el fondo oscuro.
+
+<Canvas of={ModalStories.WithClose} />
+
+## Con ícono
+
+El prop `icon` acepta cualquier nombre de Font Awesome (ej: `fa-circle-check`). El color se controla con `icon-color`.
+
+<Canvas of={ModalStories.WithIcon} />
+
+## Con área segura
+
+El slot `safe-area` agrega contenido adicional bajo el cuerpo del modal, separado visualmente del contenido principal.
+
+<Canvas of={ModalStories.WithSafeArea} />
+
+## Con imagen (promo)
+
+Usando `variant="promo"` junto con `image-src` e `image-alt` se activa la variante con imagen superior y efecto de silueta.
+
+<Canvas of={ModalStories.WithImage} />
+
+## Con avatar
+
+El prop `avatar-src` muestra una imagen de perfil circular sobre el contenido del modal.
+
+<Canvas of={ModalStories.WithAvatar} />
+
+## Playground
+
+<Canvas of={ModalStories.Playground} />
+<Controls of={ModalStories.Playground} />
+
+## Props
+
+| Prop | Atributo | Tipo | Default | Descripción |
+|------|----------|------|---------|-------------|
+| `open` | `open` | `boolean` | `false` | Controla si el modal está visible |
+| `closable` | `closable` | `boolean` | `false` | Muestra el botón "Cerrar" |
+| `noClose` | `no-close` | `boolean` | `false` | Desactiva cierre por fondo y tecla Escape |
+| `fixed` | `fixed` | `boolean` | `false` | Modal de altura completa (grid layout) |
+| `textTitle` | `text-title` | `string` | — | Título del modal |
+| `textDescription` | `text-description` | `string` | — | Descripción o cuerpo del modal |
+| `icon` | `icon` | `string` | — | Nombre del ícono FA (ej: `fa-circle-check`) |
+| `iconColor` | `icon-color` | `string` | `x1` | Color del ícono |
+| `imageSrc` | `image-src` | `string` | — | URL de la imagen (requiere `variant="promo"`) |
+| `imageAlt` | `image-alt` | `string` | — | Texto alternativo de la imagen |
+| `avatarSrc` | `avatar-src` | `string` | — | URL del avatar circular |
+| `avatarAlt` | `avatar-alt` | `string` | — | Texto alternativo del avatar |
+| `variant` | `variant` | `string` | — | Variante del card: `promo` |
+| `actionableAlign` | `actionable-align` | `string` | `right` | Alineación del footer: `left`, `center`, `right` |
+| `id` | `id` | `string` | — | ID base del modal (se sufija `-title` y `-description` para aria) |
+
+## Slots
+
+| Slot | Descripción |
+|------|-------------|
+| `actionable` | Botones de acción en el footer del modal |
+| `safe-area` | Contenido adicional bajo el cuerpo principal |
+
+## Eventos
+
+| Evento | Descripción |
+|--------|-------------|
+| `close` | Emitido al cerrar el modal (fondo, botón Cerrar o Escape) |

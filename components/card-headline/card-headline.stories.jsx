@@ -21,8 +21,8 @@ export const Info = {
         button-text="Ver más"
         button-link="https://www.google.com"
       >
-        <span slot="title">Descuento especial</span>
-        <span slot="description">Válido para compras en línea hasta agotar stock.</span>
+        <span slot="title">Producto destacado</span>
+        <span slot="description">Disponible en tiendas seleccionadas.</span>
       </dsh-card-headline>
     </div>
   `,
@@ -42,7 +42,7 @@ export const Segmentos = {
       </dsh-card-headline>
       <dsh-card-headline segment="slate" variant="info" amount="30%" img="https://www.w3schools.com/howto/img_mountains_wide.jpg" style="max-width:260px;display:block;">
         <span slot="title">Slate</span>
-        <span slot="description">Beneficio corporativo.</span>
+        <span slot="description">Variante slate.</span>
       </dsh-card-headline>
     </div>
   `,

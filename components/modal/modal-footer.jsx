@@ -1,21 +1,11 @@
-import { c, css, useEffect, useEvent, useRef } from 'atomico';
-import { useSlot } from '@atomico/hooks/use-slot';
+import { c, css } from 'atomico';
 import { DshSpace0, DshSpace200, DshSpace300 } from '@tokens';
 
 function ModalFooterComponent({ align, visible }) {
-  const ref = useRef();
-  const slot = useSlot(ref);
-
-  const onSlotChange = useEvent('onSlotChange', { bubbles: true, composed: true });
-
-  useEffect(() => {
-    onSlotChange();
-  }, [slot]);
-
   return (
     <host shadowDom className={visible ? '' : 'empty'}>
       <div className={`container ${align}`.trim()}>
-        <slot ref={ref} name="actionable" />
+        <slot name="actionable" />
       </div>
     </host>
   );

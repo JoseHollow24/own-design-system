@@ -1,4 +1,4 @@
-import { c, css, useEffect, useEvent, useProp, useRef, useState } from 'atomico';
+import { c, css, useEffect, useEvent, useProp, useRef } from 'atomico';
 import { useListener } from '@atomico/hooks/use-listener';
 import { useChildNodes } from '@atomico/hooks/use-child-nodes';
 import '@components/icon';
@@ -17,7 +17,7 @@ import './modal-organizer-text.jsx';
 import './modal-organizer-safe.jsx';
 import './modal-organizer-image.jsx';
 import './modal-organizer-avatar.jsx';
-import { DshSpace200, DshTextFamilyRawsonPro } from '@tokens';
+import { DshSpace200 } from '@tokens';
 
 function ModalComponent(props) {
   const {
@@ -39,25 +39,21 @@ function ModalComponent(props) {
 
   const [open, setOpen] = useProp('open');
 
-  useEffect(() => {
-    setOpen(props.open);
-  }, [props.open]);
-
-  const [safeAreaMargin, setSafeAreaMargin] = useState(false);
-  const [show, setShow] = useState({ safeArea: false, footer: false });
-
   const modalRef = useRef();
-  const footerRef = useRef();
-  const safeAreaRef = useRef();
   const backgroundRef = useRef();
   const modalCardRef = useRef();
 
-  const [childNodes, update] = useChildNodes();
+  const [rawChildNodes = []] = useChildNodes();
+  const childElements = (Array.isArray(rawChildNodes) ? rawChildNodes : Array.from(rawChildNodes))
+    .filter((node) => node instanceof Element);
+
+  const show = {
+    safeArea: childElements.some((node) => node.slot === 'safe-area'),
+    footer: childElements.some((node) => node.slot === 'actionable'),
+  };
+  const safeAreaMargin = !!(imageSrc || avatarSrc || icon || textTitle || textDescription);
 
   const dispatchClose = useEvent('close', { bubbles: true, composed: true });
-
-  useListener(footerRef, 'onSlotChange', update);
-  useListener(safeAreaRef, 'onSlotChange', update);
 
   useListener(backgroundRef, 'onBackgroundClick', () => {
     if (!noClose) {
@@ -72,24 +68,6 @@ function ModalComponent(props) {
       dispatchClose();
     }
   });
-
-  useEffect(() => {
-    if (childNodes.length) {
-      const safeArea = !!childNodes.find((node) => node.slot === 'safe-area')?.children;
-      const footer = !!childNodes.find((node) => node.slot === 'actionable')?.children;
-      setShow({ safeArea, footer });
-    } else {
-      setShow({ safeArea: false, footer: false });
-    }
-  }, [childNodes]);
-
-  useEffect(() => {
-    if (imageSrc || avatarSrc || icon || textTitle || textDescription) {
-      setSafeAreaMargin(true);
-    } else {
-      setSafeAreaMargin(false);
-    }
-  }, [imageSrc, avatarSrc, icon, textTitle, textDescription]);
 
   useEffect(() => {
     if (noClose) return;
@@ -150,11 +128,11 @@ function ModalComponent(props) {
                 )}
               </dsh-modal-organizer-text>
             )}
-            <dsh-modal-organizer-safe ref={safeAreaRef} visible={show.safeArea} margin={safeAreaMargin}>
+            <dsh-modal-organizer-safe visible={show.safeArea} margin={safeAreaMargin}>
               <slot name="safe-area" slot="safe-area" />
             </dsh-modal-organizer-safe>
           </dsh-modal-organizer>
-          <dsh-modal-footer ref={footerRef} align={actionableAlign} visible={show.footer}>
+          <dsh-modal-footer align={actionableAlign} visible={show.footer}>
             <slot name="actionable" slot="actionable" />
           </dsh-modal-footer>
         </dsh-modal-card>
@@ -186,7 +164,6 @@ ModalComponent.styles = [
   css`
     :host {
       position: relative;
-      font-family: ${DshTextFamilyRawsonPro};
     }
 
     ::slotted(*) {

@@ -7,12 +7,9 @@ import {
   DshShadowM,
   DshShadowS,
   DshSpace0,
-  DshSpace50,
   DshSpace100,
   DshSpace200,
   DshSpace300,
-  DshSpace400,
-  DshSpace500,
   DshSpace600,
   DshSpaceN400,
 } from '@tokens';
@@ -71,20 +68,26 @@ export const styles = css`
     max-width: 1332px;
   }
 
-  .content-body__top {
-    padding-right: var(--side-padding);
+  .content-body {
     display: flex;
-    gap: ${DshSpace50};
-    align-items: center;
+    align-items: flex-start;
+    gap: ${DshSpace100};
   }
 
-  .content-body__top-icon {
+  .content-body__icon {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 32px;
     height: 32px;
     flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .content-body__text {
+    flex: 1;
+    min-width: 0;
+    padding-right: var(--side-padding, 0px);
   }
 
   /* ── TITLE / CONTENT / FOOTER slot sections ─────────── */
@@ -162,19 +165,8 @@ export const styles = css`
 
   /* ── DESKTOP ─────────────────────────────────────────── */
   @media (min-width: 768px) {
-    :host(:not([variant='important'])) .content-body {
-      padding-left: ${DshSpace500};
-    }
     :host(:not([variant='important'])) .content {
       min-width: inherit;
-    }
-    :host(:not([variant='important'])) .content-body__top-icon {
-      position: absolute;
-      left: ${DshSpace200};
-      top: ${DshSpace200};
-    }
-    :host(:not([variant='important'])) .content-body__mid {
-      padding-right: var(--side-padding, 0px);
     }
   }
 `;

@@ -19,15 +19,15 @@ export const ThreeItems = {
     <dsh-card-highlights style="display:block;max-width:700px;">
       <dsh-card-highlights-item slot="tab" color="a6">
         ${iconSvg}
-        <span slot="label">Beneficio Ámbar</span>
+        <span slot="label">Ámbar</span>
       </dsh-card-highlights-item>
       <dsh-card-highlights-item slot="tab" color="r6">
         ${iconSvg}
-        <span slot="label">Beneficio Rojo</span>
+        <span slot="label">Rojo</span>
       </dsh-card-highlights-item>
       <dsh-card-highlights-item slot="tab" color="v6">
         ${iconSvg}
-        <span slot="label">Beneficio Verde</span>
+        <span slot="label">Verde</span>
       </dsh-card-highlights-item>
     </dsh-card-highlights>
   `,
@@ -39,11 +39,11 @@ export const TwoItems = {
     <dsh-card-highlights style="display:block;max-width:500px;">
       <dsh-card-highlights-item slot="tab" color="m6">
         ${iconSvg}
-        <span slot="label">Opción Morado</span>
+        <span slot="label">Morado</span>
       </dsh-card-highlights-item>
       <dsh-card-highlights-item slot="tab" color="x6">
         ${iconSvg}
-        <span slot="label">Opción Azul</span>
+        <span slot="label">Azul</span>
       </dsh-card-highlights-item>
     </dsh-card-highlights>
   `,
@@ -80,11 +80,11 @@ export const Playground = {
     <dsh-card-highlights style="display:block;max-width:600px;">
       <dsh-card-highlights-item slot="tab" color="${args.color}">
         ${iconSvg}
-        <span slot="label">Elemento destacado</span>
+        <span slot="label">Primario</span>
       </dsh-card-highlights-item>
       <dsh-card-highlights-item slot="tab" color="x6">
         ${iconSvg}
-        <span slot="label">Segundo elemento</span>
+        <span slot="label">Azul</span>
       </dsh-card-highlights-item>
     </dsh-card-highlights>
   `,

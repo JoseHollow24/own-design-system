@@ -17,13 +17,13 @@ export const Default = {
       tag-color="yellow"
       tag-text="Text Tag"
       img="https://www.w3schools.com/howto/img_mountains_wide.jpg"
-      title="Fracción"
-      subtitle="Recibe hasta un 50% de dcto. en el total de tu boleta."
-      description="Válido por compras online hasta agotar stock. Tope: $7.500"
+      title="Producto"
+      subtitle="Encuentra los mejores precios de temporada."
+      description="Disponible en productos seleccionados."
       amount="15%"
-      textamount="<strong>Descuento</strong>"
+      textamount="<strong>Ahorro</strong>"
       link="https://www.google.com"
-      link-text="Ir a beneficio"
+      link-text="Ver oferta"
     ></dsh-card-deal>
   `,
 };
@@ -37,13 +37,13 @@ export const Featured = {
       tag-color="yellow"
       tag-text="Text Tag"
       img="https://www.w3schools.com/howto/img_mountains_wide.jpg"
-      title="Fracción"
-      subtitle="Recibe hasta un 50% de dcto. en el total de tu boleta."
-      description="Válido por compras online hasta agotar stock. Tope: $7.500"
+      title="Producto"
+      subtitle="Encuentra los mejores precios de temporada."
+      description="Disponible en productos seleccionados."
       amount="$9.990"
-      textamount="Dcto."
+      textamount="Precio"
       link="https://www.google.com"
-      link-text="Ir a beneficio"
+      link-text="Ver detalle"
     ></dsh-card-deal>
   `,
 };
@@ -57,13 +57,13 @@ export const FeaturedDiscount = {
       tag-color="yellow"
       tag-text="Text Tag"
       img="https://www.w3schools.com/howto/img_mountains_wide.jpg"
-      title="Fracción"
-      subtitle="Recibe hasta un 50% de dcto. en el total de tu boleta."
-      description="Válido por compras online hasta agotar stock. Tope: $7.500"
+      title="Producto"
+      subtitle="Encuentra los mejores precios de temporada."
+      description="Disponible en productos seleccionados."
       amount="50<sup>%</sup>"
-      textamount="<strong>Dcto.</strong>"
+      textamount="<strong>Ahorro</strong>"
       link="https://www.google.com"
-      link-text="Ir a beneficio"
+      link-text="Ver detalle"
     ></dsh-card-deal>
   `,
 };

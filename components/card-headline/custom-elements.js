@@ -5,7 +5,7 @@ export default {
     variant: 'info',
     img: 'https://www.w3schools.com/howto/img_mountains_wide.jpg',
     amount: '$9.990',
-    buttonText: 'Ver beneficio',
+    buttonText: 'Ver detalle',
     buttonLink: 'https://www.google.com',
     target: '_self',
     descriptionFont: 'default',

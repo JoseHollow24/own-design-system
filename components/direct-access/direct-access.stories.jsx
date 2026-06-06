@@ -14,8 +14,8 @@ export const Default = {
   render: () => html`
     <dsh-direct-access
       icon="fa-shield-check"
-      title="Certificado de afiliación"
-      subtitle="Descarga tu certificado en línea"
+      title="Panel de usuario"
+      subtitle="Accede a tus herramientas"
       segment="blue"
       link="/"
     ></dsh-direct-access>
@@ -63,8 +63,8 @@ export const WithExternalLink = {
   render: () => html`
     <dsh-direct-access
       icon="fa-file-invoice"
-      title="Portal de cotizaciones"
-      subtitle="Gestiona tus cotizaciones"
+      title="Portal de servicios"
+      subtitle="Gestiona tus servicios en línea"
       segment="blue"
       link="https://example.com"
       target="_blank"

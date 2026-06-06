@@ -27,17 +27,17 @@ export const Segmentos = {
     <div style="display:flex;flex-wrap:wrap;gap:24px;">
       <dsh-card-details color="blue" icon="fa-user" style="max-width:280px;display:block;">
         <strong slot="title">Blue</strong>
-        <p slot="content">Información laboral.</p>
+        <p slot="content">Contenido de variante azul.</p>
         <button slot="footer">Ver más</button>
       </dsh-card-details>
       <dsh-card-details color="purple" icon="fa-heart" style="max-width:280px;display:block;">
         <strong slot="title">Purple</strong>
-        <p slot="content">Tu pensión mensual.</p>
+        <p slot="content">Contenido de variante púrpura.</p>
         <button slot="footer">Ver detalles</button>
       </dsh-card-details>
       <dsh-card-details color="slate" icon="fa-building" style="max-width:280px;display:block;">
         <h4 slot="title">Slate</h4>
-        <p slot="content">Información corporativa.</p>
+        <p slot="content">Contenido de variante slate.</p>
         <button slot="footer">Gestionar</button>
       </dsh-card-details>
     </div>

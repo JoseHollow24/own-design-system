@@ -5,8 +5,8 @@ const Props = {
   args: {
     icon: 'fa-shield-check',
     faStyles: 'fas',
-    title: 'Certificado de afiliación',
-    subtitle: 'Descarga tu certificado en línea',
+    title: 'Panel de usuario',
+    subtitle: 'Accede a tus herramientas',
     segment: 'blue',
     link: '/',
     target: '_self',

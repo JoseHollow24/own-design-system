@@ -1,17 +1,8 @@
-import { c, css, useEffect, useEvent, useRef, useState } from 'atomico';
-import { useSlot } from '@atomico/hooks/use-slot';
+import { c, css, useEffect, useState } from 'atomico';
 import { DshSpace300 } from '@tokens';
 
 function ModalOrganizerSafeComponent({ visible, margin }) {
-  const ref = useRef();
-  const slot = useSlot(ref);
   const [classname, setClassname] = useState('empty');
-
-  const onSlotChange = useEvent('onSlotChange', { bubbles: true, composed: true });
-
-  useEffect(() => {
-    onSlotChange();
-  }, [slot]);
 
   useEffect(() => {
     let current = 'empty';
@@ -22,7 +13,7 @@ function ModalOrganizerSafeComponent({ visible, margin }) {
 
   return (
     <host shadowDom className={classname}>
-      <slot ref={ref} name="safe-area" />
+      <slot name="safe-area" />
     </host>
   );
 }
