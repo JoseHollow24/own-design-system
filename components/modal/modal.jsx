@@ -1,6 +1,6 @@
 import { c, css, useEffect, useEvent, useProp, useRef } from 'atomico';
 import { useListener } from '@atomico/hooks/use-listener';
-import { useChildNodes } from '@atomico/hooks/use-child-nodes';
+import { useSlot } from '@atomico/hooks/use-slot';
 import '@components/icon';
 import './modal-container.jsx';
 import './modal-card.jsx';
@@ -17,7 +17,7 @@ import './modal-organizer-text.jsx';
 import './modal-organizer-safe.jsx';
 import './modal-organizer-image.jsx';
 import './modal-organizer-avatar.jsx';
-import { DshSpace200 } from '@tokens';
+import { DshSpace0, DshSpace200, DshSpace300 } from '@tokens';
 
 function ModalComponent(props) {
   const {
@@ -42,14 +42,15 @@ function ModalComponent(props) {
   const modalRef = useRef();
   const backgroundRef = useRef();
   const modalCardRef = useRef();
+  const safeAreaRef = useRef();
+  const actionableRef = useRef();
 
-  const [rawChildNodes = []] = useChildNodes();
-  const childElements = (Array.isArray(rawChildNodes) ? rawChildNodes : Array.from(rawChildNodes))
-    .filter((node) => node instanceof Element);
+  const safeAreaSlot = useSlot(safeAreaRef);
+  const actionableSlot = useSlot(actionableRef);
 
   const show = {
-    safeArea: childElements.some((node) => node.slot === 'safe-area'),
-    footer: childElements.some((node) => node.slot === 'actionable'),
+    safeArea: safeAreaSlot.length > 0,
+    footer: actionableSlot.length > 0,
   };
   const safeAreaMargin = !!(imageSrc || avatarSrc || icon || textTitle || textDescription);
 
@@ -129,11 +130,11 @@ function ModalComponent(props) {
               </dsh-modal-organizer-text>
             )}
             <dsh-modal-organizer-safe visible={show.safeArea} margin={safeAreaMargin}>
-              <slot name="safe-area" slot="safe-area" />
+              <slot name="safe-area" ref={safeAreaRef} />
             </dsh-modal-organizer-safe>
           </dsh-modal-organizer>
           <dsh-modal-footer align={actionableAlign} visible={show.footer}>
-            <slot name="actionable" slot="actionable" />
+            <slot name="actionable" ref={actionableRef} />
           </dsh-modal-footer>
         </dsh-modal-card>
         <dsh-modal-background tabindex="-1" ref={backgroundRef} />
@@ -169,6 +170,25 @@ ModalComponent.styles = [
     ::slotted(*) {
       margin: 0;
       padding: 0;
+    }
+
+    ::slotted([slot='actionable']) {
+      gap: ${DshSpace200};
+      display: flex;
+      flex-direction: row;
+      padding: ${DshSpace0};
+    }
+
+    @media only screen and (min-width: 768px) {
+      ::slotted([slot='actionable']) {
+        gap: ${DshSpace300};
+      }
+    }
+
+    @media only screen and (max-width: 767px) {
+      ::slotted([slot='actionable']) {
+        flex-direction: column-reverse;
+      }
     }
 
     dsh-modal-organizer-text:nth-child(3) {

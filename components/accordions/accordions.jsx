@@ -13,8 +13,8 @@ const cssLightDom = css`
 `;
 
 function accordionComponent() {
-  const [rawChildNodes = []] = useChildNodes();
-  const childNodes = (Array.isArray(rawChildNodes) ? rawChildNodes : Array.from(rawChildNodes)).filter(Boolean);
+  const rawChildNodes = useChildNodes();
+  const childNodes = rawChildNodes.filter(Boolean);
 
   useCssLightDom(cssLightDom);
 

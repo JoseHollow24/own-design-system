@@ -10,7 +10,7 @@ function SelectComponent({
   checkboxPlaceholderPlural, checkboxPlaceholderSingular,
   helper, disabled, error, modal, nested, value, alphabeticalOrder,
 }) {
-  const [childNodes] = useChildNodes();
+  const childNodes = useChildNodes();
   const refSlot = useRef();
   const slotOptions = useSlot(refSlot).filter((e) => e instanceof HTMLElement);
   const [active, setActive] = useProp('active');

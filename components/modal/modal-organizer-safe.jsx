@@ -13,7 +13,7 @@ function ModalOrganizerSafeComponent({ visible, margin }) {
 
   return (
     <host shadowDom className={classname}>
-      <slot name="safe-area" />
+      <slot />
     </host>
   );
 }

@@ -17,51 +17,196 @@ Web component de menú lateral vertical del DSH Design System. Soporta ítems co
 
 ## Componentes
 
-| Componente | Descripción |
-|---|---|
-| `dsh-menu-vertical` | Contenedor del menú con header responsive y slot `menu-item` |
-| `dsh-menu-vertical-item` | Ítem de menú principal con soporte para sub-ítems |
-| `dsh-menu-vertical-subitem` | Sub-ítem del menú |
+<table style={{width:'100%',borderCollapse:'collapse',fontSize:'14px',marginBottom:'24px'}}>
+  <thead>
+    <tr style={{background:'#ebeff4'}}>
+      <th style={{padding:'10px 14px',textAlign:'left',borderBottom:'2px solid #c9d0d3'}}>Componente</th>
+      <th style={{padding:'10px 14px',textAlign:'left',borderBottom:'2px solid #c9d0d3'}}>Descripción</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style={{borderBottom:'1px solid #dfe3e5'}}>
+      <td style={{padding:'10px 14px'}}><code>dsh-menu-vertical</code></td>
+      <td style={{padding:'10px 14px'}}>Contenedor del menú con header responsive y slot <code>menu-item</code></td>
+    </tr>
+    <tr style={{borderBottom:'1px solid #dfe3e5'}}>
+      <td style={{padding:'10px 14px'}}><code>dsh-menu-vertical-item</code></td>
+      <td style={{padding:'10px 14px'}}>Ítem de menú principal con soporte para sub-ítems</td>
+    </tr>
+    <tr>
+      <td style={{padding:'10px 14px'}}><code>dsh-menu-vertical-subitem</code></td>
+      <td style={{padding:'10px 14px'}}>Sub-ítem del menú</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Props de dsh-menu-vertical
 
-| Prop | Tipo | Default | Descripción |
-|------|------|---------|-------------|
-| `open-mobile` | Boolean | `false` | Abre el menú en modo mobile |
+<table style={{width:'100%',borderCollapse:'collapse',fontSize:'14px',marginBottom:'24px'}}>
+  <thead>
+    <tr style={{background:'#ebeff4'}}>
+      <th style={{padding:'10px 14px',textAlign:'left',borderBottom:'2px solid #c9d0d3'}}>Prop</th>
+      <th style={{padding:'10px 14px',textAlign:'left',borderBottom:'2px solid #c9d0d3'}}>Tipo</th>
+      <th style={{padding:'10px 14px',textAlign:'left',borderBottom:'2px solid #c9d0d3'}}>Default</th>
+      <th style={{padding:'10px 14px',textAlign:'left',borderBottom:'2px solid #c9d0d3'}}>Descripción</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style={{padding:'10px 14px'}}><code>open-mobile</code></td>
+      <td style={{padding:'10px 14px'}}>Boolean</td>
+      <td style={{padding:'10px 14px'}}><code>false</code></td>
+      <td style={{padding:'10px 14px'}}>Abre el menú en modo mobile</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Props de dsh-menu-vertical-item
 
-| Prop | Tipo | Default | Descripción |
-|------|------|---------|-------------|
-| `item-value` | String | `""` | Texto del ítem |
-| `item-identifier` | String | `""` | Identificador único del ítem |
-| `href` | String | `"#"` | URL de destino |
-| `target` | String | `"_self"` | Target del enlace |
-| `active` | Boolean | `false` | Estado activo |
-| `desktop-icon-name` | String | `"bullet"` | Icono Font Awesome para desktop (ej: `fa-house`) o `"bullet"` |
-| `mobile-icon-name` | String | `"bullet"` | Icono Font Awesome para mobile |
-| `is-home-item` | Boolean | `false` | Marca el ítem como home (se oculta en mobile/tablet) |
-| `height-menu` | String | `""` | Altura del menú (asignada automáticamente) |
+<table style={{width:'100%',borderCollapse:'collapse',fontSize:'14px',marginBottom:'24px'}}>
+  <thead>
+    <tr style={{background:'#ebeff4'}}>
+      <th style={{padding:'10px 14px',textAlign:'left',borderBottom:'2px solid #c9d0d3'}}>Prop</th>
+      <th style={{padding:'10px 14px',textAlign:'left',borderBottom:'2px solid #c9d0d3'}}>Tipo</th>
+      <th style={{padding:'10px 14px',textAlign:'left',borderBottom:'2px solid #c9d0d3'}}>Default</th>
+      <th style={{padding:'10px 14px',textAlign:'left',borderBottom:'2px solid #c9d0d3'}}>Descripción</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style={{borderBottom:'1px solid #dfe3e5'}}>
+      <td style={{padding:'10px 14px'}}><code>item-value</code></td>
+      <td style={{padding:'10px 14px'}}>String</td>
+      <td style={{padding:'10px 14px'}}><code>""</code></td>
+      <td style={{padding:'10px 14px'}}>Texto del ítem</td>
+    </tr>
+    <tr style={{borderBottom:'1px solid #dfe3e5'}}>
+      <td style={{padding:'10px 14px'}}><code>item-identifier</code></td>
+      <td style={{padding:'10px 14px'}}>String</td>
+      <td style={{padding:'10px 14px'}}><code>""</code></td>
+      <td style={{padding:'10px 14px'}}>Identificador único del ítem</td>
+    </tr>
+    <tr style={{borderBottom:'1px solid #dfe3e5'}}>
+      <td style={{padding:'10px 14px'}}><code>href</code></td>
+      <td style={{padding:'10px 14px'}}>String</td>
+      <td style={{padding:'10px 14px'}}><code>"#"</code></td>
+      <td style={{padding:'10px 14px'}}>URL de destino</td>
+    </tr>
+    <tr style={{borderBottom:'1px solid #dfe3e5'}}>
+      <td style={{padding:'10px 14px'}}><code>target</code></td>
+      <td style={{padding:'10px 14px'}}>String</td>
+      <td style={{padding:'10px 14px'}}><code>"_self"</code></td>
+      <td style={{padding:'10px 14px'}}>Target del enlace</td>
+    </tr>
+    <tr style={{borderBottom:'1px solid #dfe3e5'}}>
+      <td style={{padding:'10px 14px'}}><code>active</code></td>
+      <td style={{padding:'10px 14px'}}>Boolean</td>
+      <td style={{padding:'10px 14px'}}><code>false</code></td>
+      <td style={{padding:'10px 14px'}}>Estado activo</td>
+    </tr>
+    <tr style={{borderBottom:'1px solid #dfe3e5'}}>
+      <td style={{padding:'10px 14px'}}><code>desktop-icon-name</code></td>
+      <td style={{padding:'10px 14px'}}>String</td>
+      <td style={{padding:'10px 14px'}}><code>"bullet"</code></td>
+      <td style={{padding:'10px 14px'}}>Icono Font Awesome para desktop (ej: <code>fa-house</code>) o <code>"bullet"</code></td>
+    </tr>
+    <tr style={{borderBottom:'1px solid #dfe3e5'}}>
+      <td style={{padding:'10px 14px'}}><code>mobile-icon-name</code></td>
+      <td style={{padding:'10px 14px'}}>String</td>
+      <td style={{padding:'10px 14px'}}><code>"bullet"</code></td>
+      <td style={{padding:'10px 14px'}}>Icono Font Awesome para mobile</td>
+    </tr>
+    <tr style={{borderBottom:'1px solid #dfe3e5'}}>
+      <td style={{padding:'10px 14px'}}><code>is-home-item</code></td>
+      <td style={{padding:'10px 14px'}}>Boolean</td>
+      <td style={{padding:'10px 14px'}}><code>false</code></td>
+      <td style={{padding:'10px 14px'}}>Marca el ítem como home (se oculta en mobile/tablet)</td>
+    </tr>
+    <tr>
+      <td style={{padding:'10px 14px'}}><code>height-menu</code></td>
+      <td style={{padding:'10px 14px'}}>String</td>
+      <td style={{padding:'10px 14px'}}><code>""</code></td>
+      <td style={{padding:'10px 14px'}}>Altura del menú (asignada automáticamente)</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Props de dsh-menu-vertical-subitem
 
-| Prop | Tipo | Default | Descripción |
-|------|------|---------|-------------|
-| `href` | String | `"#"` | URL de destino |
-| `target` | String | `"_self"` | Target del enlace |
-| `active` | Boolean | `false` | Estado activo |
-| `sub-item-identifier` | String | `""` | Identificador único del sub-ítem |
+<table style={{width:'100%',borderCollapse:'collapse',fontSize:'14px',marginBottom:'24px'}}>
+  <thead>
+    <tr style={{background:'#ebeff4'}}>
+      <th style={{padding:'10px 14px',textAlign:'left',borderBottom:'2px solid #c9d0d3'}}>Prop</th>
+      <th style={{padding:'10px 14px',textAlign:'left',borderBottom:'2px solid #c9d0d3'}}>Tipo</th>
+      <th style={{padding:'10px 14px',textAlign:'left',borderBottom:'2px solid #c9d0d3'}}>Default</th>
+      <th style={{padding:'10px 14px',textAlign:'left',borderBottom:'2px solid #c9d0d3'}}>Descripción</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style={{borderBottom:'1px solid #dfe3e5'}}>
+      <td style={{padding:'10px 14px'}}><code>href</code></td>
+      <td style={{padding:'10px 14px'}}>String</td>
+      <td style={{padding:'10px 14px'}}><code>"#"</code></td>
+      <td style={{padding:'10px 14px'}}>URL de destino</td>
+    </tr>
+    <tr style={{borderBottom:'1px solid #dfe3e5'}}>
+      <td style={{padding:'10px 14px'}}><code>target</code></td>
+      <td style={{padding:'10px 14px'}}>String</td>
+      <td style={{padding:'10px 14px'}}><code>"_self"</code></td>
+      <td style={{padding:'10px 14px'}}>Target del enlace</td>
+    </tr>
+    <tr style={{borderBottom:'1px solid #dfe3e5'}}>
+      <td style={{padding:'10px 14px'}}><code>active</code></td>
+      <td style={{padding:'10px 14px'}}>Boolean</td>
+      <td style={{padding:'10px 14px'}}><code>false</code></td>
+      <td style={{padding:'10px 14px'}}>Estado activo</td>
+    </tr>
+    <tr>
+      <td style={{padding:'10px 14px'}}><code>sub-item-identifier</code></td>
+      <td style={{padding:'10px 14px'}}>String</td>
+      <td style={{padding:'10px 14px'}}><code>""</code></td>
+      <td style={{padding:'10px 14px'}}>Identificador único del sub-ítem</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Slots de dsh-menu-vertical
 
-| Slot | Descripción |
-|------|-------------|
-| `menu-item` | Ítems `dsh-menu-vertical-item` |
-| `menu-avatar` | Avatar/logo para el header desktop |
-| `button-header-mobile` | Botón adicional en el header mobile |
+<table style={{width:'100%',borderCollapse:'collapse',fontSize:'14px',marginBottom:'24px'}}>
+  <thead>
+    <tr style={{background:'#ebeff4'}}>
+      <th style={{padding:'10px 14px',textAlign:'left',borderBottom:'2px solid #c9d0d3'}}>Slot</th>
+      <th style={{padding:'10px 14px',textAlign:'left',borderBottom:'2px solid #c9d0d3'}}>Descripción</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style={{borderBottom:'1px solid #dfe3e5'}}>
+      <td style={{padding:'10px 14px'}}><code>menu-item</code></td>
+      <td style={{padding:'10px 14px'}}>Ítems <code>dsh-menu-vertical-item</code></td>
+    </tr>
+    <tr style={{borderBottom:'1px solid #dfe3e5'}}>
+      <td style={{padding:'10px 14px'}}><code>menu-avatar</code></td>
+      <td style={{padding:'10px 14px'}}>Avatar/logo para el header desktop</td>
+    </tr>
+    <tr>
+      <td style={{padding:'10px 14px'}}><code>button-header-mobile</code></td>
+      <td style={{padding:'10px 14px'}}>Botón adicional en el header mobile</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Slots de dsh-menu-vertical-item
 
-| Slot | Descripción |
-|------|-------------|
-| `sub-item` | Sub-ítems `dsh-menu-vertical-subitem` |
+<table style={{width:'100%',borderCollapse:'collapse',fontSize:'14px'}}>
+  <thead>
+    <tr style={{background:'#ebeff4'}}>
+      <th style={{padding:'10px 14px',textAlign:'left',borderBottom:'2px solid #c9d0d3'}}>Slot</th>
+      <th style={{padding:'10px 14px',textAlign:'left',borderBottom:'2px solid #c9d0d3'}}>Descripción</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style={{padding:'10px 14px'}}><code>sub-item</code></td>
+      <td style={{padding:'10px 14px'}}>Sub-ítems <code>dsh-menu-vertical-subitem</code></td>
+    </tr>
+  </tbody>
+</table>

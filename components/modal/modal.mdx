@@ -50,33 +50,159 @@ El prop `avatar-src` muestra una imagen de perfil circular sobre el contenido de
 
 ## Props
 
-| Prop | Atributo | Tipo | Default | Descripción |
-|------|----------|------|---------|-------------|
-| `open` | `open` | `boolean` | `false` | Controla si el modal está visible |
-| `closable` | `closable` | `boolean` | `false` | Muestra el botón "Cerrar" |
-| `noClose` | `no-close` | `boolean` | `false` | Desactiva cierre por fondo y tecla Escape |
-| `fixed` | `fixed` | `boolean` | `false` | Modal de altura completa (grid layout) |
-| `textTitle` | `text-title` | `string` | — | Título del modal |
-| `textDescription` | `text-description` | `string` | — | Descripción o cuerpo del modal |
-| `icon` | `icon` | `string` | — | Nombre del ícono FA (ej: `fa-circle-check`) |
-| `iconColor` | `icon-color` | `string` | `x1` | Color del ícono |
-| `imageSrc` | `image-src` | `string` | — | URL de la imagen (requiere `variant="promo"`) |
-| `imageAlt` | `image-alt` | `string` | — | Texto alternativo de la imagen |
-| `avatarSrc` | `avatar-src` | `string` | — | URL del avatar circular |
-| `avatarAlt` | `avatar-alt` | `string` | — | Texto alternativo del avatar |
-| `variant` | `variant` | `string` | — | Variante del card: `promo` |
-| `actionableAlign` | `actionable-align` | `string` | `right` | Alineación del footer: `left`, `center`, `right` |
-| `id` | `id` | `string` | — | ID base del modal (se sufija `-title` y `-description` para aria) |
+<table style={{width:'100%',borderCollapse:'collapse',fontSize:'14px',marginBottom:'24px'}}>
+  <thead>
+    <tr style={{background:'#ebeff4'}}>
+      <th style={{padding:'10px 14px',textAlign:'left',borderBottom:'2px solid #c9d0d3'}}>Prop</th>
+      <th style={{padding:'10px 14px',textAlign:'left',borderBottom:'2px solid #c9d0d3'}}>Atributo</th>
+      <th style={{padding:'10px 14px',textAlign:'left',borderBottom:'2px solid #c9d0d3'}}>Tipo</th>
+      <th style={{padding:'10px 14px',textAlign:'left',borderBottom:'2px solid #c9d0d3'}}>Default</th>
+      <th style={{padding:'10px 14px',textAlign:'left',borderBottom:'2px solid #c9d0d3'}}>Descripción</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style={{borderBottom:'1px solid #dfe3e5'}}>
+      <td style={{padding:'10px 14px'}}><code>open</code></td>
+      <td style={{padding:'10px 14px'}}><code>open</code></td>
+      <td style={{padding:'10px 14px'}}>boolean</td>
+      <td style={{padding:'10px 14px'}}><code>false</code></td>
+      <td style={{padding:'10px 14px'}}>Controla si el modal está visible</td>
+    </tr>
+    <tr style={{borderBottom:'1px solid #dfe3e5'}}>
+      <td style={{padding:'10px 14px'}}><code>closable</code></td>
+      <td style={{padding:'10px 14px'}}><code>closable</code></td>
+      <td style={{padding:'10px 14px'}}>boolean</td>
+      <td style={{padding:'10px 14px'}}><code>false</code></td>
+      <td style={{padding:'10px 14px'}}>Muestra el botón "Cerrar"</td>
+    </tr>
+    <tr style={{borderBottom:'1px solid #dfe3e5'}}>
+      <td style={{padding:'10px 14px'}}><code>noClose</code></td>
+      <td style={{padding:'10px 14px'}}><code>no-close</code></td>
+      <td style={{padding:'10px 14px'}}>boolean</td>
+      <td style={{padding:'10px 14px'}}><code>false</code></td>
+      <td style={{padding:'10px 14px'}}>Desactiva cierre por fondo y tecla Escape</td>
+    </tr>
+    <tr style={{borderBottom:'1px solid #dfe3e5'}}>
+      <td style={{padding:'10px 14px'}}><code>fixed</code></td>
+      <td style={{padding:'10px 14px'}}><code>fixed</code></td>
+      <td style={{padding:'10px 14px'}}>boolean</td>
+      <td style={{padding:'10px 14px'}}><code>false</code></td>
+      <td style={{padding:'10px 14px'}}>Modal de altura completa (grid layout)</td>
+    </tr>
+    <tr style={{borderBottom:'1px solid #dfe3e5'}}>
+      <td style={{padding:'10px 14px'}}><code>textTitle</code></td>
+      <td style={{padding:'10px 14px'}}><code>text-title</code></td>
+      <td style={{padding:'10px 14px'}}>string</td>
+      <td style={{padding:'10px 14px'}}>—</td>
+      <td style={{padding:'10px 14px'}}>Título del modal</td>
+    </tr>
+    <tr style={{borderBottom:'1px solid #dfe3e5'}}>
+      <td style={{padding:'10px 14px'}}><code>textDescription</code></td>
+      <td style={{padding:'10px 14px'}}><code>text-description</code></td>
+      <td style={{padding:'10px 14px'}}>string</td>
+      <td style={{padding:'10px 14px'}}>—</td>
+      <td style={{padding:'10px 14px'}}>Descripción o cuerpo del modal</td>
+    </tr>
+    <tr style={{borderBottom:'1px solid #dfe3e5'}}>
+      <td style={{padding:'10px 14px'}}><code>icon</code></td>
+      <td style={{padding:'10px 14px'}}><code>icon</code></td>
+      <td style={{padding:'10px 14px'}}>string</td>
+      <td style={{padding:'10px 14px'}}>—</td>
+      <td style={{padding:'10px 14px'}}>Nombre del ícono FA (ej: <code>fa-circle-check</code>)</td>
+    </tr>
+    <tr style={{borderBottom:'1px solid #dfe3e5'}}>
+      <td style={{padding:'10px 14px'}}><code>iconColor</code></td>
+      <td style={{padding:'10px 14px'}}><code>icon-color</code></td>
+      <td style={{padding:'10px 14px'}}>string</td>
+      <td style={{padding:'10px 14px'}}><code>x1</code></td>
+      <td style={{padding:'10px 14px'}}>Color del ícono</td>
+    </tr>
+    <tr style={{borderBottom:'1px solid #dfe3e5'}}>
+      <td style={{padding:'10px 14px'}}><code>imageSrc</code></td>
+      <td style={{padding:'10px 14px'}}><code>image-src</code></td>
+      <td style={{padding:'10px 14px'}}>string</td>
+      <td style={{padding:'10px 14px'}}>—</td>
+      <td style={{padding:'10px 14px'}}>URL de la imagen (requiere <code>variant="promo"</code>)</td>
+    </tr>
+    <tr style={{borderBottom:'1px solid #dfe3e5'}}>
+      <td style={{padding:'10px 14px'}}><code>imageAlt</code></td>
+      <td style={{padding:'10px 14px'}}><code>image-alt</code></td>
+      <td style={{padding:'10px 14px'}}>string</td>
+      <td style={{padding:'10px 14px'}}>—</td>
+      <td style={{padding:'10px 14px'}}>Texto alternativo de la imagen</td>
+    </tr>
+    <tr style={{borderBottom:'1px solid #dfe3e5'}}>
+      <td style={{padding:'10px 14px'}}><code>avatarSrc</code></td>
+      <td style={{padding:'10px 14px'}}><code>avatar-src</code></td>
+      <td style={{padding:'10px 14px'}}>string</td>
+      <td style={{padding:'10px 14px'}}>—</td>
+      <td style={{padding:'10px 14px'}}>URL del avatar circular</td>
+    </tr>
+    <tr style={{borderBottom:'1px solid #dfe3e5'}}>
+      <td style={{padding:'10px 14px'}}><code>avatarAlt</code></td>
+      <td style={{padding:'10px 14px'}}><code>avatar-alt</code></td>
+      <td style={{padding:'10px 14px'}}>string</td>
+      <td style={{padding:'10px 14px'}}>—</td>
+      <td style={{padding:'10px 14px'}}>Texto alternativo del avatar</td>
+    </tr>
+    <tr style={{borderBottom:'1px solid #dfe3e5'}}>
+      <td style={{padding:'10px 14px'}}><code>variant</code></td>
+      <td style={{padding:'10px 14px'}}><code>variant</code></td>
+      <td style={{padding:'10px 14px'}}>string</td>
+      <td style={{padding:'10px 14px'}}>—</td>
+      <td style={{padding:'10px 14px'}}>Variante del card: <code>promo</code></td>
+    </tr>
+    <tr style={{borderBottom:'1px solid #dfe3e5'}}>
+      <td style={{padding:'10px 14px'}}><code>actionableAlign</code></td>
+      <td style={{padding:'10px 14px'}}><code>actionable-align</code></td>
+      <td style={{padding:'10px 14px'}}>string</td>
+      <td style={{padding:'10px 14px'}}><code>right</code></td>
+      <td style={{padding:'10px 14px'}}>Alineación del footer: <code>left</code>, <code>center</code>, <code>right</code></td>
+    </tr>
+    <tr>
+      <td style={{padding:'10px 14px'}}><code>id</code></td>
+      <td style={{padding:'10px 14px'}}><code>id</code></td>
+      <td style={{padding:'10px 14px'}}>string</td>
+      <td style={{padding:'10px 14px'}}>—</td>
+      <td style={{padding:'10px 14px'}}>ID base del modal (se sufija <code>-title</code> y <code>-description</code> para aria)</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Slots
 
-| Slot | Descripción |
-|------|-------------|
-| `actionable` | Botones de acción en el footer del modal |
-| `safe-area` | Contenido adicional bajo el cuerpo principal |
+<table style={{width:'100%',borderCollapse:'collapse',fontSize:'14px',marginBottom:'24px'}}>
+  <thead>
+    <tr style={{background:'#ebeff4'}}>
+      <th style={{padding:'10px 14px',textAlign:'left',borderBottom:'2px solid #c9d0d3'}}>Slot</th>
+      <th style={{padding:'10px 14px',textAlign:'left',borderBottom:'2px solid #c9d0d3'}}>Descripción</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style={{borderBottom:'1px solid #dfe3e5'}}>
+      <td style={{padding:'10px 14px'}}><code>actionable</code></td>
+      <td style={{padding:'10px 14px'}}>Botones de acción en el footer del modal</td>
+    </tr>
+    <tr>
+      <td style={{padding:'10px 14px'}}><code>safe-area</code></td>
+      <td style={{padding:'10px 14px'}}>Contenido adicional bajo el cuerpo principal</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Eventos
 
-| Evento | Descripción |
-|--------|-------------|
-| `close` | Emitido al cerrar el modal (fondo, botón Cerrar o Escape) |
+<table style={{width:'100%',borderCollapse:'collapse',fontSize:'14px'}}>
+  <thead>
+    <tr style={{background:'#ebeff4'}}>
+      <th style={{padding:'10px 14px',textAlign:'left',borderBottom:'2px solid #c9d0d3'}}>Evento</th>
+      <th style={{padding:'10px 14px',textAlign:'left',borderBottom:'2px solid #c9d0d3'}}>Descripción</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style={{padding:'10px 14px'}}><code>close</code></td>
+      <td style={{padding:'10px 14px'}}>Emitido al cerrar el modal (fondo, botón Cerrar o Escape)</td>
+    </tr>
+  </tbody>
+</table>

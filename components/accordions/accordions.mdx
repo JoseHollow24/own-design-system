@@ -15,23 +15,63 @@ Web component de acordeones del DSH Design System. Compuesto por tres elementos:
 
 Controla el color del borde izquierdo según la variante seleccionada.
 
-| Variant | Color |
-|---------|-------|
-| `blue` | Blue (C1) |
-| `slate` | Slate (G1) |
-| `purple` | Purple (M1) |
-| `neutral` | Sin borde izquierdo |
+<table style={{width:'100%',borderCollapse:'collapse',fontSize:'14px',marginBottom:'24px'}}>
+  <thead>
+    <tr style={{background:'#ebeff4'}}>
+      <th style={{padding:'10px 14px',textAlign:'left',borderBottom:'2px solid #c9d0d3'}}>Variant</th>
+      <th style={{padding:'10px 14px',textAlign:'left',borderBottom:'2px solid #c9d0d3'}}>Color</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style={{borderBottom:'1px solid #dfe3e5'}}>
+      <td style={{padding:'10px 14px'}}><code>blue</code></td>
+      <td style={{padding:'10px 14px'}}>Blue (C1)</td>
+    </tr>
+    <tr style={{borderBottom:'1px solid #dfe3e5'}}>
+      <td style={{padding:'10px 14px'}}><code>slate</code></td>
+      <td style={{padding:'10px 14px'}}>Slate (G1)</td>
+    </tr>
+    <tr style={{borderBottom:'1px solid #dfe3e5'}}>
+      <td style={{padding:'10px 14px'}}><code>purple</code></td>
+      <td style={{padding:'10px 14px'}}>Purple (M1)</td>
+    </tr>
+    <tr>
+      <td style={{padding:'10px 14px'}}><code>neutral</code></td>
+      <td style={{padding:'10px 14px'}}>Sin borde izquierdo</td>
+    </tr>
+  </tbody>
+</table>
 
 <Canvas of={AccordionsStories.Variantes} />
 
 ## Tipos de acordeón
 
-| Type | Descripción |
-|------|-------------|
-| `primario` | Fondo azul claro, sin borde visible |
-| `secundario` | Fondo blanco, borde azul completo |
-| `borderbottom` | Solo borde inferior, fondo transparente |
-| `none` | Sin bordes ni fondo |
+<table style={{width:'100%',borderCollapse:'collapse',fontSize:'14px',marginBottom:'24px'}}>
+  <thead>
+    <tr style={{background:'#ebeff4'}}>
+      <th style={{padding:'10px 14px',textAlign:'left',borderBottom:'2px solid #c9d0d3'}}>Type</th>
+      <th style={{padding:'10px 14px',textAlign:'left',borderBottom:'2px solid #c9d0d3'}}>Descripción</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style={{borderBottom:'1px solid #dfe3e5'}}>
+      <td style={{padding:'10px 14px'}}><code>primario</code></td>
+      <td style={{padding:'10px 14px'}}>Fondo azul claro, sin borde visible</td>
+    </tr>
+    <tr style={{borderBottom:'1px solid #dfe3e5'}}>
+      <td style={{padding:'10px 14px'}}><code>secundario</code></td>
+      <td style={{padding:'10px 14px'}}>Fondo blanco, borde azul completo</td>
+    </tr>
+    <tr style={{borderBottom:'1px solid #dfe3e5'}}>
+      <td style={{padding:'10px 14px'}}><code>borderbottom</code></td>
+      <td style={{padding:'10px 14px'}}>Solo borde inferior, fondo transparente</td>
+    </tr>
+    <tr>
+      <td style={{padding:'10px 14px'}}><code>none</code></td>
+      <td style={{padding:'10px 14px'}}>Sin bordes ni fondo</td>
+    </tr>
+  </tbody>
+</table>
 
 <Canvas of={AccordionsStories.Tipos} />
 
@@ -48,20 +88,82 @@ Los `dsh-accordion-item` pueden contener otro `dsh-accordions` en el slot `accor
 
 ## Props de dsh-accordion-item
 
-| Prop | Tipo | Default | Descripción |
-|------|------|---------|-------------|
-| `label` | String | `""` | Título del acordeón |
-| `sublabel` | String | `""` | Subtítulo opcional |
-| `variant` | String | `"blue"` | Color: blue, slate, purple, neutral |
-| `type` | String | `"primario"` | Estilo: primario, secundario, borderbottom, none |
-| `open` | Boolean | `false` | Si el acordeón está expandido |
-| `checkbox` | Boolean | `false` | Muestra checkbox en el header |
-| `checked` | Boolean | `false` | Estado del checkbox |
+<table style={{width:'100%',borderCollapse:'collapse',fontSize:'14px',marginBottom:'24px'}}>
+  <thead>
+    <tr style={{background:'#ebeff4'}}>
+      <th style={{padding:'10px 14px',textAlign:'left',borderBottom:'2px solid #c9d0d3'}}>Prop</th>
+      <th style={{padding:'10px 14px',textAlign:'left',borderBottom:'2px solid #c9d0d3'}}>Tipo</th>
+      <th style={{padding:'10px 14px',textAlign:'left',borderBottom:'2px solid #c9d0d3'}}>Default</th>
+      <th style={{padding:'10px 14px',textAlign:'left',borderBottom:'2px solid #c9d0d3'}}>Descripción</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style={{borderBottom:'1px solid #dfe3e5'}}>
+      <td style={{padding:'10px 14px'}}><code>label</code></td>
+      <td style={{padding:'10px 14px'}}>String</td>
+      <td style={{padding:'10px 14px'}}><code>""</code></td>
+      <td style={{padding:'10px 14px'}}>Título del acordeón</td>
+    </tr>
+    <tr style={{borderBottom:'1px solid #dfe3e5'}}>
+      <td style={{padding:'10px 14px'}}><code>sublabel</code></td>
+      <td style={{padding:'10px 14px'}}>String</td>
+      <td style={{padding:'10px 14px'}}><code>""</code></td>
+      <td style={{padding:'10px 14px'}}>Subtítulo opcional</td>
+    </tr>
+    <tr style={{borderBottom:'1px solid #dfe3e5'}}>
+      <td style={{padding:'10px 14px'}}><code>variant</code></td>
+      <td style={{padding:'10px 14px'}}>String</td>
+      <td style={{padding:'10px 14px'}}><code>"blue"</code></td>
+      <td style={{padding:'10px 14px'}}>Color: blue, slate, purple, neutral</td>
+    </tr>
+    <tr style={{borderBottom:'1px solid #dfe3e5'}}>
+      <td style={{padding:'10px 14px'}}><code>type</code></td>
+      <td style={{padding:'10px 14px'}}>String</td>
+      <td style={{padding:'10px 14px'}}><code>"primario"</code></td>
+      <td style={{padding:'10px 14px'}}>Estilo: primario, secundario, borderbottom, none</td>
+    </tr>
+    <tr style={{borderBottom:'1px solid #dfe3e5'}}>
+      <td style={{padding:'10px 14px'}}><code>open</code></td>
+      <td style={{padding:'10px 14px'}}>Boolean</td>
+      <td style={{padding:'10px 14px'}}><code>false</code></td>
+      <td style={{padding:'10px 14px'}}>Si el acordeón está expandido</td>
+    </tr>
+    <tr style={{borderBottom:'1px solid #dfe3e5'}}>
+      <td style={{padding:'10px 14px'}}><code>checkbox</code></td>
+      <td style={{padding:'10px 14px'}}>Boolean</td>
+      <td style={{padding:'10px 14px'}}><code>false</code></td>
+      <td style={{padding:'10px 14px'}}>Muestra checkbox en el header</td>
+    </tr>
+    <tr>
+      <td style={{padding:'10px 14px'}}><code>checked</code></td>
+      <td style={{padding:'10px 14px'}}>Boolean</td>
+      <td style={{padding:'10px 14px'}}><code>false</code></td>
+      <td style={{padding:'10px 14px'}}>Estado del checkbox</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Slots de dsh-accordion-item
 
-| Slot | Descripción |
-|------|-------------|
-| `body` | Contenido expandible del acordeón |
-| `accordion` | Acordeones anidados |
-| `header-right` | Elemento a la derecha del header |
+<table style={{width:'100%',borderCollapse:'collapse',fontSize:'14px'}}>
+  <thead>
+    <tr style={{background:'#ebeff4'}}>
+      <th style={{padding:'10px 14px',textAlign:'left',borderBottom:'2px solid #c9d0d3'}}>Slot</th>
+      <th style={{padding:'10px 14px',textAlign:'left',borderBottom:'2px solid #c9d0d3'}}>Descripción</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style={{borderBottom:'1px solid #dfe3e5'}}>
+      <td style={{padding:'10px 14px'}}><code>body</code></td>
+      <td style={{padding:'10px 14px'}}>Contenido expandible del acordeón</td>
+    </tr>
+    <tr style={{borderBottom:'1px solid #dfe3e5'}}>
+      <td style={{padding:'10px 14px'}}><code>accordion</code></td>
+      <td style={{padding:'10px 14px'}}>Acordeones anidados</td>
+    </tr>
+    <tr>
+      <td style={{padding:'10px 14px'}}><code>header-right</code></td>
+      <td style={{padding:'10px 14px'}}>Elemento a la derecha del header</td>
+    </tr>
+  </tbody>
+</table>

@@ -22,18 +22,70 @@ Web component de tarjeta de detalles del DSH Design System. Incluye línea de co
 
 ## Props
 
-| Prop | Tipo | Default | Descripción |
-|------|------|---------|-------------|
-| `color` | String | `"neutral"` | Color: neutral, blue, purple, slate, cav, ffmm, apv |
-| `open` | Boolean | `true` | Si el acordeón interno está expandido |
-| `accordeonable` | Boolean | `false` | Activa el botón colapsar/expandir (solo en móvil) |
-| `icon` | String | — | Nombre del ícono FontAwesome (ej: fa-user) |
-| `footer-align` | String | `"fluid right"` | Alineación del footer: left, right, center, fluid |
+<table style={{width:'100%',borderCollapse:'collapse',fontSize:'14px',marginBottom:'24px'}}>
+  <thead>
+    <tr style={{background:'#ebeff4'}}>
+      <th style={{padding:'10px 14px',textAlign:'left',borderBottom:'2px solid #c9d0d3'}}>Prop</th>
+      <th style={{padding:'10px 14px',textAlign:'left',borderBottom:'2px solid #c9d0d3'}}>Tipo</th>
+      <th style={{padding:'10px 14px',textAlign:'left',borderBottom:'2px solid #c9d0d3'}}>Default</th>
+      <th style={{padding:'10px 14px',textAlign:'left',borderBottom:'2px solid #c9d0d3'}}>Descripción</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style={{borderBottom:'1px solid #dfe3e5'}}>
+      <td style={{padding:'10px 14px'}}><code>color</code></td>
+      <td style={{padding:'10px 14px'}}>String</td>
+      <td style={{padding:'10px 14px'}}><code>"neutral"</code></td>
+      <td style={{padding:'10px 14px'}}>Color: neutral, blue, purple, slate, cav, ffmm, apv</td>
+    </tr>
+    <tr style={{borderBottom:'1px solid #dfe3e5'}}>
+      <td style={{padding:'10px 14px'}}><code>open</code></td>
+      <td style={{padding:'10px 14px'}}>Boolean</td>
+      <td style={{padding:'10px 14px'}}><code>true</code></td>
+      <td style={{padding:'10px 14px'}}>Si el acordeón interno está expandido</td>
+    </tr>
+    <tr style={{borderBottom:'1px solid #dfe3e5'}}>
+      <td style={{padding:'10px 14px'}}><code>accordeonable</code></td>
+      <td style={{padding:'10px 14px'}}>Boolean</td>
+      <td style={{padding:'10px 14px'}}><code>false</code></td>
+      <td style={{padding:'10px 14px'}}>Activa el botón colapsar/expandir (solo en móvil)</td>
+    </tr>
+    <tr style={{borderBottom:'1px solid #dfe3e5'}}>
+      <td style={{padding:'10px 14px'}}><code>icon</code></td>
+      <td style={{padding:'10px 14px'}}>String</td>
+      <td style={{padding:'10px 14px'}}>—</td>
+      <td style={{padding:'10px 14px'}}>Nombre del ícono FontAwesome (ej: fa-user)</td>
+    </tr>
+    <tr>
+      <td style={{padding:'10px 14px'}}><code>footer-align</code></td>
+      <td style={{padding:'10px 14px'}}>String</td>
+      <td style={{padding:'10px 14px'}}><code>"fluid right"</code></td>
+      <td style={{padding:'10px 14px'}}>Alineación del footer: left, right, center, fluid</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Slots
 
-| Slot | Descripción |
-|------|-------------|
-| `title` | Título del card (strong, h4, p) |
-| `content` | Contenido principal |
-| `footer` | Botones de acción |
+<table style={{width:'100%',borderCollapse:'collapse',fontSize:'14px'}}>
+  <thead>
+    <tr style={{background:'#ebeff4'}}>
+      <th style={{padding:'10px 14px',textAlign:'left',borderBottom:'2px solid #c9d0d3'}}>Slot</th>
+      <th style={{padding:'10px 14px',textAlign:'left',borderBottom:'2px solid #c9d0d3'}}>Descripción</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style={{borderBottom:'1px solid #dfe3e5'}}>
+      <td style={{padding:'10px 14px'}}><code>title</code></td>
+      <td style={{padding:'10px 14px'}}>Título del card (strong, h4, p)</td>
+    </tr>
+    <tr style={{borderBottom:'1px solid #dfe3e5'}}>
+      <td style={{padding:'10px 14px'}}><code>content</code></td>
+      <td style={{padding:'10px 14px'}}>Contenido principal</td>
+    </tr>
+    <tr>
+      <td style={{padding:'10px 14px'}}><code>footer</code></td>
+      <td style={{padding:'10px 14px'}}>Botones de acción</td>
+    </tr>
+  </tbody>
+</table>

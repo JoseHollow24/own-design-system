@@ -26,26 +26,84 @@ Web component de tarjetas destacadas del DSH Design System. Presenta una serie d
 
 ## Componentes
 
-| Componente | Descripción |
-|---|---|
-| `dsh-card-highlights` | Contenedor que gestiona el layout y asigna props automáticamente a los items |
-| `dsh-card-highlights-item` | Item individual con slots `icon` y `label` |
+<table style={{width:'100%',borderCollapse:'collapse',fontSize:'14px',marginBottom:'24px'}}>
+  <thead>
+    <tr style={{background:'#ebeff4'}}>
+      <th style={{padding:'10px 14px',textAlign:'left',borderBottom:'2px solid #c9d0d3'}}>Componente</th>
+      <th style={{padding:'10px 14px',textAlign:'left',borderBottom:'2px solid #c9d0d3'}}>Descripción</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style={{borderBottom:'1px solid #dfe3e5'}}>
+      <td style={{padding:'10px 14px'}}><code>dsh-card-highlights</code></td>
+      <td style={{padding:'10px 14px'}}>Contenedor que gestiona el layout y asigna props automáticamente a los items</td>
+    </tr>
+    <tr>
+      <td style={{padding:'10px 14px'}}><code>dsh-card-highlights-item</code></td>
+      <td style={{padding:'10px 14px'}}>Item individual con slots <code>icon</code> y <code>label</code></td>
+    </tr>
+  </tbody>
+</table>
 
 ## Props de dsh-card-highlights-item
 
-| Prop | Tipo | Default | Descripción |
-|------|------|---------|-------------|
-| `color` | String | `"a6"` | Color del item: a6, r6, n6, v6, t6, l6, m6, x6, a1 |
-| `type` | String | `""` | Asignado automáticamente: "one" (primero) o "informative" (resto) |
-| `index` | String | `""` | Posición inversa asignada por el contenedor |
-| `total` | Number | `1` | Total de items, asignado por el contenedor |
+<table style={{width:'100%',borderCollapse:'collapse',fontSize:'14px',marginBottom:'24px'}}>
+  <thead>
+    <tr style={{background:'#ebeff4'}}>
+      <th style={{padding:'10px 14px',textAlign:'left',borderBottom:'2px solid #c9d0d3'}}>Prop</th>
+      <th style={{padding:'10px 14px',textAlign:'left',borderBottom:'2px solid #c9d0d3'}}>Tipo</th>
+      <th style={{padding:'10px 14px',textAlign:'left',borderBottom:'2px solid #c9d0d3'}}>Default</th>
+      <th style={{padding:'10px 14px',textAlign:'left',borderBottom:'2px solid #c9d0d3'}}>Descripción</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style={{borderBottom:'1px solid #dfe3e5'}}>
+      <td style={{padding:'10px 14px'}}><code>color</code></td>
+      <td style={{padding:'10px 14px'}}>String</td>
+      <td style={{padding:'10px 14px'}}><code>"a6"</code></td>
+      <td style={{padding:'10px 14px'}}>Color del item: a6, r6, n6, v6, t6, l6, m6, x6, a1</td>
+    </tr>
+    <tr style={{borderBottom:'1px solid #dfe3e5'}}>
+      <td style={{padding:'10px 14px'}}><code>type</code></td>
+      <td style={{padding:'10px 14px'}}>String</td>
+      <td style={{padding:'10px 14px'}}><code>""</code></td>
+      <td style={{padding:'10px 14px'}}>Asignado automáticamente: "one" (primero) o "informative" (resto)</td>
+    </tr>
+    <tr style={{borderBottom:'1px solid #dfe3e5'}}>
+      <td style={{padding:'10px 14px'}}><code>index</code></td>
+      <td style={{padding:'10px 14px'}}>String</td>
+      <td style={{padding:'10px 14px'}}><code>""</code></td>
+      <td style={{padding:'10px 14px'}}>Posición inversa asignada por el contenedor</td>
+    </tr>
+    <tr>
+      <td style={{padding:'10px 14px'}}><code>total</code></td>
+      <td style={{padding:'10px 14px'}}>Number</td>
+      <td style={{padding:'10px 14px'}}><code>1</code></td>
+      <td style={{padding:'10px 14px'}}>Total de items, asignado por el contenedor</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Slots de dsh-card-highlights-item
 
-| Slot | Descripción |
-|------|-------------|
-| `icon` | Icono o SVG (48px desktop, 32px mobile) |
-| `label` | Texto del elemento |
+<table style={{width:'100%',borderCollapse:'collapse',fontSize:'14px'}}>
+  <thead>
+    <tr style={{background:'#ebeff4'}}>
+      <th style={{padding:'10px 14px',textAlign:'left',borderBottom:'2px solid #c9d0d3'}}>Slot</th>
+      <th style={{padding:'10px 14px',textAlign:'left',borderBottom:'2px solid #c9d0d3'}}>Descripción</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style={{borderBottom:'1px solid #dfe3e5'}}>
+      <td style={{padding:'10px 14px'}}><code>icon</code></td>
+      <td style={{padding:'10px 14px'}}>Icono o SVG (48px desktop, 32px mobile)</td>
+    </tr>
+    <tr>
+      <td style={{padding:'10px 14px'}}><code>label</code></td>
+      <td style={{padding:'10px 14px'}}>Texto del elemento</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Uso
 

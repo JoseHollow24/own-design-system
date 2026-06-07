@@ -30,8 +30,8 @@ const cssLightDom = css`
 function accordionItemComponent({ label, checkbox, variant, type, sublabel }) {
   const contentBody = useRef();
 
-  const [rawChildNodes = []] = useChildNodes();
-  const childNodes = (Array.isArray(rawChildNodes) ? rawChildNodes : Array.from(rawChildNodes)).filter(Boolean);
+  const rawChildNodes = useChildNodes();
+  const childNodes = rawChildNodes.filter(Boolean);
 
   const slotHeaderFilter = childNodes
     .filter((e) => e instanceof HTMLElement)

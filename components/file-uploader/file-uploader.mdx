@@ -26,32 +26,129 @@ Web component de carga de archivos del DSH Design System. Permite subir archivos
 
 ## Props
 
-| Prop | Tipo | Default | Descripción |
-|------|------|---------|-------------|
-| `text-title` | String | — | Título del componente |
-| `text-subtitle` | String | — | Subtítulo informativo |
-| `text-button` | String | `"Subir archivo"` | Texto del botón |
-| `button-variant` | String | `"secondary"` | Variante del botón: primary, secondary, tertiary |
-| `allowed-types` | String | `""` | Extensiones permitidas (ej: `.pdf,.doc`) |
-| `max-load` | Number | `1` | Máximo de archivos a cargar |
-| `max-size` | Number | `3` | Tamaño máximo en MB por archivo |
-| `disabled` | Boolean | `false` | Deshabilita el componente |
-| `defaults` | Array | — | Archivos precargados |
-| `name` | String | — | Nombre del input para formularios |
+<table style={{width:'100%',borderCollapse:'collapse',fontSize:'14px',marginBottom:'24px'}}>
+  <thead>
+    <tr style={{background:'#ebeff4'}}>
+      <th style={{padding:'10px 14px',textAlign:'left',borderBottom:'2px solid #c9d0d3'}}>Prop</th>
+      <th style={{padding:'10px 14px',textAlign:'left',borderBottom:'2px solid #c9d0d3'}}>Tipo</th>
+      <th style={{padding:'10px 14px',textAlign:'left',borderBottom:'2px solid #c9d0d3'}}>Default</th>
+      <th style={{padding:'10px 14px',textAlign:'left',borderBottom:'2px solid #c9d0d3'}}>Descripción</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style={{borderBottom:'1px solid #dfe3e5'}}>
+      <td style={{padding:'10px 14px'}}><code>text-title</code></td>
+      <td style={{padding:'10px 14px'}}>String</td>
+      <td style={{padding:'10px 14px'}}>—</td>
+      <td style={{padding:'10px 14px'}}>Título del componente</td>
+    </tr>
+    <tr style={{borderBottom:'1px solid #dfe3e5'}}>
+      <td style={{padding:'10px 14px'}}><code>text-subtitle</code></td>
+      <td style={{padding:'10px 14px'}}>String</td>
+      <td style={{padding:'10px 14px'}}>—</td>
+      <td style={{padding:'10px 14px'}}>Subtítulo informativo</td>
+    </tr>
+    <tr style={{borderBottom:'1px solid #dfe3e5'}}>
+      <td style={{padding:'10px 14px'}}><code>text-button</code></td>
+      <td style={{padding:'10px 14px'}}>String</td>
+      <td style={{padding:'10px 14px'}}><code>"Subir archivo"</code></td>
+      <td style={{padding:'10px 14px'}}>Texto del botón</td>
+    </tr>
+    <tr style={{borderBottom:'1px solid #dfe3e5'}}>
+      <td style={{padding:'10px 14px'}}><code>button-variant</code></td>
+      <td style={{padding:'10px 14px'}}>String</td>
+      <td style={{padding:'10px 14px'}}><code>"secondary"</code></td>
+      <td style={{padding:'10px 14px'}}>Variante del botón: primary, secondary, tertiary</td>
+    </tr>
+    <tr style={{borderBottom:'1px solid #dfe3e5'}}>
+      <td style={{padding:'10px 14px'}}><code>allowed-types</code></td>
+      <td style={{padding:'10px 14px'}}>String</td>
+      <td style={{padding:'10px 14px'}}><code>""</code></td>
+      <td style={{padding:'10px 14px'}}>Extensiones permitidas (ej: <code>.pdf,.doc</code>)</td>
+    </tr>
+    <tr style={{borderBottom:'1px solid #dfe3e5'}}>
+      <td style={{padding:'10px 14px'}}><code>max-load</code></td>
+      <td style={{padding:'10px 14px'}}>Number</td>
+      <td style={{padding:'10px 14px'}}><code>1</code></td>
+      <td style={{padding:'10px 14px'}}>Máximo de archivos a cargar</td>
+    </tr>
+    <tr style={{borderBottom:'1px solid #dfe3e5'}}>
+      <td style={{padding:'10px 14px'}}><code>max-size</code></td>
+      <td style={{padding:'10px 14px'}}>Number</td>
+      <td style={{padding:'10px 14px'}}><code>3</code></td>
+      <td style={{padding:'10px 14px'}}>Tamaño máximo en MB por archivo</td>
+    </tr>
+    <tr style={{borderBottom:'1px solid #dfe3e5'}}>
+      <td style={{padding:'10px 14px'}}><code>disabled</code></td>
+      <td style={{padding:'10px 14px'}}>Boolean</td>
+      <td style={{padding:'10px 14px'}}><code>false</code></td>
+      <td style={{padding:'10px 14px'}}>Deshabilita el componente</td>
+    </tr>
+    <tr style={{borderBottom:'1px solid #dfe3e5'}}>
+      <td style={{padding:'10px 14px'}}><code>defaults</code></td>
+      <td style={{padding:'10px 14px'}}>Array</td>
+      <td style={{padding:'10px 14px'}}>—</td>
+      <td style={{padding:'10px 14px'}}>Archivos precargados</td>
+    </tr>
+    <tr>
+      <td style={{padding:'10px 14px'}}><code>name</code></td>
+      <td style={{padding:'10px 14px'}}>String</td>
+      <td style={{padding:'10px 14px'}}>—</td>
+      <td style={{padding:'10px 14px'}}>Nombre del input para formularios</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Eventos
 
-| Evento | Descripción |
-|--------|-------------|
-| `onChange` | Disparado al cambiar la lista de archivos. `detail` = array de archivos |
-| `onError` | Disparado al haber errores de validación. `detail` = lista de errores |
-| `onDelete` | Disparado al eliminar un archivo. `detail` = archivo eliminado |
+<table style={{width:'100%',borderCollapse:'collapse',fontSize:'14px',marginBottom:'24px'}}>
+  <thead>
+    <tr style={{background:'#ebeff4'}}>
+      <th style={{padding:'10px 14px',textAlign:'left',borderBottom:'2px solid #c9d0d3'}}>Evento</th>
+      <th style={{padding:'10px 14px',textAlign:'left',borderBottom:'2px solid #c9d0d3'}}>Descripción</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style={{borderBottom:'1px solid #dfe3e5'}}>
+      <td style={{padding:'10px 14px'}}><code>onChange</code></td>
+      <td style={{padding:'10px 14px'}}>Disparado al cambiar la lista de archivos. <code>detail</code> = array de archivos</td>
+    </tr>
+    <tr style={{borderBottom:'1px solid #dfe3e5'}}>
+      <td style={{padding:'10px 14px'}}><code>onError</code></td>
+      <td style={{padding:'10px 14px'}}>Disparado al haber errores de validación. <code>detail</code> = lista de errores</td>
+    </tr>
+    <tr>
+      <td style={{padding:'10px 14px'}}><code>onDelete</code></td>
+      <td style={{padding:'10px 14px'}}>Disparado al eliminar un archivo. <code>detail</code> = archivo eliminado</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Errores de validación
 
-| Código | Descripción |
-|--------|-------------|
-| `not_valid_type` | Tipo de archivo no permitido |
-| `not_valid_size` | Archivo supera el tamaño máximo |
-| `not_valid_max_load` | Se supera la cantidad máxima de archivos |
-| `not_valid_duplicated` | Archivo duplicado |
+<table style={{width:'100%',borderCollapse:'collapse',fontSize:'14px'}}>
+  <thead>
+    <tr style={{background:'#ebeff4'}}>
+      <th style={{padding:'10px 14px',textAlign:'left',borderBottom:'2px solid #c9d0d3'}}>Código</th>
+      <th style={{padding:'10px 14px',textAlign:'left',borderBottom:'2px solid #c9d0d3'}}>Descripción</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style={{borderBottom:'1px solid #dfe3e5'}}>
+      <td style={{padding:'10px 14px'}}><code>not_valid_type</code></td>
+      <td style={{padding:'10px 14px'}}>Tipo de archivo no permitido</td>
+    </tr>
+    <tr style={{borderBottom:'1px solid #dfe3e5'}}>
+      <td style={{padding:'10px 14px'}}><code>not_valid_size</code></td>
+      <td style={{padding:'10px 14px'}}>Archivo supera el tamaño máximo</td>
+    </tr>
+    <tr style={{borderBottom:'1px solid #dfe3e5'}}>
+      <td style={{padding:'10px 14px'}}><code>not_valid_max_load</code></td>
+      <td style={{padding:'10px 14px'}}>Se supera la cantidad máxima de archivos</td>
+    </tr>
+    <tr>
+      <td style={{padding:'10px 14px'}}><code>not_valid_duplicated</code></td>
+      <td style={{padding:'10px 14px'}}>Archivo duplicado</td>
+    </tr>
+  </tbody>
+</table>

@@ -5,7 +5,7 @@ function ModalFooterComponent({ align, visible }) {
   return (
     <host shadowDom className={visible ? '' : 'empty'}>
       <div className={`container ${align}`.trim()}>
-        <slot name="actionable" />
+        <slot />
       </div>
     </host>
   );
@@ -44,27 +44,10 @@ ModalFooterComponent.styles = [
       justify-content: end;
     }
 
-    ::slotted([slot='actionable']) {
-      gap: ${DshSpace200};
-      display: flex;
-      flex-direction: row;
-      padding: ${DshSpace0};
-    }
-
-    @media only screen and (min-width: 768px) {
-      ::slotted([slot='actionable']) {
-        gap: ${DshSpace300};
-      }
-    }
-
     @media only screen and (max-width: 767px) {
       .container {
         display: block;
         flex-direction: column;
-      }
-
-      ::slotted([slot='actionable']) {
-        flex-direction: column-reverse;
       }
     }
   `,

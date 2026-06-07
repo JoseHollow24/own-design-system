@@ -9,14 +9,40 @@ Web component de mensaje del DSH Design System. Combina tres variantes de mensaj
 
 ## Variantes disponibles
 
-| Variant | Descripción |
-|---------|-------------|
-| `info` | Mensaje informativo simple con ícono azul y fondo blanco |
-| `informative` | Fondo azul claro, ícono info |
-| `success` | Fondo verde claro, ícono check |
-| `error` | Fondo rojo claro, ícono X |
-| `warning` | Fondo naranja claro, ícono triángulo |
-| `important` | Borde punteado, fondo índigo claro, sin ícono automático |
+<table style={{width:'100%',borderCollapse:'collapse',fontSize:'14px'}}>
+  <thead>
+    <tr style={{background:'#ebeff4'}}>
+      <th style={{padding:'10px 14px',textAlign:'left',borderBottom:'2px solid #c9d0d3'}}>Variant</th>
+      <th style={{padding:'10px 14px',textAlign:'left',borderBottom:'2px solid #c9d0d3'}}>Descripción</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style={{borderBottom:'1px solid #dfe3e5'}}>
+      <td style={{padding:'10px 14px'}}><code>info</code></td>
+      <td style={{padding:'10px 14px'}}>Mensaje informativo simple con ícono azul y fondo blanco</td>
+    </tr>
+    <tr style={{borderBottom:'1px solid #dfe3e5'}}>
+      <td style={{padding:'10px 14px'}}><code>informative</code></td>
+      <td style={{padding:'10px 14px'}}>Fondo azul claro, ícono info</td>
+    </tr>
+    <tr style={{borderBottom:'1px solid #dfe3e5'}}>
+      <td style={{padding:'10px 14px'}}><code>success</code></td>
+      <td style={{padding:'10px 14px'}}>Fondo verde claro, ícono check</td>
+    </tr>
+    <tr style={{borderBottom:'1px solid #dfe3e5'}}>
+      <td style={{padding:'10px 14px'}}><code>error</code></td>
+      <td style={{padding:'10px 14px'}}>Fondo rojo claro, ícono X</td>
+    </tr>
+    <tr style={{borderBottom:'1px solid #dfe3e5'}}>
+      <td style={{padding:'10px 14px'}}><code>warning</code></td>
+      <td style={{padding:'10px 14px'}}>Fondo naranja claro, ícono triángulo</td>
+    </tr>
+    <tr>
+      <td style={{padding:'10px 14px'}}><code>important</code></td>
+      <td style={{padding:'10px 14px'}}>Borde punteado, fondo índigo claro, sin ícono automático</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Info
 
@@ -43,9 +69,29 @@ El prop `close-button` agrega un botón X (disponible en variantes de acción). 
 
 ## Slots
 
-| Slot | Descripción |
-|------|-------------|
-| `title` | Título del mensaje |
-| `content` | Contenido principal |
-| `footer` | Acciones o enlaces al pie |
-| `icon` | Ícono personalizado (solo para variant `important`) |
+<table style={{width:'100%',borderCollapse:'collapse',fontSize:'14px'}}>
+  <thead>
+    <tr style={{background:'#ebeff4'}}>
+      <th style={{padding:'10px 14px',textAlign:'left',borderBottom:'2px solid #c9d0d3'}}>Slot</th>
+      <th style={{padding:'10px 14px',textAlign:'left',borderBottom:'2px solid #c9d0d3'}}>Descripción</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style={{borderBottom:'1px solid #dfe3e5'}}>
+      <td style={{padding:'10px 14px'}}><code>title</code></td>
+      <td style={{padding:'10px 14px'}}>Título del mensaje</td>
+    </tr>
+    <tr style={{borderBottom:'1px solid #dfe3e5'}}>
+      <td style={{padding:'10px 14px'}}><code>content</code></td>
+      <td style={{padding:'10px 14px'}}>Contenido principal</td>
+    </tr>
+    <tr style={{borderBottom:'1px solid #dfe3e5'}}>
+      <td style={{padding:'10px 14px'}}><code>footer</code></td>
+      <td style={{padding:'10px 14px'}}>Acciones o enlaces al pie</td>
+    </tr>
+    <tr>
+      <td style={{padding:'10px 14px'}}><code>icon</code></td>
+      <td style={{padding:'10px 14px'}}>Ícono personalizado (solo para variant <code>important</code>)</td>
+    </tr>
+  </tbody>
+</table>

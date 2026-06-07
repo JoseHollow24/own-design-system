@@ -36,10 +36,31 @@ Con más de 6 páginas aparecen puntos suspensivos adaptados a la posición actu
 
 El componente emite tres CustomEvents:
 
-| Evento | Detalle | Cuándo |
-|--------|---------|--------|
-| `nextPage` | número de página | Al hacer clic en "Siguiente" |
-| `prevPage` | número de página | Al hacer clic en "Anterior" |
-| `currentPage` | número de página | Al hacer clic en un número |
+<table style={{width:'100%',borderCollapse:'collapse',fontSize:'14px'}}>
+  <thead>
+    <tr style={{background:'#ebeff4'}}>
+      <th style={{padding:'10px 14px',textAlign:'left',borderBottom:'2px solid #c9d0d3'}}>Evento</th>
+      <th style={{padding:'10px 14px',textAlign:'left',borderBottom:'2px solid #c9d0d3'}}>Detalle</th>
+      <th style={{padding:'10px 14px',textAlign:'left',borderBottom:'2px solid #c9d0d3'}}>Cuándo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style={{borderBottom:'1px solid #dfe3e5'}}>
+      <td style={{padding:'10px 14px'}}><code>nextPage</code></td>
+      <td style={{padding:'10px 14px'}}>número de página</td>
+      <td style={{padding:'10px 14px'}}>Al hacer clic en "Siguiente"</td>
+    </tr>
+    <tr style={{borderBottom:'1px solid #dfe3e5'}}>
+      <td style={{padding:'10px 14px'}}><code>prevPage</code></td>
+      <td style={{padding:'10px 14px'}}>número de página</td>
+      <td style={{padding:'10px 14px'}}>Al hacer clic en "Anterior"</td>
+    </tr>
+    <tr>
+      <td style={{padding:'10px 14px'}}><code>currentPage</code></td>
+      <td style={{padding:'10px 14px'}}>número de página</td>
+      <td style={{padding:'10px 14px'}}>Al hacer clic en un número</td>
+    </tr>
+  </tbody>
+</table>
 
 <Canvas of={PaginationStories.Interaction} />
