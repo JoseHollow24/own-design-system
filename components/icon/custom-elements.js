@@ -1,5 +1,5 @@
 const sizes = ['s1', 's2', 's3', 's4', 's5', 's6', 's7'];
-const faStyleOptions = ['fas', 'far', 'fal', 'fab'];
+const faStyleOptions = ['fas', 'far'];
 
 const Props = {
   args: {

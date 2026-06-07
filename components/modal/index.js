@@ -31,3 +31,8 @@ if (!customElements.get('dsh-modal-title')) customElements.define('dsh-modal-tit
 if (!customElements.get('dsh-modal-description')) customElements.define('dsh-modal-description', ModalDescription);
 if (!customElements.get('dsh-modal-image')) customElements.define('dsh-modal-image', ModalImage);
 if (!customElements.get('dsh-modal-avatar')) customElements.define('dsh-modal-avatar', ModalAvatar);
+
+export { Modal, ModalContainer, ModalCard, ModalClose, ModalBackground };
+export { ModalOrganizer, ModalOrganizerIcon, ModalOrganizerText, ModalOrganizerImage };
+export { ModalOrganizerAvatar, ModalOrganizerSafe, ModalFooter };
+export { ModalTitle, ModalDescription, ModalImage, ModalAvatar };

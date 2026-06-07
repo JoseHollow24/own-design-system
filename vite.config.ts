@@ -5,6 +5,10 @@ import { resolve } from "path";
 const components = [
   "button", "icon", "tag", "badge", "loading",
   "checkbox", "radio", "input", "textarea", "select",
+  "accordions", "message", "pagination", "direct-access",
+  "progress-bar", "menu-vertical", "modal",
+  "card-headline", "card-details", "card-deal", "card-highlight",
+  "file-uploader", "datepicker", "timepicker",
 ];
 
 export default defineConfig({

@@ -39,6 +39,48 @@
     "./components/select": {
       "import": "./dist/components/select.js"
     },
+    "./components/accordions": {
+      "import": "./dist/components/accordions.js"
+    },
+    "./components/message": {
+      "import": "./dist/components/message.js"
+    },
+    "./components/pagination": {
+      "import": "./dist/components/pagination.js"
+    },
+    "./components/direct-access": {
+      "import": "./dist/components/direct-access.js"
+    },
+    "./components/progress-bar": {
+      "import": "./dist/components/progress-bar.js"
+    },
+    "./components/menu-vertical": {
+      "import": "./dist/components/menu-vertical.js"
+    },
+    "./components/modal": {
+      "import": "./dist/components/modal.js"
+    },
+    "./components/card-headline": {
+      "import": "./dist/components/card-headline.js"
+    },
+    "./components/card-details": {
+      "import": "./dist/components/card-details.js"
+    },
+    "./components/card-deal": {
+      "import": "./dist/components/card-deal.js"
+    },
+    "./components/card-highlight": {
+      "import": "./dist/components/card-highlight.js"
+    },
+    "./components/file-uploader": {
+      "import": "./dist/components/file-uploader.js"
+    },
+    "./components/datepicker": {
+      "import": "./dist/components/datepicker.js"
+    },
+    "./components/timepicker": {
+      "import": "./dist/components/timepicker.js"
+    },
     "./styles/tokens.css": {
       "default": "./src/generated-tokens/tokens.css"
     }
