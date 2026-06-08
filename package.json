@@ -1,6 +1,6 @@
 {
   "name": "josehollow-design-system",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Web Components design system built with AtomicoJS",
   "type": "module",
   "main": "./dist/index.js",
