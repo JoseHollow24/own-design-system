@@ -188,7 +188,7 @@
     "dev:timepicker": "vite --config components/timepicker/vite.config.js",
     "build:timepicker": "npm run build:radio && vite build --config components/timepicker/vite.config.js",
     "test:timepicker": "npm run build:timepicker && web-test-runner components/timepicker/timepicker.test.js --config components/timepicker/web-test-runner.mjs",
-    "build:all-components": "npm run build:icon && npm run build:button && npm run build:tag && npm run build:badge && npm run build:loading && npm run build:checkbox && npm run build:radio && npm run build:input && npm run build:textarea && npm run build:select && npm run build:progress-bar && npm run build:accordions",
+    "build:all-components": "npm run build:icon && npm run build:button && npm run build:tag && npm run build:badge && npm run build:loading && npm run build:checkbox && npm run build:radio && npm run build:input && npm run build:textarea && npm run build:select && npm run build:accordions",
     "test:storybook": "vitest --config vitest.config.ts",
     "test:storybook:run": "vitest run --config vitest.config.ts",
     "coverage": "vitest run --config vitest.config.ts --coverage",
