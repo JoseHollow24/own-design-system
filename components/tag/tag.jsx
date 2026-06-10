@@ -13,7 +13,7 @@ const subvariantsInfo = {
 };
 
 const Component = (props) => {
-  const { variant, subvariant, label, showIcon, color } = props;
+  const { variant, subvariant, label, showIcon, color, darkMode } = props;
 
   const [stateInteractive, setStateInteractive] = useProp('state');
   const refTagInteractive = useRef();
@@ -104,7 +104,7 @@ const Component = (props) => {
 
   return (
     <host shadowDom ref={refHost}>
-      {customProperties(variant, subvariant, color)}
+      {customProperties(variant, subvariant, color, darkMode)}
       {tag()}
     </host>
   );

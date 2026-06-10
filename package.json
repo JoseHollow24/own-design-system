@@ -1,6 +1,6 @@
 {
   "name": "josehollow-design-system",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "Web Components design system built with AtomicoJS",
   "type": "module",
   "main": "./dist/index.js",
@@ -67,10 +67,6 @@
       "types": "./dist/components/direct-access/index.d.ts",
       "import": "./dist/components/direct-access.js"
     },
-    "./components/progress-bar": {
-      "types": "./dist/components/progress-bar/index.d.ts",
-      "import": "./dist/components/progress-bar.js"
-    },
     "./components/menu-vertical": {
       "types": "./dist/components/menu-vertical/index.d.ts",
       "import": "./dist/components/menu-vertical.js"
@@ -78,10 +74,6 @@
     "./components/modal": {
       "types": "./dist/components/modal/index.d.ts",
       "import": "./dist/components/modal.js"
-    },
-    "./components/card-headline": {
-      "types": "./dist/components/card-headline/index.d.ts",
-      "import": "./dist/components/card-headline.js"
     },
     "./components/card-details": {
       "types": "./dist/components/card-details/index.d.ts",
@@ -160,9 +152,6 @@
     "dev:select": "vite --config components/select/vite.config.js",
     "build:select": "npm run build:icon && vite build --config components/select/vite.config.js",
     "test:select": "npm run build:select && web-test-runner components/select/select.test.js --config components/select/web-test-runner.mjs",
-    "dev:card-headline": "vite --config components/card-headline/vite.config.js",
-    "build:card-headline": "npm run build:icon && npm run build:button && vite build --config components/card-headline/vite.config.js",
-    "test:card-headline": "npm run build:card-headline && web-test-runner components/card-headline/card-headline.test.js --config components/card-headline/web-test-runner.mjs",
     "dev:card-details": "vite --config components/card-details/vite.config.js",
     "build:card-details": "npm run build:icon && npm run build:button && vite build --config components/card-details/vite.config.js",
     "test:card-details": "npm run build:card-details && web-test-runner components/card-details/card-details.test.js --config components/card-details/web-test-runner.mjs",
@@ -190,9 +179,6 @@
     "dev:pagination": "vite --config components/pagination/vite.config.js",
     "build:pagination": "npm run build:icon && vite build --config components/pagination/vite.config.js",
     "test:pagination": "npm run build:pagination && web-test-runner components/pagination/pagination.test.js --config components/pagination/web-test-runner.mjs",
-    "dev:progress-bar": "vite --config components/progress-bar/vite.config.js",
-    "build:progress-bar": "vite build --config components/progress-bar/vite.config.js",
-    "test:progress-bar": "npm run build:progress-bar && web-test-runner components/progress-bar/progress-bar.test.js --config components/progress-bar/web-test-runner.mjs",
     "dev:modal": "vite --config components/modal/vite.config.js",
     "build:modal": "npm run build:icon && npm run build:button && vite build --config components/modal/vite.config.js",
     "test:modal": "npm run build:modal && web-test-runner components/modal/modal.test.js --config components/modal/web-test-runner.mjs",

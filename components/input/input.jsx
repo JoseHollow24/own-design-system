@@ -6,7 +6,7 @@ import { customProperties, styles } from './input.style';
 import { validatePhoneNumber, formatRut, isValidRut } from './input.validate';
 
 const Component = (props) => {
-  const { id, name, type, disabled, clearable, label, ariaLabel, required, ...rest } = props;
+  const { id, name, type, disabled, clearable, label, ariaLabel, required, darkMode, ...rest } = props;
 
   const [helpermessage, setHelperMessage] = useProp('helpermessage');
   const [value, setValue] = useProp('value');
@@ -237,7 +237,7 @@ const Component = (props) => {
 
   return (
     <host shadowDom onfocus={() => toogleFocus()}>
-      {customProperties(variant)}
+      {customProperties(variant, darkMode)}
       <div class="main">
         <label class="label">{label}</label>
         <div class="input-family">

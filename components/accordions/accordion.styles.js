@@ -2,35 +2,58 @@ import { html, css } from 'atomico';
 import {
   DshColorSecondaryG0,
   DshColorPrimaryC1,
-  DshSpace0,
   DshSpace100,
   DshSpace200,
   DshSpace300,
 } from '@tokens';
-import { accordionTokens } from './accordion.tokens';
+import { variantBgTokens, variantBorderLeftTokens } from './accordion.tokens';
 
-export const customProperties = (variant, type) => {
-  const other = type === 'secundario' || variant === 'transversal';
+export const cssLightDom = css`
+  [slot='body'] {
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 500;
+  }
+  [slot='btn-left'] {
+    padding: 0 16px;
+  }
+  [slot='btn-left'],
+  [slot='btn-right'] {
+    display: flex;
+    align-items: center;
+  }
+  ul {
+    margin-top: 0;
+    padding-left: 30px;
+  }
+`;
+
+export const customProperties = (variant, darkMode) => {
+  const parts = (variant || '').split('-');
+  const typeKey  = parts[0];
+  const colorKey = parts[1];
+
+  const tokenBg     = variantBgTokens[typeKey];
+  const bg          = darkMode ? (tokenBg ? '#3a445f' : 'transparent') : (tokenBg || 'transparent');
+  const borderLeft  = colorKey ? (variantBorderLeftTokens[colorKey] || DshColorPrimaryC1) : 'none';
+
   return html`
     <style>
       :host {
-        --margin: ${DshSpace0};
+        --accordion-text: ${darkMode ? '#ffffff' : DshColorSecondaryG0};
         --height-body: 0;
         --margin-bottom: ${DshSpace300};
         --m-margin-bottom: ${DshSpace200};
         --align-items-header-right: center;
       }
       .content-accordion-item {
-        background: ${variant === 'transversal' ? accordionTokens.borderbottom.background : (accordionTokens[type]?.background || 'transparent')};
-        border-left: 8px solid ${(type === 'borderbottom' || type === 'none') ? accordionTokens[type].borderColorLeft : (accordionTokens[variant]?.borderColorLeft || DshColorPrimaryC1)};
-        border-top: ${other ? '1px' : '0'} solid ${variant === 'transversal' ? accordionTokens.borderbottom.borderColor : (accordionTokens[type]?.borderColor || 'transparent')};
-        border-bottom: ${other ? '1px' : '0'} solid ${variant === 'transversal' ? accordionTokens.borderbottom.borderColorBottom : (accordionTokens[type]?.borderColorBottom || 'transparent')};
-        border-right: 1px solid ${variant === 'transversal' ? accordionTokens.borderbottom.borderColor : (accordionTokens[type]?.borderColor || 'transparent')};
-        border-radius: ${type === 'borderbottom' || variant === 'transversal' ? DshSpace0 : DshSpace100};
-        border-style: ${type === 'borderbottom' || variant === 'transversal' ? 'dashed' : 'solid'};
+        background: ${bg};
+        border-left: ${colorKey ? `8px solid ${borderLeft}` : 'none'};
+        border-radius: ${DshSpace100};
       }
       .label {
-        color: ${type === 'borderbottom' || variant === 'transversal' ? DshColorPrimaryC1 : DshColorSecondaryG0};
+        color: var(--accordion-text);
       }
     </style>
   `;
@@ -48,7 +71,7 @@ export const accordionItemStyles = css`
     padding: 16px;
   }
 
-  :host([type='secundario']) .label {
+  :host([variant*='secundario']) .label {
     font-weight: 650;
   }
 
@@ -79,11 +102,11 @@ export const accordionItemStyles = css`
     margin: 0;
   }
 
-  :host([type='primario']) ::slotted([slot='body']) {
+  :host([variant*='primario']) ::slotted([slot='body']) {
     padding: 16px;
   }
 
-  :host([type='secundario']) ::slotted([slot='body']) {
+  :host([variant*='secundario']) ::slotted([slot='body']) {
     font-size: 1.125rem;
     line-height: 1.5rem;
     font-family: 'Plus Jakarta Sans', sans-serif;
@@ -130,9 +153,18 @@ export const accordionHeaderStyles = css`
     padding-right: 16px;
     margin: 0;
     cursor: pointer;
+    color: #3e4545;
   }
 
-  :host([type='secundario']) .label {
+  :host([dark-mode]) .label {
+    color: #e8eaed;
+  }
+
+  :host([dark-mode]) .sub-label {
+    color: #e8eaed;
+  }
+
+  :host([variant*='secundario']) .label {
     font-weight: 650;
   }
 
@@ -162,7 +194,6 @@ export const accordionHeaderStyles = css`
     font-weight: 500;
     line-height: 1.5rem;
     font-size: 1.125rem;
-    color: #3e4545;
     margin: 0;
     margin-top: 8px;
     cursor: pointer;
@@ -183,7 +214,7 @@ export const accordionHeaderStyles = css`
       font-size: 1.125rem;
       line-height: 1.5rem;
     }
-    :host([type='secundario']) .label {
+    :host([variant*='secundario']) .label {
       font-size: 1.5rem;
       line-height: 2rem;
     }

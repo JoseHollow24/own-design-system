@@ -3,8 +3,6 @@ import {
   DshBorderRadius100,
   DshColorPrimaryC1,
   DshColorPrimaryC2,
-  DshColorSecondaryG3,
-  DshColorSecondaryG6,
   DshColorMonoWhite,
   DshShadowM,
   DshSpace0,
@@ -16,17 +14,19 @@ import {
   DshTextSizeLg,
   DshTextWeight400,
 } from '@tokens';
+import { bgTokens, colorTokens, hoverBgTokens, disabledColorTokens } from './pagination.tokens';
 
-export const customProperties = (shadow) =>
-  html`
+export const customProperties = (shadow, darkMode) => {
+  const mode = darkMode ? 'dark' : 'light';
+  return html`
     <style>
       :host {
-        --background: ${DshColorMonoWhite};
+        --background: ${bgTokens[mode]};
         --background-active: ${DshColorPrimaryC1};
-        --background-hover: ${DshColorSecondaryG6};
-        --color: ${DshColorPrimaryC1};
+        --background-hover: ${hoverBgTokens[mode]};
+        --color: ${colorTokens[mode]};
         --color-active: ${DshColorMonoWhite};
-        --color-disabled: ${DshColorSecondaryG3};
+        --color-disabled: ${disabledColorTokens[mode]};
         --height: 40px;
         --margin: ${DshSpace0};
         --mobile-height: 36px;
@@ -37,6 +37,7 @@ export const customProperties = (shadow) =>
       }
     </style>
   `;
+};
 
 export const styles = css`
   :host {

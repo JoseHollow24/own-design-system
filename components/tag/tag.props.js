@@ -8,6 +8,7 @@ const componentProps = {
   subvariant: { type: String, reflect: true, value: 'success' },
   showIcon: { type: Boolean, reflect: true, value: false },
   color: { type: String, reflect: true, value: '' },
+  darkMode: { type: Boolean, reflect: true, value: false },
 };
 
 export default componentProps;

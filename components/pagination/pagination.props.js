@@ -15,6 +15,11 @@ const componentProps = {
     reflect: true,
     value: false,
   },
+  darkMode: {
+    type: Boolean,
+    reflect: true,
+    value: false,
+  },
 };
 
 export default componentProps;

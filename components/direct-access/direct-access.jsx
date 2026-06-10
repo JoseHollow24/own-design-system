@@ -5,7 +5,7 @@ import '@components/icon';
 import Props from './direct-access.props';
 import { customProperties, styles } from './direct-access.styles';
 
-function Component({ icon, faStyles, link, tag, title, subtitle, segment, target, linkText, id, parentComponent }) {
+function Component({ icon, faStyles, link, tag, title, subtitle, segment, target, linkText, id, parentComponent, darkMode }) {
   const expression = 'phone, tablet 768px, desktop 1024px';
   const state = useResponsiveState(expression);
   const refAnchor = useRef();
@@ -47,7 +47,7 @@ function Component({ icon, faStyles, link, tag, title, subtitle, segment, target
 
   return (
     <host shadowDom>
-      {customProperties(segment)}
+      {customProperties(segment, darkMode)}
       <a
         ref={refAnchor}
         href={link}

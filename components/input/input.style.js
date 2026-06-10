@@ -29,7 +29,7 @@ import {
 } from '@tokens';
 import { variantBorderTokens, variantBgTokens } from './input.tokens';
 
-export const customProperties = (variant) => {
+export const customProperties = (variant, darkMode) => {
   const variantName = variant === '' ? 'default' : variant;
   return html`
     <style>
@@ -39,12 +39,18 @@ export const customProperties = (variant) => {
         --color: ${variantBgTokens[variantName]};
         --color-focus: ${DshColorPrimaryC2};
         --color-placeholder-variant: ${DshColorMonoBlack};
-        --color-background-disabled: ${DshColorSecondaryX6};
+        --color-background-disabled: ${darkMode ? '#3a4050' : DshColorSecondaryX6};
         --border-color-hover-active: ${DshColorPrimaryC0};
         --color-g-1: ${DshColorPrimaryC0};
-        --border: ${DshStrokeWeightS} solid ${DshColorPrimaryC1};
+        --border: ${DshStrokeWeightS} solid ${darkMode ? '#3a4050' : DshColorPrimaryC1};
         --border-variant: ${DshStrokeWeightM} solid ${variantBorderTokens[variantName]};
         --margin: ${DshSpace0};
+        --input-bg: ${darkMode ? '#2d3449' : DshColorMonoWhite};
+        --input-text: ${darkMode ? '#e8eaed' : DshColorSecondaryG1};
+        --input-title: ${darkMode ? '#e8eaed' : DshColorMonoBlack};
+        --input-label: ${darkMode ? '#9aa0ab' : DshColorSecondaryG3};
+        --input-placeholder: ${darkMode ? '#6b7280' : DshColorSecondaryG3};
+        --input-hover-bg: ${darkMode ? '#3a4462' : DshColorSecondaryG6};
       }
     </style>
   `;
@@ -66,7 +72,7 @@ export const styles = [
     .main { width: 100%; height: fit-content; }
     .label {
       font-family: var(--font-family);
-      color: ${DshColorMonoBlack};
+      color: var(--input-title);
       font-weight: ${DshTextWeight500};
       line-height: ${DshTextLineHeightLg};
       font-size: ${DshTextSizeBase};
@@ -83,7 +89,7 @@ export const styles = [
       border-radius: var(--border-radius);
       height: 48px;
       box-shadow: ${DshShadowS};
-      background: ${DshColorMonoWhite};
+      background: var(--input-bg);
     }
     :host([variant="success"]) .input-group,
     :host([variant="error"]) .input-group {
@@ -114,8 +120,8 @@ export const styles = [
       font-size: ${DshTextSizeLg};
       font-weight: ${DshSpaceN400};
       line-height: ${DshTextLineHeightXl};
-      color: ${DshColorMonoBlack};
-      background-color: ${DshColorMonoWhite};
+      color: var(--input-text);
+      background-color: var(--input-bg);
       padding: 11px 16px;
       border: none;
       order: 1;
@@ -147,11 +153,11 @@ export const styles = [
       border-radius: var(--border-radius);
       background: transparent;
     }
-    .button-actionable:hover { background: ${DshColorSecondaryG6}; }
+    .button-actionable:hover { background: var(--input-hover-bg); }
     :host([disabled]) .button-actionable:hover { background: var(--color-background-disabled); }
     .input-group:hover:not(.disabled) { outline: ${DshStrokeWeightS} solid var(--border-color-hover-active); }
     .input-group:active:not(.disabled) { outline: ${DshStrokeWeightS} solid var(--border-color-hover-active); }
-    .form-control::placeholder { color: ${DshColorSecondaryG1}; }
+    .form-control::placeholder { color: var(--input-placeholder); }
     .form-control:active { outline: none; border-radius: var(--border-radius); }
     .form-control:focus::placeholder { color: transparent; }
     :host([clearable]) button:focus,
@@ -186,7 +192,7 @@ export const styles = [
     :host([disabled]) .label {
       color: ${DshColorSecondaryX3};
     }
-    button { background: ${DshColorMonoWhite}; cursor: pointer; }
+    button { background: var(--input-bg); cursor: pointer; }
     :host([disabled]) button { background: var(--color-background-disabled); cursor: auto; }
     .disabled {
       background: var(--color-background-disabled);
@@ -203,7 +209,7 @@ export const styles = [
       position: absolute;
       z-index: 1;
       right: ${DshSpace0};
-      background: ${DshColorMonoWhite};
+      background: var(--input-bg);
       border-radius: var(--border-radius);
     }
     :host([variant="error"]) .form-control::placeholder { color: var(--color-placeholder-variant); }

@@ -31,12 +31,17 @@ import {
 } from '@tokens';
 import { segmentTokens } from './card-deal.tokens';
 
-export const customProperties = (segment) => html`
+export const customProperties = (segment, darkMode) => html`
   <style>
     :host {
       --margin-bottom: 0;
       --margin-top: 0;
       --margin: 0;
+      --card-bg: ${darkMode ? '#2d3449' : DshColorMonoWhite};
+      --card-text: ${darkMode ? '#e8eaed' : DshColorSecondaryG0};
+      --card-subtext: ${darkMode ? '#9aa0ab' : DshColorSecondaryG2};
+      --card-desc: ${darkMode ? '#9aa0ab' : DshColorSecondaryG3};
+      --card-amount-color: ${darkMode ? '#6eb8ff' : DshColorPrimaryC1};
       max-width: 735px;
       min-width: 288px;
     }
@@ -72,7 +77,7 @@ export const styles = css`
     width: 100%;
     border-radius: ${DshBorderRadius200};
     box-shadow: ${DshShadowM};
-    background-color: ${DshColorMonoWhite};
+    background-color: var(--card-bg);
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -93,7 +98,7 @@ export const styles = css`
     top: ${DshSpace300};
   }
   .card-content__text-amounts {
-    color: ${DshColorPrimaryC1};
+    color: var(--card-amount-color);
     font-weight: ${DshTextWeight500};
     font-size: ${DshTextSizeBase};
     line-height: ${DshTextLineHeightLg};
@@ -115,13 +120,13 @@ export const styles = css`
     font-size: ${DshTextSizeXl};
     line-height: ${DshTextLineHeight2xl};
     font-weight: ${DshTextWeight650};
-    color: ${DshColorSecondaryG0};
+    color: var(--card-text);
     display: block;
   }
   .card-content__text-main .subtitle {
     font-size: ${DshTextSizeLg};
     line-height: ${DshTextLineHeightXl};
-    color: ${DshColorSecondaryG2};
+    color: var(--card-subtext);
     display: block;
   }
   .card-image {

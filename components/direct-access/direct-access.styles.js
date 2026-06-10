@@ -30,11 +30,15 @@ import {
 } from '@tokens';
 import { segmentTokens } from './direct-access.tokens';
 
-export const customProperties = (segment) =>
+export const customProperties = (segment, darkMode) =>
   html`
     <style>
       :host {
         --segment-color: ${segmentTokens[segment] || segmentTokens.transversales};
+        --bg: ${darkMode ? '#2d3449' : DshColorMonoWhite};
+        --border: ${darkMode ? '#3a4050' : DshColorSecondaryX5};
+        --color: ${darkMode ? '#e8eaed' : DshColorSecondaryG1};
+        --hover-bg: ${darkMode ? '#3a4462' : DshColorSecondaryX6};
       }
     </style>
   `;
@@ -55,8 +59,8 @@ export const styles = css`
   }
 
   .direct-access {
-    background-color: ${DshColorMonoWhite};
-    border: ${DshStrokeWeightS} solid ${DshColorSecondaryX5};
+    background-color: var(--bg);
+    border: ${DshStrokeWeightS} solid var(--border);
     border-radius: ${DshBorderRadius200};
     box-shadow: ${DshShadowM};
     display: flex;
@@ -67,7 +71,7 @@ export const styles = css`
   }
 
   .direct-access:hover {
-    background-color: ${DshColorSecondaryX6};
+    background-color: var(--hover-bg);
     cursor: pointer;
   }
 
@@ -117,7 +121,7 @@ export const styles = css`
   }
 
   .subtitle {
-    color: ${DshColorSecondaryG1};
+    color: var(--color);
     font-size: ${DshTextSizeLg};
     font-weight: ${DshTextWeight500};
     line-height: ${DshTextLineHeightXl};
@@ -138,7 +142,7 @@ export const styles = css`
   }
 
   .title {
-    color: ${DshColorSecondaryG1};
+    color: var(--color);
     font-size: ${DshTextSizeLg};
     font-weight: ${DshTextWeight650};
     line-height: ${DshTextLineHeightXl};

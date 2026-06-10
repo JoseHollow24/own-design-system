@@ -53,6 +53,11 @@ const Props = {
     reflect: true,
     value: '_self',
   },
+  darkMode: {
+    type: Boolean,
+    reflect: true,
+    value: false,
+  },
 };
 
 export default Props;

@@ -1,12 +1,12 @@
 import { c, useProp, useRef, useEffect, useState } from 'atomico';
 import { useListener } from '@atomico/hooks/use-listener';
 import { useResponsiveState } from '@atomico/hooks/use-responsive-state';
-import { cardDetailsStyles } from './card-details.styles';
+import { customProperties, cardDetailsStyles } from './card-details.styles';
 import './card-details-line.jsx';
 import './card-details-header.jsx';
 import './card-details-accordeon.jsx';
 
-function CardDetailsComponent({ color, icon, image, accordeonable, footerAlign }) {
+function CardDetailsComponent({ color, icon, image, accordeonable, footerAlign, darkMode }) {
   const headerRef = useRef();
   const responsive = useResponsiveState('phone, tablet 768px, desktop 1024px');
 
@@ -24,6 +24,7 @@ function CardDetailsComponent({ color, icon, image, accordeonable, footerAlign }
 
   return (
     <host shadowDom class={hostClass}>
+      {customProperties(darkMode)}
       <dsh-card-details-line color={color}></dsh-card-details-line>
       <dsh-card-details-header
         ref={headerRef}
@@ -56,6 +57,7 @@ CardDetailsComponent.props = {
   icon: { type: String, reflect: true },
   image: { type: Object, reflect: true, value: () => ({ src: '', alt: '' }) },
   footerAlign: { type: String, value: 'fluid right', reflect: true },
+  darkMode: { type: Boolean, reflect: true, value: false },
 };
 
 export const CardDetails = c(CardDetailsComponent);

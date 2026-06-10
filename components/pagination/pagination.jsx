@@ -5,7 +5,7 @@ import '@components/icon';
 import componentProps from './pagination.props';
 import { customProperties, styles } from './pagination.styles';
 
-function PaginationComponent({ pages, selectPage, shadow }) {
+function PaginationComponent({ pages, selectPage, shadow, darkMode }) {
   const expression = 'phone, tablet 48rem, desktop 1024px';
   const state = useResponsiveState(expression);
   const isMobile = state === 'phone';
@@ -94,7 +94,7 @@ function PaginationComponent({ pages, selectPage, shadow }) {
 
   return (
     <host shadowDom>
-      {customProperties(shadow)}
+      {customProperties(shadow, darkMode)}
       <nav
         ref={paginationCont}
         className="pagination"

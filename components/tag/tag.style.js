@@ -33,7 +33,7 @@ const colorTokensArr = {
   L5: '#ea95f1',
 };
 
-const customProperties = (variant, subvariant, color) => {
+const customProperties = (variant, subvariant, color, darkMode) => {
   let tagBackground;
   if (color) {
     const key = color.toUpperCase() + '5';
@@ -51,6 +51,7 @@ const customProperties = (variant, subvariant, color) => {
         --background-color-pressed: ${DshColorComplementaryT1};
         --background-color-pressed-hover: ${DshColorComplementaryV1};
         --margin: ${DshSpace0};
+        --label-color: ${darkMode ? '#e8eaed' : 'inherit'};
       }
       .menu {
         border-radius: ${DshBorderRadius100} ${DshBorderRadius0};

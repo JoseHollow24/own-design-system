@@ -66,6 +66,11 @@ const props = {
     type: String,
     reflect: true,
   },
+  darkMode: {
+    type: Boolean,
+    reflect: true,
+    value: false,
+  },
 };
 
 export default props;

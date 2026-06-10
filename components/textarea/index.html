@@ -5,7 +5,15 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
   <title>DSH Textarea - Demo</title>
   <link rel="stylesheet" href="../../src/generated-tokens/tokens.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
+    .theme-toggle {
+      position: fixed; right: 24px; bottom: 24px; width: 56px; height: 56px;
+      border: none; border-radius: 50%; cursor: pointer; font-size: 20px;
+      background: #252b3b; color: #ffffff; box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+      z-index: 9999; transition: all 0.2s ease;
+    }
+    .theme-toggle:hover { transform: scale(1.05); }
     body {
       font-family: sans-serif;
       padding: 24px;
@@ -97,6 +105,22 @@
   const log = document.querySelector('#event-log');
   document.querySelector('#ev-ta').addEventListener('changeTextarea', (e) => {
     log.textContent = `changeTextarea → length: ${e.detail?.length ?? 0}, value: "${e.detail?.substring(0, 50)}${e.detail?.length > 50 ? '...' : ''}"`;
+  });
+</script>
+
+<button id="theme-toggle" class="theme-toggle"><i class="fas fa-moon"></i></button>
+<script>
+  const themeBtn = document.getElementById('theme-toggle');
+  let darkMode = false;
+  themeBtn.addEventListener('click', () => {
+    darkMode = !darkMode;
+    document.body.style.backgroundColor = darkMode ? '#252b3b' : '#f9f9f9';
+    document.body.style.color = darkMode ? '#ffffff' : '#000000';
+    document.querySelectorAll('dsh-textarea').forEach((el) => {
+      if (darkMode) el.setAttribute('dark-mode', '');
+      else el.removeAttribute('dark-mode');
+    });
+    themeBtn.innerHTML = darkMode ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
   });
 </script>
 

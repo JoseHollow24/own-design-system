@@ -6,27 +6,31 @@ import {
   DshSpace100,
   DshSpace200,
   DshSpace400,
-  DshColorSecondaryG6,
+  DshColorPrimaryC1,
+  DshColorPrimaryC2,
+  DshColorMonoWhite,
+  DshBorderRadius100,
   DshTextWeight650,
+  DshTextWeight500,
   DshTextSizeLg,
   DshTextLineHeightXl,
-  DshColorMonoBlack,
-  DshColorPrimaryC2,
-  DshColorPrimaryC1,
-  DshColorMonoWhite,
-  DshColorSecondaryG1,
-  DshBorderRadius100,
-  DshColorSecondaryX4,
-  DshColorSecondaryX6,
-  DshTextWeight500,
 } from '@tokens';
+import { bgTokens, headerBgTokens, textTokens, headerTextTokens, hoverBgTokens, borderTokens, accentTokens } from './menu-vertical.tokens';
 
-export const customProperties = (heightMenu) => {
+export const customProperties = (heightMenu, darkMode) => {
   const val = heightMenu ? `${heightMenu}px` : 'auto';
+  const mode = darkMode ? 'dark' : 'light';
   return html`
     <style>
       :host {
         --height-menu: ${val};
+        --menu-bg: ${bgTokens[mode]};
+        --menu-header-bg: ${headerBgTokens[mode]};
+        --menu-text: ${textTokens[mode]};
+        --menu-header-text: ${headerTextTokens[mode]};
+        --menu-hover-bg: ${hoverBgTokens[mode]};
+        --menu-border: ${borderTokens[mode]};
+        --menu-accent: ${accentTokens[mode]};
       }
     </style>
   `;
@@ -49,7 +53,7 @@ export const menuStyles = css`
   }
   .menu__header-mobile {
     display: none;
-    background-color: ${DshColorSecondaryG6};
+    background-color: var(--menu-header-bg);
     padding: ${DshSpace100} ${DshSpace200};
   }
   .menu__header-mobile__close__button {
@@ -79,7 +83,7 @@ export const menuStyles = css`
     font-weight: ${DshTextWeight650};
     font-size: ${DshTextSizeLg};
     line-height: ${DshTextLineHeightXl};
-    color: ${DshColorMonoBlack};
+    color: var(--menu-header-text);
   }
   @media only screen and (max-width: 63.95em) {
     :host {
@@ -106,7 +110,7 @@ export const menuStyles = css`
       padding: ${DshSpace100} ${DshSpace0};
     }
     .menu__content {
-      background-color: ${DshColorMonoWhite};
+      background-color: var(--menu-bg);
       padding: ${DshSpace100} ${DshSpace200} 0 ${DshSpace200};
       overflow-y: auto;
     }
@@ -128,7 +132,7 @@ export const menuItemStyles = css`
   .item {
     margin: ${DshSpace100} ${DshSpace0} ${DshSpace0} ${DshSpace0};
     padding: ${DshSpace0} ${DshSpace0} 7px ${DshSpace0};
-    border-bottom: 1px solid ${DshColorSecondaryX4};
+    border-bottom: 1px solid var(--menu-border);
   }
   .item.active {
     border-bottom: none;
@@ -151,7 +155,7 @@ export const menuItemStyles = css`
     border-radius: 8px 0 0 8px;
   }
   .item:hover .item__content {
-    background: ${DshColorSecondaryX6};
+    background: var(--menu-hover-bg);
   }
   .bullet {
     display: flex;
@@ -173,20 +177,20 @@ export const menuItemStyles = css`
     font-weight: ${DshTextWeight500};
     font-size: ${DshTextSizeLg};
     line-height: ${DshTextLineHeightXl};
-    color: ${DshColorSecondaryG1};
+    color: var(--menu-text);
   }
   .active .item__text {
     font-weight: ${DshTextWeight650};
   }
   dsh-icon {
-    --color: ${DshColorPrimaryC1};
+    --color: var(--menu-accent);
   }
   .sub-items {
     display: none;
   }
   .sub-items.sub-items-visible.active {
     display: block;
-    border-bottom: 1px solid ${DshColorSecondaryX4};
+    border-bottom: 1px solid var(--menu-border);
   }
   @media only screen and (max-width: 63.95em) {
     .hide-tablet-mobile {
@@ -213,7 +217,7 @@ export const menuItemStyles = css`
       bottom: ${DshSpace0};
       left: ${DshSpace0};
       right: ${DshSpace0};
-      background-color: ${DshColorMonoWhite};
+      background-color: var(--menu-bg);
       border-bottom: none;
       padding: 8px 16px ${DshSpace0} 16px;
       height: auto;
@@ -246,13 +250,13 @@ export const menuSubItemStyles = css`
     border-radius: ${DshSpace100} ${DshSpace0} ${DshSpace0} ${DshSpace100};
   }
   .sub-item:hover .sub-item__content {
-    background-color: ${DshColorSecondaryX6};
+    background-color: var(--menu-hover-bg);
   }
   .sub-item:active .sub-item__content {
-    background-color: ${DshColorPrimaryC1};
+    background-color: var(--menu-accent);
   }
   .sub-item.active .sub-item__content {
-    background-color: ${DshColorPrimaryC1};
+    background-color: var(--menu-accent);
   }
   .bullet {
     display: flex;
@@ -280,7 +284,7 @@ export const menuSubItemStyles = css`
     font-weight: ${DshTextWeight500};
     font-size: ${DshTextSizeLg};
     line-height: ${DshTextLineHeightXl};
-    color: ${DshColorPrimaryC1};
+    color: var(--menu-accent);
   }
   .sub-item:active .sub-item__text {
     color: ${DshColorMonoWhite};
@@ -289,7 +293,7 @@ export const menuSubItemStyles = css`
     color: ${DshColorMonoWhite};
   }
   dsh-icon {
-    --color: ${DshColorPrimaryC1};
+    --color: var(--menu-accent);
   }
   .sub-item:active dsh-icon {
     --color: ${DshColorMonoWhite};

@@ -1,33 +1,12 @@
-import { c, css, useRef, useProp } from 'atomico';
+import { c, useRef, useProp } from 'atomico';
 import { useCssLightDom } from '@atomico/hooks/use-css-light-dom';
 import { useResizeObserverState } from '@atomico/hooks/use-resize-observer';
 import { useChildNodes } from '@atomico/hooks/use-child-nodes';
-import { customProperties, accordionItemStyles } from './accordion.styles';
+import { customProperties, cssLightDom, accordionItemStyles } from './accordion.styles';
+import accordionItemProps from './accordion.props';
 import './accordion.header.jsx';
 
-const cssLightDom = css`
-  [slot='body'] {
-    font-size: 1.125rem;
-    line-height: 1.5rem;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-weight: 500;
-    color: #3e4545;
-  }
-  [slot='btn-left'] {
-    padding: 0 16px;
-  }
-  [slot='btn-left'],
-  [slot='btn-right'] {
-    display: flex;
-    align-items: center;
-  }
-  ul {
-    margin-top: 0;
-    padding-left: 30px;
-  }
-`;
-
-function accordionItemComponent({ label, checkbox, variant, type, sublabel }) {
+function accordionItemComponent({ label, checkbox, variant, sublabel, darkMode }) {
   const contentBody = useRef();
 
   const rawChildNodes = useChildNodes();
@@ -54,16 +33,16 @@ function accordionItemComponent({ label, checkbox, variant, type, sublabel }) {
     checkbox,
     slotHeaderFilter,
     variant,
-    type,
     checked,
     setChecked,
     isOpen,
     setIsOpen,
+    darkMode
   };
 
   return (
     <host shadowDom>
-      {customProperties(variant, type)}
+      {customProperties(variant, darkMode)}
       <div className="content-accordion-item">
         <dsh-accordion-header {...propsHeader} />
         <div className="content-body">
@@ -87,17 +66,7 @@ function accordionItemComponent({ label, checkbox, variant, type, sublabel }) {
   );
 }
 
-accordionItemComponent.props = {
-  label: { type: String, reflect: true, value: '' },
-  sublabel: { type: String, reflect: true, value: '' },
-  index: { type: Number, reflect: true },
-  checkbox: { type: Boolean, reflect: true, value: false },
-  variant: { type: String, reflect: true, value: 'blue' },
-  type: { type: String, reflect: true, value: 'primario' },
-  checked: { type: Boolean, reflect: true, value: false },
-  open: { type: Boolean, reflect: true, value: false },
-};
-
+accordionItemComponent.props = accordionItemProps;
 accordionItemComponent.styles = [accordionItemStyles];
 
 export const AccordionItem = c(accordionItemComponent);

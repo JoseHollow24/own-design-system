@@ -1,8 +1,10 @@
 import { c, useEvent, useRef } from 'atomico';
 import '@components/checkbox';
+import '@components/icon';
 import { customProperties, accordionHeaderStyles } from './accordion.styles';
+import accordionHeaderProps from './accordion.header.props';
 
-function accordionHeaderComponent({ label, sublabel, checkbox, slotHeaderFilter, variant, type, checked, setChecked, isOpen, setIsOpen }) {
+function accordionHeaderComponent({ label, sublabel, checkbox, slotHeaderFilter, variant, checked, setChecked, isOpen, setIsOpen, darkMode }) {
   const refSlotHeader = useRef();
 
   const dispatchAction = useEvent('action', {
@@ -14,7 +16,7 @@ function accordionHeaderComponent({ label, sublabel, checkbox, slotHeaderFilter,
 
   return (
     <host shadowDom>
-      {customProperties(variant, type)}
+      {customProperties(variant, darkMode)}
       <header className="content-header">
         {checkbox && (
           <dsh-checkbox checked={checked} onclick={(e) => onChange(e)} />
@@ -46,11 +48,9 @@ function accordionHeaderComponent({ label, sublabel, checkbox, slotHeaderFilter,
               setIsOpen(!isOpen);
               dispatchAction();
             }}
-            className={`content-arrow-header ${isOpen ? 'content-arrow-header-active' : ''}`}
+            className={`content-arrow-header ${isOpen ? 'fa-solid fa-chevron-up' : 'fa-solid fa-chevron-down'}`}
           >
-            <svg width="17" height="10" viewBox="0 0 17 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M2.18875 0L8.5 6.10667L14.8113 0L16.75 1.88L8.5 9.88L0.25 1.88L2.18875 0Z" fill="#0076A9" />
-            </svg>
+            <dsh-icon icon-name={isOpen ? 'fa-solid fa-chevron-up' : 'fa-solid fa-chevron-down'} size="s2" color={darkMode ? 'white' : 'c1'}></dsh-icon>
           </div>
         )}
       </header>
@@ -58,18 +58,7 @@ function accordionHeaderComponent({ label, sublabel, checkbox, slotHeaderFilter,
   );
 }
 
-accordionHeaderComponent.props = {
-  label: { type: String, reflect: true, value: '' },
-  sublabel: { type: String, reflect: true, value: '' },
-  checkbox: { type: Boolean, reflect: true, value: false },
-  checked: { type: Boolean, reflect: true, value: false },
-  isOpen: { type: Boolean, reflect: true, value: false },
-  setIsOpen: { type: Function, reflect: true, value: () => {} },
-  setChecked: { type: Function, reflect: true, value: () => {} },
-  slotHeaderFilter: { type: Array, reflect: true, value: () => [] },
-  variant: { type: String, reflect: true, value: 'blue' },
-  type: { type: String, reflect: true, value: 'primario' },
-};
+accordionHeaderComponent.props = accordionHeaderProps;
 
 accordionHeaderComponent.styles = [accordionHeaderStyles];
 

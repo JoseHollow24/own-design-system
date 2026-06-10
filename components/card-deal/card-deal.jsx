@@ -4,10 +4,10 @@ import '@components/tag';
 import '@components/button';
 import '@components/icon';
 
-function CardDealComponent({ variant, segment, tagText, tagColor, img, title, subtitle, description, textamount, amount, link, linkText }) {
+function CardDealComponent({ variant, segment, tagText, tagColor, img, title, subtitle, description, textamount, amount, link, linkText, darkMode }) {
   return (
     <host shadowDom>
-      {customProperties(segment)}
+      {customProperties(segment, darkMode)}
       <div className={`card ${variant || ''}`}>
         {img && (
           <div className="card-image">
@@ -62,6 +62,7 @@ CardDealComponent.props = {
   link: { type: String, value: '', reflect: true },
   linkText: { type: String, value: '', reflect: true },
   tagColor: { type: String, value: 'blue', reflect: true },
+  darkMode: { type: Boolean, reflect: true, value: false },
 };
 
 CardDealComponent.styles = [styles];

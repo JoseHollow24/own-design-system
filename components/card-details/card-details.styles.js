@@ -1,4 +1,4 @@
-import { css } from 'atomico';
+import { html, css } from 'atomico';
 import {
   DshShadowL,
   DshSpace100,
@@ -17,6 +17,15 @@ import {
 } from '@tokens';
 import { segmentPalette } from './card-details.tokens';
 
+export const customProperties = (darkMode) => html`
+  <style>
+    :host {
+      --card-bg: ${darkMode ? '#252b3b' : DshColorMonoWhite};
+      --card-text: ${darkMode ? '#e8eaed' : 'inherit'};
+    }
+  </style>
+`;
+
 export const cardDetailsStyles = css`
   :host {
     display: flex;
@@ -24,7 +33,7 @@ export const cardDetailsStyles = css`
     width: 100%;
     overflow: hidden;
     box-shadow: ${DshShadowL};
-    background-color: ${DshColorMonoWhite};
+    background-color: var(--card-bg, ${DshColorMonoWhite});
     border-top-left-radius: ${DshSpace100};
     border-top-right-radius: ${DshSpace100};
     border-bottom-left-radius: ${DshBorderRadius300};

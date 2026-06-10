@@ -1,4 +1,5 @@
-import { css } from 'atomico';
+import { html, css } from 'atomico';
+import { darkBgTokens, darkTextTokens, darkBorderTokens } from './button.tokens';
 
 // Tokens
 import {
@@ -36,6 +37,44 @@ import {
   DshColorComplementaryR4,
 } from '@tokens'
 
+
+export const customProperties = (darkMode) => {
+  if (!darkMode) return html``;
+  return html`
+    <style>
+      button.secondary.blue {
+        background-color: ${darkBgTokens.secondaryBlue} !important;
+        color: ${darkTextTokens.secondaryBlue} !important;
+        border-color: ${darkBorderTokens.secondaryBlue} !important;
+      }
+      button.secondary.blue:hover {
+        background-color: ${darkBgTokens.secondaryHover} !important;
+      }
+      button.secondary.blue:focus {
+        background-color: ${darkBgTokens.secondaryBlue} !important;
+        color: ${darkTextTokens.secondaryBlue} !important;
+      }
+      button.secondary:disabled {
+        background-color: ${darkBgTokens.secondaryDisabled} !important;
+        border-color: ${darkBorderTokens.secondaryDisabled} !important;
+        color: ${darkTextTokens.secondaryDisabled} !important;
+      }
+      button.tertiary.blue {
+        color: ${darkTextTokens.tertiaryBlue} !important;
+      }
+      button.tertiary.blue:hover {
+        background-color: ${darkBgTokens.tertiaryHover} !important;
+      }
+      button.tertiary.blue:active {
+        color: ${darkTextTokens.tertiaryActive} !important;
+        background-color: ${darkBgTokens.tertiaryActive} !important;
+      }
+      button.tertiary:disabled {
+        color: ${darkTextTokens.tertiaryDisabled} !important;
+      }
+    </style>
+  `;
+};
 
 export const baseStyles = css`
   :host {

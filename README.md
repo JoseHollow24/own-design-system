@@ -33,10 +33,8 @@ import 'josehollow-design-system/components/accordions';
 import 'josehollow-design-system/components/message';
 import 'josehollow-design-system/components/pagination';
 import 'josehollow-design-system/components/direct-access';
-import 'josehollow-design-system/components/progress-bar';
 import 'josehollow-design-system/components/menu-vertical';
 import 'josehollow-design-system/components/modal';
-import 'josehollow-design-system/components/card-headline';
 import 'josehollow-design-system/components/card-details';
 import 'josehollow-design-system/components/card-deal';
 import 'josehollow-design-system/components/card-highlight';
@@ -407,34 +405,6 @@ import 'josehollow-design-system/components/message';
 
 ---
 
-### Progress Bar — `<dsh-progress-bar>`
-
-```js
-import 'josehollow-design-system/components/progress-bar';
-```
-
-```html
-<dsh-progress-bar
-  options-data='[{"value":40}]'
-  min-value="0"
-  max-value="100"
-  label-top-start="Progress"
-  label-bottom-end="40%"
-></dsh-progress-bar>
-```
-
-| Prop | Type | Default | Description |
-|---|---|---|---|
-| `options-data` | String (JSON) | `[]` | Array of `{ value, color? }` objects |
-| `min-value` | Number | `0` | Minimum value |
-| `max-value` | Number | `100` | Maximum value |
-| `label-top-start` | String | `''` | Top-left label |
-| `label-top-end` | String | `''` | Top-right label |
-| `label-bottom-start` | String | `''` | Bottom-left label |
-| `label-bottom-end` | String | `''` | Bottom-right label |
-
----
-
 ### Pagination — `<dsh-pagination>`
 
 ```js
@@ -554,39 +524,6 @@ import 'josehollow-design-system/components/modal';
 **Slots:** `safe-area` (custom content area), `actionable` (footer buttons)
 
 **Events:** `close`
-
----
-
-### Card Headline — `<dsh-card-headline>`
-
-```js
-import 'josehollow-design-system/components/card-headline';
-```
-
-```html
-<dsh-card-headline
-  variant="info"
-  amount="$1.250.000"
-  button-text="View details"
-  button-link="/details"
-  img="/logo.png"
->
-  <span slot="title">Account Balance</span>
-</dsh-card-headline>
-```
-
-| Prop | Type | Default | Description |
-|---|---|---|---|
-| `variant` | String | `info` | `info` \| custom |
-| `img` | String | `''` | Header image URL |
-| `amount` | String | `''` | Main amount/value text |
-| `button-text` | String | `''` | CTA button label |
-| `button-link` | String | `''` | CTA button URL |
-| `target` | String | `_self` | Link target |
-| `segment` | String | `default` | Segment theme token |
-| `description-font` | String | `default` | Font size token for description |
-
-**Slots:** `title`, `description` (variant `info`), default slot (other variants)
 
 ---
 

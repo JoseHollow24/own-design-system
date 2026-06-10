@@ -17,18 +17,18 @@ import {
 } from '@tokens';
 import { stateBorderTokens, stateCounterTokens } from './textarea.tokens';
 
-export const customProperties = (state, disabled, rows) => html`
+export const customProperties = (state, disabled, rows, darkMode) => html`
   <style>
     :host {
       --font-family: ${DshTextFamilyRawsonPro};
       --font-weight-regular: ${DshTextWeight400};
       --font-weight-medium: ${DshTextWeight500};
       --border-color: ${disabled ? DshColorSecondaryX4 : stateBorderTokens[state]};
-      --color: ${disabled ? DshColorSecondaryG3 : DshColorSecondaryG1};
-      --color-footer: ${disabled ? DshColorSecondaryG3 : DshColorSecondaryG1};
+      --color: ${disabled ? DshColorSecondaryG3 : (darkMode ? '#e8eaed' : DshColorSecondaryG1)};
+      --color-footer: ${disabled ? DshColorSecondaryG3 : (darkMode ? '#9aa0ab' : DshColorSecondaryG1)};
       --color-footer-counter: ${disabled ? DshColorSecondaryX4 : stateCounterTokens[state]};
-      --color-title: ${disabled ? DshColorSecondaryG3 : DshColorMonoBlack};
-      --background: ${disabled ? DshColorSecondaryX6 : DshColorMonoWhite};
+      --color-title: ${disabled ? DshColorSecondaryG3 : (darkMode ? '#e8eaed' : DshColorMonoBlack)};
+      --background: ${disabled ? DshColorSecondaryX6 : (darkMode ? '#2d3449' : DshColorMonoWhite)};
       --border-color-hover: ${DshColorSecondaryX1};
       --border-color-active: ${DshColorPrimaryC1};
       --margin: 0;

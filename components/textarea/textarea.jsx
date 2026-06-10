@@ -3,7 +3,7 @@ import { customProperties, mainStyles } from './textarea.style';
 
 function TextAreaComponent({
   value, disabled, label, maxlength, counter, helpermessage,
-  resizeHeight, maxHeight, a11yLabel, ...props
+  resizeHeight, maxHeight, a11yLabel, darkMode, ...props
 }) {
   const textareaRef = useRef();
   const [state, setState] = useState('default');
@@ -68,7 +68,7 @@ function TextAreaComponent({
 
   return (
     <host shadowDom>
-      {customProperties(state, disabled, rows)}
+      {customProperties(state, disabled, rows, darkMode)}
       <div class="content-textarea">
         <div class={`body-textarea ${!resizeHeight ? 'outfocus' : ''}`}>
           {label && (
@@ -127,6 +127,7 @@ TextAreaComponent.props = {
   counter: { type: Boolean, reflect: true, value: false },
   helpermessage: { type: String, reflect: true, value: '' },
   resizeHeight: { type: Boolean, value: false, reflect: true },
+  darkMode: { type: Boolean, reflect: true, value: false },
   default: { type: Boolean, reflect: true, value: true },
   success: { type: Boolean, reflect: true, value: false },
   warning: { type: Boolean, reflect: true, value: false },

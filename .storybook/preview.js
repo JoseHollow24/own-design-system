@@ -1,8 +1,46 @@
 import '../src/generated-tokens/tokens.css';
 import './docs-override.css';
 
+const DARK_BG = '#252b3b';
+const LIGHT_BG = '#f6f7f7';
+
+export const globalTypes = {
+  theme: {
+    name: 'Tema',
+    description: 'Alternar modo claro / oscuro',
+    defaultValue: 'light',
+    toolbar: {
+      icon: 'moon',
+      items: [
+        { value: 'light', icon: 'sun', title: 'Modo claro' },
+        { value: 'dark', icon: 'moon', title: 'Modo oscuro' },
+      ],
+      dynamicTitle: true,
+    },
+  },
+};
+
+const withDarkMode = (StoryFn, context) => {
+  const isDark = context.globals?.theme === 'dark';
+
+  document.body.style.backgroundColor = isDark ? DARK_BG : LIGHT_BG;
+  document.body.style.transition = 'background-color 0.2s ease';
+
+  setTimeout(() => {
+    document.querySelectorAll('*').forEach((el) => {
+      if (el.tagName?.toLowerCase().startsWith('dsh-')) {
+        if (isDark) el.setAttribute('dark-mode', '');
+        else el.removeAttribute('dark-mode');
+      }
+    });
+  }, 0);
+
+  return StoryFn(context);
+};
+
 /** @type { import('@storybook/web-components-vite').Preview } */
 const preview = {
+  decorators: [withDarkMode],
   parameters: {
     controls: {
       expanded: true,

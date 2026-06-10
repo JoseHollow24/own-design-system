@@ -3,12 +3,12 @@ import { useSlot } from "@atomico/hooks/use-slot";
 
 import './assets/loading';
 import componentProps from './button.props';
-import { baseStyles, primaryLight, secondaryLight, tertiaryLight } from './button.styles';
+import { customProperties, baseStyles, primaryLight, secondaryLight, tertiaryLight } from './button.styles';
 
 const Component = (props) => {
   const {
     label, variant, color, type, disabled, href, target,
-    vertical, full, fluid, loading, width, id, name: btnName, parentComponent,
+    vertical, full, fluid, loading, width, id, name: btnName, parentComponent, darkMode,
   } = props;
 
   // Inicializar con los valores reales evita el flash de texto negro en el primer render
@@ -103,6 +103,7 @@ const Component = (props) => {
 
   return (
     <host shadowDom className={hostClasses}>
+      {customProperties(darkMode)}
       <a ref={refAnchor} href={href} target={target} className="hidden" aria-hidden="true"></a>
       <button
         ref={refButton}
